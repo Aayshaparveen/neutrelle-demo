@@ -1,6 +1,7 @@
 import React from "react";
 import TextField from "@mui/material/TextField";
 import styled from "@emotion/styled";
+import {ImArrowUpRight2 } from "react-icons/im";
 import Registration from './Registration';
 import ImpactCalculatorStyle from "./ImpactCalculatorStyle.css";
 const CssTextField = styled(TextField)({
@@ -50,6 +51,7 @@ const ImpactCalculator = () => {
         </div>
         <div className="details">
          <a href="./Registration">Enter details manually</a>
+         <p className="arrow"><ImArrowUpRight2/></p>
         </div>
       </div>
     </>
