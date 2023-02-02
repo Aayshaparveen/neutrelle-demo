@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { AiOutlineClose } from "react-icons/ai";
 import { GiHamburgerMenu } from "react-icons/gi";
-import NavbarStyle from "./NavbarStyle.css";
+import "./NavbarStyle.css";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -11,7 +11,7 @@ const Navbar = () => {
     <div className="navbar">
       <a href="#" onClick={() => setOpenMenu(false)}>
         <img
-          src="./public/image/dark-green.png"
+          src="./image/dark-green.png"
           // src="https://neutrelle.co.uk/wp-content/uploads/2022/12/dark-green.png"
           className="logo"
           // alt="logo"

@@ -9,7 +9,7 @@
   height: 300px;
   padding: 0px 110px;
   font-size: 50px;
-  font-weight: lighter
+  font-weight: lighter;
 }
 .title {
   font-size: xx-large;
@@ -55,7 +55,7 @@ button {
   padding: 0px 7px;
 }
 .details {
-  padding: 34px 60px;
+  padding: 34px 45px;
   font-size: 20px;
   display: flex;
   align-items: center;

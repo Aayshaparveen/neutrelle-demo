@@ -1,5 +1,5 @@
 import React from "react";
-import FooterStyle from "./FooterStyle.css";
+import "./FooterStyle.css";
 import { BsFacebook } from "react-icons/bs";
 import {AiFillTwitterSquare} from "react-icons/ai"
 import {FaInstagramSquare} from "react-icons/fa"
