@@ -1,37 +1,61 @@
-.main-container{
-    background-color: aqua;
-    border: 2px solid black;
-    margin: -65px 109px;
-    border-radius: 20px 5px;
+.main-container {
+  margin: 25px 109px;
+  border-radius: 0px 35px;
+  margin-top: -90px;
+  box-shadow: 0px 1px 1px 1px grey;
 }
 .heading {
-    height: 300px;
-    padding: 0px 110px;
-    font-size: 53px;
+  height: 300px;
+  padding: 0px 110px;
+  font-size: 53px;
 }
-.title{
-    font-size: larger;
+.title {
+  font-size: xx-large;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 30px;
 }
-.sub-title{
-    font-size: medium;
+.sub-title {
+  font-size: large;
+  padding-left: 40px;
+  padding-top: 5px;
 }
-.Registration-box{
-    background-color: lightblue;
+.Registration-box {
+  /* background-color: lightblue; */
+  padding: 25px 40px;
+  display: flex;
+  gap: 20px;
 }
-button{
-    background-color: #2cd28d;;
+button {
+  background-color: #2cd28d;
+  border: 1px;
+  padding: 0px 15px;
+  border-radius: 0px 20px;
+  font-size: 15px;
+  font-weight: bold;
 }
-.linear-box{
-    background-color: burlywood;
+.line-box {
+  display: flex;
+  align-items: center;
 }
-.left-linear{
-    background-color:yellow;
-    max-width: 20px;
+.left-line {
+  color: black;
+  width: 5vh;
+  padding-left: 40px;
 }
-.right-liner{
-    background-color: chartreuse;
-    max-width: 30px;
+.right-line {
+  color: black;
+  width: 135vh;
+  padding-left: 0px;
 }
-.details p{
-    color: red;
+.text-div {
+  padding: 0px 7px;
+}
+.details {
+  padding: 34px 60px;
+  color: gray;
+  font-size: 20px;
+}
+#custom-css-outlined-input {
+  padding-right: 120px;
 }
