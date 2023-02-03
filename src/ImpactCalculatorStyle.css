@@ -41,8 +41,8 @@ button {
   border: 1px;
   padding: 0px 15px;
   border-radius: 0px 20px;
-  font-size: 15px;
-  font-weight: bold;
+  font-size: 1.2vw;
+  /* font-weight: bold; */
   cursor: pointer;
 }
 .bottom-container {

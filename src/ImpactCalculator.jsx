@@ -8,10 +8,12 @@ import "./ImpactCalculatorStyle.css";
 const CssTextField = styled(TextField)({
   "& label.Mui-focused": {
     color: "gray",
+    background:"white",
+    padding: "0px 10px",
   },
-  "& .MuiInput-underline:after": {
-    borderBottomColor: "green",
-  },
+  // "& .MuiInput-underline:after": {
+  //   borderBottomColor: "green",
+  // },
   "& .MuiOutlinedInput-root": {
     "& fieldset": {
       boxShadow: "0px 0px 1px 0px",
