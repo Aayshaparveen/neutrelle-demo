@@ -4,7 +4,7 @@ import styled from "@emotion/styled";
 import {ImArrowUpRight2 } from "react-icons/im";
 import Registration from './Registration';
 import "./ImpactCalculatorStyle.css";
-// import { Navigate } from "react-router-dom";
+
 const CssTextField = styled(TextField)({
   "& label.Mui-focused": {
     color: "gray",
