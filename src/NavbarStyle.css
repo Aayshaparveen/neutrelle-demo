@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: Poppins, sans-serif;
 }
 
 .navbar {
@@ -10,7 +11,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 5rem 1.5rem 3rem;
+  padding: 1.2rem 5rem 0.2rem 2rem;
   position: fixed;
   top: 0;
   right: 0;
@@ -30,13 +31,13 @@
   list-style-type: none;
 }
 .navbar-link {
-  /* // padding: 12px 0; */
   text-decoration: none;
-  padding: 8px 0;
-  font-size: 17px;
-  font-weight: 600;
-  letter-spacing: 0.2px;
-  color: #00000070;
+    padding: 8px 0px;
+    font-size: 1.2vw;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    color: rgba(0, 0, 0, 0.44);
+
 }
 .navbar-link:hover {
   height: 40px;
@@ -84,8 +85,8 @@
   display: none;
   font-size: 2.2rem;
   position: absolute;
-  top: 20%;
-  right: 46%;
+  top: 30%;
+  right: 36%;
   color: #000000;
   z-index: 9999;
 }
@@ -109,12 +110,8 @@
   display: none;
 }
 h1{
-  /* background-color: #2cd28d; */
-  text-align: center;
-  height: 100vh;
-  text-align: center;
-  align-items: center;
-  display: flex;
+ padding: 165px 0px;
+ text-align: center;
 }
 
 
@@ -139,7 +136,8 @@ h1{
     cursor: pointer;
   }
   .mobile-nav-icon {
-    font-size: 3rem;
+    font-size: 2rem;
+    margin: 0px 35px;
     color: #000000;
   }
 
@@ -170,7 +168,7 @@ h1{
 
   .active .mobile-nav-icon {
     display: none;
-    font-size: 3.4rem;
+    font-size: 3rem;
     position: absolute;
     color: #000000;
     z-index: 9999;
@@ -187,4 +185,12 @@ h1{
  .navbar-link{
   font-size: larger;
  }
+}
+
+/* // for tablet */
+@media (max-width:9000 ) {
+  .navbar{
+    padding: 2rem 3rem 0rem 1rem;
+    background-color: #2cd28d;
+  }
 }

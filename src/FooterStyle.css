@@ -35,17 +35,18 @@ p {
   font-size: small;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   .footer {
     flex-direction: column;
     padding: 0px;
-    /* margin: -30px 0px; */
     height: 45vh;
     overflow: hidden;
+    justify-content: space-around;
   }
   .icon {
-    padding-left: 92px;
-    gap: 40px;
+    /* padding-left: 92px; */
+    gap: 20%;
+    justify-content: center;
   }
 
   .last-box {
@@ -53,6 +54,6 @@ p {
   }
   .last-container {
     background-color: black;
-    font-size: large;
+    font-size: small;
   }
 }
