@@ -60,7 +60,7 @@
   height: 40px;
   position: relative;
 }
-.bttom-dash:after {
+ .bottom-dash:after {
   content: "";
   height: 2.5px;
   width: 20px;
@@ -110,7 +110,7 @@
   display: none;
 }
 h1{
- padding: 165px 0px;
+ padding: 184px 0px;
  text-align: center;
 }
 

@@ -56,7 +56,7 @@ button {
 }
 .left-line {
   min-width: 2%;
-  border-bottom: 2px solid rgb(226, 226, 226);
+  border: 2px solid rgb(226, 226, 226);
 }
 .right-line {
   width: 100%;
