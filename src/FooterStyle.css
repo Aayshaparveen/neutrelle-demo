@@ -18,8 +18,8 @@ p {
   padding: 15px;
   font-size: small;
 }
-.bottom-logo{
-max-width: 150px;
+.bottom-logo {
+  max-width: 150px;
 }
 
 .last-box {
@@ -27,32 +27,31 @@ max-width: 150px;
   gap: 25px;
   color: white;
 }
-.last-container{
+.last-container {
   background-color: black;
   color: gray;
   text-align: center;
   margin: -50px 0px;
-  font-size: small
- 
+  font-size: small;
 }
 
-@media (max-width: 800px){
-  .footer{
-      flex-direction: column;
-      padding: 0px;
-      /* margin: -30px 0px; */
-      height: 45vh;
+@media (max-width: 800px) {
+  .footer {
+    flex-direction: column;
+    padding: 0px;
+    /* margin: -30px 0px; */
+    height: 45vh;
+    overflow: hidden;
   }
-  .icon{
-    /* background-color: aqua; */
-   padding-left: 160px;
+  .icon {
+    padding-left: 92px;
     gap: 40px;
   }
-  
-  .last-box{
+
+  .last-box {
     padding-block-end: 100px;
   }
-  .last-container{
+  .last-container {
     background-color: black;
     font-size: large;
   }
