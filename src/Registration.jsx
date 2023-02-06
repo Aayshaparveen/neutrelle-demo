@@ -28,11 +28,11 @@ const CssTextField = styled(TextField)({
 const Registration = () => {
   return (
     <div className="main-container2">
-      <p className="heading">Impact Calculator</p>
-      <div className="main-box">
-        <h2 className="title">Check your car's Impact</h2>
-        <p className="sub-title">Enter your car details to check</p>
-        <div className="Registration-box">
+      <p className="heading2">Impact Calculator</p>
+      <div className="main-box2">
+        <h2 className="title2">Check your car's Impact</h2>
+        <p className="sub-title2">Enter your car details to check</p>
+        <div className="Registration-box2">
           <p className="Registration-title">Registration</p>
           <CssTextField
             label="Enter Registration Number*"

@@ -4,23 +4,23 @@
     max-width: 81vw;
     margin: 0px auto;
   }
-  .heading {
+  .heading2 {
     padding-top: 80px;
     padding-bottom: 40px;
     color: rgb(0, 0, 0);
     font-size: 3rem;
   }
-  .title {
+  .title2 {
       font-size: 1.5rem;
       font-weight: 500;
       padding-top: 30px;
     }
-    .sub-title {
+    .sub-title2 {
         font-size: 1rem;
         padding-left: 5px;
         padding-top: 5px;
     }
-    .Registration-box {
+    .Registration-box2{
         padding: 25px 5px;
         display: flex;
         gap: 10px;
