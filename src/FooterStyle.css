@@ -4,19 +4,22 @@
   align-items: center;
   justify-content: space-around;
   text-align: center;
-  padding: 65px 0px;
+  padding: 75px 0px;
 }
 .icon {
   /* background-color: blue; */
   color: white;
   width: 40vh;
   display: flex;
-  gap: 15px;
+  gap: 20px;
 }
 p {
   color: gray;
   padding: 15px;
-  font-size: small;
+  font-size: 10px;
+}
+.bottom{
+  padding-right: 140px;
 }
 .bottom-logo {
   max-width: 150px;
@@ -24,17 +27,32 @@ p {
 
 .last-box {
   display: flex;
-  gap: 25px;
+  /* gap: 25px; */
+  margin: 0px -60px;
+}
+.last-para-link a{
   color: white;
+    text-decoration: none;
+    font-size: 12px;
 }
 .last-container {
   background-color: black;
   color: gray;
   text-align: center;
-  margin: -50px 0px;
-  font-size: small;
+  margin: -70px 0px;
+  padding-bottom: 40px;
 }
-
+.last-container-para{
+  padding-left: 40%;
+  font-size: 11px;
+  display: flex;
+  gap: 5px;
+}
+.last-container-para a{
+  color: gray;
+  text-decoration: none;
+  font-weight: 600;
+}
 @media (max-width: 600px) {
   .footer {
     flex-direction: column;

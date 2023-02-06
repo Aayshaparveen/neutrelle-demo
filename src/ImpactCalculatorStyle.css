@@ -56,25 +56,28 @@ button {
 }
 .left-line {
   min-width: 2%;
-  border: 2px solid rgb(226, 226, 226);
+  border: 1px solid rgb(226, 226, 226);
 }
 .right-line {
   width: 100%;
   border-bottom: 2px solid rgb(226, 226, 226);
 }
-.text-div {
-  font-size: 1.2rem;
+/* .text-div{
+
+} */
+.text-div p {
+  font-size: 13px;
   color: rgb(0, 0, 0);
-  padding: 0.2rem 0.6rem;
+  padding: 0rem 0.4rem;
 }
 .details {
   padding: 34px 5px;
-  font-size: 20px;
   display: flex;
   align-items: center;
 }
 .details a {
   text-decoration: none;
+  font-size: 16px;
   color: gray;
 }
 #custom-css-outlined-input {
