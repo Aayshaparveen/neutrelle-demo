@@ -37,3 +37,28 @@
   font-size: 16px;
   padding: 0px;
 }
+#custom-css-outlined-input{
+  padding-right: 120px;
+}
+.car-deatils{
+  /* background-color: lavender; */
+}
+#demo-controlled-open-select-label{
+  color: gray;
+}
+#demo-controlled-open-select{
+  padding: 15px 150px;
+  
+}
+.MuiOutlinedInput-notchedOutline {
+  border-color: gray;
+  border-width: 1px;
+  border-radius: 0px 15px;
+}
+
+.MuiOutlinedInput-input {
+  padding: 18px 155px;
+  /* border-radius: 55px 78px; */
+  border: 1px solid gray;
+  border-radius: 0px 20px;
+}

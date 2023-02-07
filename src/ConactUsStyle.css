@@ -1,0 +1,27 @@
+.Container{
+ display: flex;
+ margin-top: 70px;
+}
+.contact-box{
+    width: 579px;
+  height: 67px;
+  margin: 50px 20px 1px 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000;
+  background-color: antiquewhite;
+}
+.contact-heading{
+    font-family: Poppins;
+    font-size: 40px;
+    padding-left: 90px;
+    font-style: inherit
+}
+.contact-img-box img{
+    width: 580px;
+  height: 580px;
+  margin: 50px 130px 118px 20px;
+}

@@ -4,7 +4,7 @@ import OurMission from './OurMission'
 import ImpactCalculator from './ImpactCalculator';
 import MyGarage from './MyGarage';
 import Blog from './Blog';
-import ContactUs from './ConactUs';
+import ContactUs from './ContactUs';
 import Footer from './Footer';
 import Registration from './Registration';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
