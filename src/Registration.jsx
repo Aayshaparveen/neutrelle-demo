@@ -1,6 +1,6 @@
 import React from "react";
-import TextField from "@mui/material/TextField";
 import "./RegistrationStyle.css";
+import TextField from "@mui/material/TextField";
 import styled from "@emotion/styled";
 const CssTextField = styled(TextField)({
   "& label.Mui-focused": {
@@ -9,22 +9,23 @@ const CssTextField = styled(TextField)({
     padding: "0px 10px",
   },
   "& .MuiOutlinedInput-root": {
-      "& fieldset": {
-          marginRight:"400px",
-          boxShadow: "0px 0px 1px 0px",
-          borderRadius: "1px 15px",
-          border: "1px solid rgb(226, 226, 226) ",
-        },
-        "&:hover fieldset": {
-          borderColor: 'transparent',
-        },
-    
+    "& fieldset": {
+      marginRight: "400px",
+      boxShadow: "0px 0px 1px 0px",
+      borderRadius: "1px 15px",
+      border: "1px solid rgb(226, 226, 226) ",
+    },
+    "&:hover fieldset": {
+      borderColor: "transparent",
+    },
+
     "&.Mui-focused fieldset": {
       border: "1px solid black",
       borderRadius: "1px 15px",
     },
   },
 });
+
 const Registration = () => {
   return (
     <div className="main-container2">
@@ -38,6 +39,10 @@ const Registration = () => {
             label="Enter Registration Number*"
             id="custom-css-outlined-input"
           />
+        </div>
+        <div className="details-box">
+          <p className="Registration-title">Car Basic Details</p>
+          <div className="car-deatils"></div>
         </div>
       </div>
     </div>

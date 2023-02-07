@@ -4,10 +4,11 @@ import OurMission from './OurMission'
 import ImpactCalculator from './ImpactCalculator';
 import MyGarage from './MyGarage';
 import Blog from './Blog';
-import ContactUs from './ConactUs'
+import ContactUs from './ConactUs';
 import Footer from './Footer';
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Registration from './Registration';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 function App() {
  
   return (
@@ -21,8 +22,9 @@ function App() {
         <Route path='/MyGarage' element={<MyGarage/>} />
         <Route path='/Blog' element={<Blog/>} />
         <Route path='/ContactUs' element={<ContactUs/>} />
+        <Route path='/Registration' element={<Registration/>} />
+
       </Routes>
-      <Registration/>
    <Footer/>
    </BrowserRouter>
    </>

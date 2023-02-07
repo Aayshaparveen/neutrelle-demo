@@ -47,7 +47,7 @@
   font-size: 18px;
   color: black;
 }
-.heading2 {
+.bottom-heading{
   padding-top: 15px;
   font-weight: normal;
   padding-left: 300px;
@@ -178,4 +178,28 @@ span {
   text-decoration: none;
   color: black;
   font-weight: bold;
+}
+@media (max-width:921px) {
+  .sub-heading{
+    font-size: 2.4vw;
+    font-style: italic;
+    margin: 8px 230px;
+    font-weight: 100;
+    text-align: center
+  }
+  .img-box1 {
+    display: flex;
+    padding: 5px 260px;
+}
+.para-container{
+  padding-left: 165px;
+    padding-right: 111px;
+    padding-top: 20px;
+}
+.bottom-heading {
+  padding-top: 15px;
+  font-weight: normal;
+  padding-left: 165px;
+  font-size: 2.1vw;
+}
 }

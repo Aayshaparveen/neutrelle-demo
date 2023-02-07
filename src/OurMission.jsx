@@ -41,7 +41,7 @@ const OurMission = () => {
         </p>
       </div>
       <div>
-        <h2 className="heading2">Extraordinary Experiences</h2>
+        <h2 className="bottom-heading">Extraordinary Experiences</h2>
       </div>
       <div className="para-container2">
         <p>
