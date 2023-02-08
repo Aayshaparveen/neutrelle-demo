@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ConactUsStyle.css";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
@@ -39,6 +39,11 @@ const CssTextField = styled(TextField)({
     
   }}
 />;
+// const [fullName, setfullName] = useState("");
+// const [Email, setEmail] = useState("");
+// const handelChange = () =>{
+//   console.log("output",e.target.value);
+// }
 const ContactUs = () => {
   return (
     <>
@@ -56,11 +61,14 @@ const ContactUs = () => {
             label="Your Name *"
             placeholder="Full Name"
             id="custom-css-outlined-input"
+            // onChange={handelChange}
           />
           <CssTextField
             label="Email *"
             placeholder="Your Email"
             id="custom-css-outlined-input"
+            // onChange={handelChange}
+
           />
           <TextField
             placeholder="Your Message"

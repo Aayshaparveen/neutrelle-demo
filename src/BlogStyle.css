@@ -1,0 +1,66 @@
+.Blog-box{
+    margin: 120px 320px 48px 100px;
+  font-family: Poppins;
+  font-size: 45px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000;
+}
+.blog-container1{
+
+}
+.Blog1{
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+  border-radius: 30px;
+}
+.Blog-img{
+  width: 380px;
+  height: 214px;
+  margin: 0 0 20px;
+  border-radius: 30px;
+}
+.Nov-2022-by-Neu {
+  width: 210px;
+  height: 18px;
+  margin: 20px 194px 10px 0;
+  padding-left: 1%;
+  opacity: 0.5;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.29;
+  letter-spacing: 0.35px;
+  color: #000;
+}
+.The-worlds-healthie {
+  width: 380px;
+  height: 117px;
+  padding-left: 1%;
+  /* margin: 10px 0 5px; */
+  font-family: Poppins;
+  font-size: 28px;
+  font-weight: normal;
+  font-style: normal;
+  color: #000;
+}
+.A-new-report-finds-I {
+  width: 380px;
+  height: 52px;
+  margin: 15px 0px 0px 0px;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.63;
+  letter-spacing: normal;
+  color: #000;
+  padding-left: 1%;
+}

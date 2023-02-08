@@ -70,19 +70,23 @@ form {
 }
 .checkbox {
   display: flex;
+  align-items: center;
   background-color: aliceblue;
   border: 1px solid #d3d3d3;
   margin: 25px 38px;
+  padding: 10px 20px;
   width: 250px;
 }
 .RecaptchaLogo-img {
-  width: 70px;
+  width: 65px;
   height: 60px;
+  padding-left: 33px;
 }
 .MuiFormControlLabel-root {
   margin-left: 3px;
 }
 .MuiFormControlLabel-root .MuiFormControlLabel-label {
   padding: 0px;
+  font-style: normal;
 }
 
