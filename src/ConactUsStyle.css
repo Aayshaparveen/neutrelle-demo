@@ -48,5 +48,28 @@ form{
     padding-top: 25px;
 }
 #demo-helper-text-misaligned-no-helper1{
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
+    border: 2px solid gray;
+   
+}
+.MuiOutlinedInput-input {
+  padding: 18px 155px;
+  border: 1px solid gray;
+  border-radius: 0px 20px;
+}
+#demo-helper-text-aligned{
+  padding-bottom: 100px;
+
+}
+.MuiInputLabel-root {
+  color: gray !important;
+  
+}
+.Message-box{
+ 
+  margin: 30px 35px 0px 33px;
+  padding: 17px 30px 16px;
+  border-radius: 0px 20px ;
+  background-color: #2cd28d;
+  font-weight: 600;
 }
