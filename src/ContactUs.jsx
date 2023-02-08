@@ -27,14 +27,16 @@ const CssTextField = styled(TextField)({
       border: "1px solid black",
       borderRadius: "1px 15px",
     },
+  
   },
 });
 <Box
   sx={{
     display: "flex",
     alignItems: "center",
-
+    
     "& > :not(style)": { m: 1 },
+    
   }}
 />;
 const ContactUs = () => {
@@ -73,6 +75,7 @@ const ContactUs = () => {
               label="I'm not a robot"
             />
           </FormGroup>
+          <img src="./image/RecaptchaLogo.png" className="RecaptchaLogo-img"></img>
         </div>
         <div>
           <button className="Message-box">Send Message</button>
