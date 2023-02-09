@@ -41,7 +41,46 @@ const Blog = () => {
           </span>
         </div>
       </div>
-        <div className="last-impact">
+      <div className="blog-container2">
+        <div className="Blog4">
+          <img src="./image/Blog(4).png" className="Blog-img"></img>
+          <span className="Nov-2022-by-Neu">12 Nov 2022 • by Neutrelle</span>
+          <span className="million-tons-of">
+            380 million tons of plastic are made every year. None of it is truly
+            recyclable.
+          </span>
+          <span className="Not-even-water-bottl">
+            Not even water bottles and milk jugs meet standards for
+            recyclability, a new report finds.
+          </span>
+        </div>
+        <div className="Blog5">
+          <img src="./image/Blog(5).png" className="Blog-img"></img>
+          <span className="Nov-2022-by-Neu">12 Nov 2022 • by Neutrelle</span>
+          <span className="Idaho-cobalt-mine-is">
+            Idaho cobalt mine is a harbinger of what’s to come
+          </span>
+          <span className="A-new-venture-near-S">
+            A new venture near Salmon signals an uptick in hardrock mining
+            across the West.
+          </span>
+        </div>
+        <div className="Blog6">
+          <img src="./image/Blog(6).png" className="Blog-img"></img>
+          <span className="Nov-2022-by-Neu">12 Nov 2022 • by Neutrelle</span>
+          <span className="Disaster-debris-is-p">
+            Disaster debris is pushing Puerto Rico’s landfills to the brink
+          </span>
+          <span className="Composting-could-be">
+            Composting could be the solution.
+          </span>
+        </div>
+      </div>
+      <div className="Readmore-box">
+        <button className="Readmore-button">Read More</button>
+      </div>
+
+      <div className="last-impact">
         <div className="section">
           <div className="box1">
             <h2>Let's decarbonise our World!</h2>

@@ -1,5 +1,5 @@
-.Blog-box{
-    margin: 120px 320px 40px 65px;
+.Blog-box {
+  margin: 120px 320px 40px 65px;
   font-family: Poppins;
   font-size: 45px;
   font-weight: normal;
@@ -9,16 +9,16 @@
   letter-spacing: normal;
   color: #000;
 }
-.blog-container1{
-   display: flex;
+.blog-container1 {
+  display: flex;
 }
-.Blog1{
+.Blog1 {
   display: flex;
   flex-direction: column;
   margin-left: 50px;
   border-radius: 30px;
 }
-.Blog-img{
+.Blog-img {
   width: 360px;
   height: 205px;
   margin: 0 0 20px;
@@ -65,7 +65,7 @@
   padding-left: 1%;
 }
 
-.Blog2{
+.Blog2 {
   display: flex;
   flex-direction: column;
   /* margin-left: 100px; */
@@ -99,7 +99,7 @@
   color: #000;
   padding-left: 1%;
 }
-.Blog3{
+.Blog3 {
   display: flex;
   flex-direction: column;
   /* margin-left: 10px; */
@@ -132,4 +132,119 @@
   letter-spacing: normal;
   color: #000;
   padding-left: 1%;
+}
+.blog-container2 {
+  display: flex;
+}
+.Blog4 {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+  border-radius: 30px;
+}
+.million-tons-of {
+  width: 385px;
+  height: 117px;
+  padding-left: 0px;
+  margin: 10px 0 5px;
+  font-family: Poppins;
+  font-size: 28px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000;
+}
+.Not-even-water-bottl {
+  width: 380px;
+  height: 52px;
+  margin: 5px 0 0;
+  padding-left: 0px;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.63;
+  letter-spacing: normal;
+  color: #000;
+}
+.Blog5 {
+  display: flex;
+  flex-direction: column;
+  /* margin-left: 50px; */
+  border-radius: 30px;
+}
+.Idaho-cobalt-mine-is {
+  width: 380px;
+  height: 117px;
+  padding-left: 0px;
+  margin: 10px 0 5px;
+  font-size: 28px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000;
+}
+.A-new-venture-near-S {
+  width: 380px;
+  height: 52px;
+  margin: 5px 0 0;
+  font-size: 16px;
+  padding-left: 0px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.63;
+  letter-spacing: normal;
+  color: #000;
+}
+.Blog6 {
+  display: flex;
+  flex-direction: column;
+  /* margin-left: 50px; */
+  border-radius: 30px;
+}
+.Disaster-debris-is-p {
+  width: 380px;
+  height: 117px;
+  margin: 10px 0 5px;
+  font-size: 28px;
+  padding-left: 0px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000;
+}
+.Composting-could-be {
+  width: 380px;
+  height: 26px;
+  margin: 5px 0 0;
+  padding-left: 0px;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.63;
+  letter-spacing: normal;
+  color: #000;
+}
+.Readmore-box {
+  margin: 35px 40px 55px;
+  padding: 17px 556px 16px 558px;
+  border-radius: 0px 20px;
+  background-color: #ededed;
+}
+.Readmore-button {
+  padding: 0px;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  color: #000;
+  background-color: #ededed;
 }
