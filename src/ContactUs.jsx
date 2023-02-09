@@ -39,12 +39,14 @@ const CssTextField = styled(TextField)({
     
   }}
 />;
-// const [fullName, setfullName] = useState("");
-// const [Email, setEmail] = useState("");
-// const handelChange = () =>{
-//   console.log("output",e.target.value);
-// }
 const ContactUs = () => {
+  const [FullName, setFullName] = useState("");
+  const [Email, setEmail] = useState("");
+
+  const handelChange = (e) =>{
+    console.log("output",e.target.value);
+   
+  }
   return (
     <>
     <div className="Container">
@@ -59,15 +61,16 @@ const ContactUs = () => {
         <form>
           <CssTextField
             label="Your Name *"
+            name="FullName"
             placeholder="Full Name"
             id="custom-css-outlined-input"
-            // onChange={handelChange}
+            onChange={handelChange}
           />
           <CssTextField
             label="Email *"
             placeholder="Your Email"
             id="custom-css-outlined-input"
-            // onChange={handelChange}
+            onChange={handelChange}
 
           />
           <TextField
