@@ -1,0 +1,92 @@
+.Container {
+  display: flex;
+  margin-top: 125px;
+}
+.contact-box {
+  width: 579px;
+  height: 67px;
+  margin: 50px 20px 1px 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000;
+}
+.contact-heading {
+  font-family: Poppins;
+  font-size: 40px;
+  padding-left: 35px;
+  font-style: inherit;
+}
+.contact-img-box img {
+  width: 494px;
+  height: 580px;
+  margin: 50px 130px 118px 20px;
+}
+.We-are-here-to-help {
+  width: 580px;
+  height: 42px;
+  margin: 0px 0px 0px -25px;
+  opacity: 0.5;
+  font-family: Poppins;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000;
+  padding-left: 60px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 35px;
+  padding-top: 25px;
+}
+#demo-helper-text-misaligned-no-helper1 {
+  /* background-color: antiquewhite; */
+  border: 2px solid gray;
+}
+.MuiOutlinedInput-input {
+  padding: 18px 155px;
+  border: 1px solid gray;
+  border-radius: 0px 20px;
+}
+#demo-helper-text-aligned {
+  padding-bottom: 100px;
+}
+.MuiInputLabel-root {
+  color: gray !important;
+}
+.Message-box {
+  margin: 30px 35px 0px 33px;
+  padding: 17px 30px 16px;
+  border-radius: 0px 20px;
+  background-color: #2cd28d;
+  font-weight: 600;
+}
+.checkbox {
+  display: flex;
+  align-items: center;
+  background-color: aliceblue;
+  border: 1px solid #d3d3d3;
+  margin: 25px 38px;
+  padding: 10px 20px;
+  width: 250px;
+}
+.RecaptchaLogo-img {
+  width: 65px;
+  height: 60px;
+  padding-left: 33px;
+}
+.MuiFormControlLabel-root {
+  margin-left: 3px;
+}
+.MuiFormControlLabel-root .MuiFormControlLabel-label {
+  padding: 0px;
+  font-style: normal;
+}
+

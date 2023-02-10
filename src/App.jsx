@@ -6,7 +6,7 @@ import MyGarage from './MyGarage';
 import Blog from './Blog';
 import ContactUs from './ContactUs';
 import Footer from './Footer';
-import Registration from './Registration';
+import Registration from './Cardeatils';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {

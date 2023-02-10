@@ -1,5 +1,5 @@
 import React from "react";
-import "./RegistrationStyle.css";
+import "./style.css";
 import TextField from "@mui/material/TextField";
 import styled from "@emotion/styled";
 import InputLabel from "@mui/material/InputLabel";
