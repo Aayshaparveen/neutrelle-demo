@@ -66,7 +66,7 @@ const ContactUs = () => {
     <>
       <div className="Container">
         <div className="contact-box">
-          <div>
+          <div className="contact-heading-box">
             <span className="contact-heading">Contact Us</span>
           </div>
           <p className="We-are-here-to-help">
@@ -113,8 +113,8 @@ const ContactUs = () => {
               className="RecaptchaLogo-img"
             ></img>
           </div>
-          <div>
-            <button className="Message-box" onClick={handleSubmit}>
+          <div className="Message-box">
+            <button className="Message-text" onClick={handleSubmit}>
               Send Message
             </button>
           </div>

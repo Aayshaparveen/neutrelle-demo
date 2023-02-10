@@ -61,7 +61,7 @@ form {
 .MuiInputLabel-root {
   color: gray !important;
 }
-.Message-box {
+.Message-text {
   margin: 30px 35px 0px 33px;
   padding: 17px 30px 16px;
   border-radius: 0px 20px;
@@ -94,5 +94,39 @@ form {
   text-align: right;
   font-size: 10px;
   padding: 0px;
+}
+/* Responisive for Mobile */
+@media (max-width:600px) {
+  .Container{
+    display: block;
+    height: 705px;
+  }
+  .contact-img-box img{
+    display: none;
+  }
+  .contact-heading{
+    padding-left: 15px;
+  }
+  .We-are-here-to-help{
+    width: 303px;
+    margin: 0px 0px 0px -20px;
+    padding-left: 40px;
+  }
+  form{
+    width: 350px;
+    padding-left: 15px;
+  }
+  .contact-heading-box{
+    width: 255px;
+  }
+  .contact-box{
+    width: 0px;
+  }
+  .checkbox{
+    margin: 25px 20px;
+  }
+  .Message-box{
+    width: 275px;
+  }
 }
 
