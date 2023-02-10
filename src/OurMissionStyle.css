@@ -346,18 +346,13 @@ span {
   .right-img {
     margin-top: 0px;
     width: 265px;
-    /* margin-left: 105px; */
     height: 280px;
   }
   .Mission-container {
     width: 388px;
   }
-
-  .main-heading {
-    /* font-size: 4.9vw; */
-  }
   .last-impact {
-    width: 100%;
+    width: 107%;
   }
   .footer {
     width: 100%;
