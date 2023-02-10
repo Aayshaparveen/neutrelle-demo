@@ -27,77 +27,117 @@ const CssTextField = styled(TextField)({
       border: "1px solid black",
       borderRadius: "1px 15px",
     },
-  
   },
 });
 <Box
   sx={{
     display: "flex",
     alignItems: "center",
-    
+
     "& > :not(style)": { m: 1 },
-    
   }}
 />;
 const ContactUs = () => {
   const [FullName, setFullName] = useState("");
   const [Email, setEmail] = useState("");
+  const [showFnameError, setShowFnameError] = useState(false);
+  const [showEmailError, setShowEmailError] = useState(false);
 
-  const handelChange = (e) =>{
-    console.log("output",e.target.value);
-   
+  const handelChange = (e) => {
+    console.log("output", e.target.value);
+    if (e.target.name == "FullName") {
+      setFullName(e.target.value);
+    }
+    if (e.target.name == "Email") {
+      setEmail(e.target.value);
+    }
+  };
+  const handleSubmit = () => {
+    if(FullName == ""){
+        setShowFnameError(true)
+    }
+    if(Email == ""){
+      setShowEmailError(true)
   }
+    console.log("FullName", FullName);
+    console.log("Email", Email);
+  };
   return (
     <>
-    <div className="Container">
-      <div className="contact-box">
-        <div>
-          <span className="contact-heading">Contact Us</span>
-        </div>
-        <p className="We-are-here-to-help">
-          We are here to help. Please enter your message and a member of the
-          team will be in touch within 48 hours!
-        </p>
-        <form>
-          <CssTextField
-            label="Your Name *"
-            name="FullName"
-            placeholder="Full Name"
-            id="custom-css-outlined-input"
-            onChange={handelChange}
-          />
-          <CssTextField
-            label="Email *"
-            placeholder="Your Email"
-            id="custom-css-outlined-input"
-            onChange={handelChange}
-
-          />
-          <TextField
-            placeholder="Your Message"
-            id="demo-helper-text-aligned"
-            label=" Message"
-          />
-        </form>
-        <div className="checkbox">
-          <FormGroup>
-            <FormControlLabel
-              control={<Checkbox defaultChecked />}
-              label="I'm not a robot"
+      <div className="Container">
+        <div className="contact-box">
+          <div className="contact-heading-box">
+            <span className="contact-heading">Contact Us</span>
+          </div>
+          <p className="We-are-here-to-help">
+            We are here to help. Please enter your message and a member of the
+            team will be in touch within 48 hours!
+          </p>
+          <form>
+            <CssTextField
+              label="Your Name *"
+              name="FullName"
+              placeholder="Full Name"
+              id="custom-css-outlined-input"
+              onChange={handelChange}
             />
+<<<<<<< HEAD:src/ContactUs/index.jsx
           </FormGroup>
           <img src="./src/assets/image/RecaptchaLogo.png" className="RecaptchaLogo-img"></img>
+=======
+            {showFnameError == true ? (
+              <p className="error-text">This feild is required</p>
+            ) : null}
+            <CssTextField
+              label="Email *"
+              name="Email"
+              placeholder="Your Email"
+              id="custom-css-outlined-input"
+              onChange={handelChange}
+            />
+            {showEmailError == true ? (
+              <p className="error-text">This feild is required</p>
+            ) : null}
+
+            <TextField
+              placeholder="Your Message"
+              id="demo-helper-text-aligned"
+              label=" Message"
+            />
+          </form>
+          <div className="checkbox">
+            <FormGroup>
+              <FormControlLabel
+                control={<Checkbox defaultChecked />}
+                label="I'm not a robot"
+              />
+            </FormGroup>
+            <img
+              src="./image/RecaptchaLogo.png"
+              className="RecaptchaLogo-img"
+            ></img>
+          </div>
+          <div className="Message-box">
+            <button className="Message-text" onClick={handleSubmit}>
+              Send Message
+            </button>
+          </div>
+>>>>>>> 4028b5af91b466235a37a2fe1ea4ec22d8741642:src/ContactUs.jsx
         </div>
-        <div>
-          <button className="Message-box">Send Message</button>
+
+        <div className="contact-img-box">
+          <img src="./image\illustration-contact-us-1.png"></img>
         </div>
       </div>
+<<<<<<< HEAD:src/ContactUs/index.jsx
 
       <div className="contact-img-box">
         <img src="./src/assets/image/illustration-contact-us-1.png"></img>
       </div>
 
     </div>
+=======
+>>>>>>> 4028b5af91b466235a37a2fe1ea4ec22d8741642:src/ContactUs.jsx
       <div className="last-impact">
         <div className="section">
           <div className="box1">

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
 import styled from "@emotion/styled";
 import { ImArrowUpRight2 } from "react-icons/im";
@@ -30,6 +30,21 @@ const CssTextField = styled(TextField)({
   },
 });
 const ImpactCalculator = () => {
+  const [RegistrationNumber, setRegistrationNumber] = useState("");
+  const [showRnumberError, setShowRnumberError] = useState(false);
+ 
+  const handelChange = (e) => {
+    console.log("output", e.target.value);
+    if (e.target.name == "RegistrationNumber") {
+      setRegistrationNumber(e.target.value);
+    }
+  };
+  const handleSubmit = () => {
+    if(RegistrationNumber == ""){
+        setShowRnumberError(true)
+    }
+    // console.log("RegistrationNumber", RegistrationNumber);
+  };
   return (
     <div className="main-container">
       <p className="heading">Impact Calculator</p>
@@ -40,9 +55,18 @@ const ImpactCalculator = () => {
           <CssTextField
             label="Enter Registration Number*"
             id="custom-css-outlined-input"
+            name=" RegistrationNumber"
+            placeholder="e.g. “SD22SZP”"
+            onChange={handelChange}
           />
-          <button>Check Registration Number</button>
+            
+          <button onClick={handleSubmit}>Check Registration Number</button>
         </div>
+
+           {showRnumberError == true ? (
+              <p className="error-message">This feild is required</p>
+            ) : null}
+
         <div className="bottom-container">
           <div className="line-box">
             <div className="left-line"></div>

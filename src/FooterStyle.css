@@ -83,3 +83,15 @@ p {
     gap: 5px;
 }
 }
+/* Tab */
+@media (max-width:998px) {
+  .footer{
+   padding: 75px 25px;
+  }
+  .last-container{
+    padding: 0px;
+  }
+  .icon{
+    width: 20vh;
+  }
+}
