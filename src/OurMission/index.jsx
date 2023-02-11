@@ -7,8 +7,9 @@ const OurMission = () => {
         <div>
           <img
             className="left-img"
-            src="./src/assets/image/illustration-mission-page-left-1.png" />
-            {/* // src="./image/illustration-mission-page-left-1.png" */}
+            src="./vite.svg" />
+            {/* src="./src/assets/image/illustration-mission-page-left-1.png" /> */}
+            
         </div>
         <div className="Mission-container">
           <h2 className="main-heading">Our Mission</h2>
