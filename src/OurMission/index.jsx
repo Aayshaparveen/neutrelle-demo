@@ -6,7 +6,7 @@ const OurMission = () => {
         <div>
           <img
             className="left-img"
-            src={"./src/assets/image/illustration-mission-page-left-1.png"} alt="/"></img>
+            src={"./src/assets/image/illustration-mission-page-left-1.png"}></img>
             {/* // src="./image/illustration-mission-page-left-1.png" */}
         </div>
         <div className="Mission-container">
