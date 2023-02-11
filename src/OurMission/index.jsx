@@ -1,4 +1,5 @@
 import "./style.css";
+import React from "react";
 const OurMission = () => {
   return (
     <>
@@ -6,13 +7,13 @@ const OurMission = () => {
         <div>
           <img
             className="left-img"
-            src={"./src/assets/image/illustration-mission-page-left-1.png"}></img>
+            src="./src/assets/image/illustration-mission-page-left-1.png"></img>
             {/* // src="./image/illustration-mission-page-left-1.png" */}
         </div>
         <div className="Mission-container">
           <h2 className="main-heading">Our Mission</h2>
           <div className="img-box1">
-            <img src="./src/assets/image/icon-quote-left-1.png"></img>
+            <img src="./assets/image/icon-quote-left-1.png"></img>
           </div>
           <h2 className="sub-heading">
             Carbon capture and storage is extremely important, but it isnt
