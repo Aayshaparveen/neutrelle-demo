@@ -11,7 +11,7 @@ const Navbar = () => {
     <div className="navbar">
       <a href="#" onClick={() => setOpenMenu(false)}>
         <img
-          src="./src/assets/image/dark-green.png"
+          src="./public/image/dark-green.png"
           // src="https://neutrelle.co.uk/wp-content/uploads/2022/12/dark-green.png"
           className="logo"
           // alt="logo"

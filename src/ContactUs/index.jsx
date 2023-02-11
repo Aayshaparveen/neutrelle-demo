@@ -110,7 +110,7 @@ const ContactUs = () => {
               />
             </FormGroup>
             <img
-              src="./src/assets/image/RecaptchaLogo.png"
+              src="./public/image/RecaptchaLogo.png"
               className="RecaptchaLogo-img"
             ></img>
           </div>
@@ -125,7 +125,7 @@ const ContactUs = () => {
         </div> */}
 
         <div className="contact-img-box">
-          <img src="./src/assets/image/illustration-contact-us-1.png"></img>
+          <img src="./public/image/illustration-contact-us-1.png"></img>
         </div>
       </div>
 

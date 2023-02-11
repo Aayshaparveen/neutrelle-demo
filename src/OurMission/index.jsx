@@ -7,14 +7,14 @@ const OurMission = () => {
         <div>
           <img
             className="left-img"
-            src="./vite.svg" />
-            {/* src="./src/assets/image/illustration-mission-page-left-1.png" /> */}
+             src="./public/image/illustration-mission-page-left-1.png" />
+          
             
         </div>
         <div className="Mission-container">
           <h2 className="main-heading">Our Mission</h2>
           <div className="img-box1">
-            <img src="./src/assets/image/icon-quote-left-1.png"></img>
+            <img src="./public/image/icon-quote-left-1.png"></img>
           </div>
           <h2 className="sub-heading">
             Carbon capture and storage is extremely important, but it isnt
@@ -22,7 +22,7 @@ const OurMission = () => {
             biodiversity that we ought to be cherishing.
           </h2>
           <div className="img-box2">
-            <img src="./src/assets/image/icon-quote-right-1.png"></img>
+            <img src="./public/image/icon-quote-right-1.png"></img>
           </div>
           <div className="para-container">
             <p>
@@ -79,7 +79,7 @@ const OurMission = () => {
           </div>
           <div className="values-box">
             <div className="img-box">
-              <img src="./src/assets/image/values.png"></img>
+              <img src="./public/image/values.png"></img>
             </div>
             <div className="para-container4">
               <p>
@@ -117,7 +117,7 @@ const OurMission = () => {
             </p>
           </div>
           <div className="last-img-box1">
-            <img src="./src/assets/image/icon-quote-left-1.png"></img>
+            <img src="./public/image/icon-quote-left-1.png"></img>
           </div>
           <h2 className="sub-heading2">
             E fuels offer such a wonderful opportunity ... the carbon circle is
@@ -129,7 +129,7 @@ const OurMission = () => {
           <br />
           <span>- Ross Brawn</span>
           <div className="last-img-box2">
-            <img src="./src/assets/image/icon-quote-right-1.png"></img>
+            <img src="./public/image/icon-quote-right-1.png"></img>
           </div>
           <div className="para-container6">
             <p>
@@ -160,7 +160,7 @@ const OurMission = () => {
         <div>
           <img
             className="right-img"
-            src="./src/assets/image/illustration-mission-page-right.png"
+            src="./public/image/illustration-mission-page-right.png"
           ></img>
         </div>
       </div>
