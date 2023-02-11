@@ -53,12 +53,12 @@ const ContactUs = () => {
     }
   };
   const handleSubmit = () => {
-    if(FullName == ""){
-        setShowFnameError(true)
+    if (FullName == "") {
+      setShowFnameError(true);
     }
-    if(Email == ""){
-      setShowEmailError(true)
-  }
+    if (Email == "") {
+      setShowEmailError(true);
+    }
     console.log("FullName", FullName);
     console.log("Email", Email);
   };
@@ -81,10 +81,7 @@ const ContactUs = () => {
               id="custom-css-outlined-input"
               onChange={handelChange}
             />
-<<<<<<< HEAD:src/ContactUs/index.jsx
-          </FormGroup>
-          <img src="./src/assets/image/RecaptchaLogo.png" className="RecaptchaLogo-img"></img>
-=======
+
             {showFnameError == true ? (
               <p className="error-text">This feild is required</p>
             ) : null}
@@ -113,7 +110,7 @@ const ContactUs = () => {
               />
             </FormGroup>
             <img
-              src="./image/RecaptchaLogo.png"
+              src="./src/assets/image/RecaptchaLogo.png"
               className="RecaptchaLogo-img"
             ></img>
           </div>
@@ -122,22 +119,16 @@ const ContactUs = () => {
               Send Message
             </button>
           </div>
->>>>>>> 4028b5af91b466235a37a2fe1ea4ec22d8741642:src/ContactUs.jsx
         </div>
+        {/* <div className="contact-img-box">
+          <img src="./image\illustration-contact-us-1.png"></img>
+        </div> */}
 
         <div className="contact-img-box">
-          <img src="./image\illustration-contact-us-1.png"></img>
+          <img src="./src/assets/image/illustration-contact-us-1.png"></img>
         </div>
       </div>
-<<<<<<< HEAD:src/ContactUs/index.jsx
 
-      <div className="contact-img-box">
-        <img src="./src/assets/image/illustration-contact-us-1.png"></img>
-      </div>
-
-    </div>
-=======
->>>>>>> 4028b5af91b466235a37a2fe1ea4ec22d8741642:src/ContactUs.jsx
       <div className="last-impact">
         <div className="section">
           <div className="box1">
