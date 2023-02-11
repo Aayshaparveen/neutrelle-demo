@@ -6,8 +6,8 @@ const OurMission = () => {
         <div>
           <img
             className="left-img"
-            // src="./src/assets/image/illustration-mission-page-left-1.png"
-            src="./image/illustration-mission-page-left-1.png"
+            src="./src/assets/image/illustration-mission-page-left-1.png"
+            // src="./image/illustration-mission-page-left-1.png"
           ></img>
         </div>
         <div className="Mission-container">
