@@ -7,7 +7,7 @@ const OurMission = () => {
         <div>
           <img
             className="left-img"
-            src=".\src\assets\image/illustration-mission-page-left-1.png"></img>
+            src="./src/assets/image/illustration-mission-page-left-1.png"></img>
             {/* // src="./image/illustration-mission-page-left-1.png" */}
         </div>
         <div className="Mission-container">
@@ -128,7 +128,7 @@ const OurMission = () => {
           <br />
           <span>- Ross Brawn</span>
           <div className="last-img-box2">
-            <img src="./src/assets/imageicon-quote-right-1.png"></img>
+            <img src="./src/assets/image/icon-quote-right-1.png"></img>
           </div>
           <div className="para-container6">
             <p>
