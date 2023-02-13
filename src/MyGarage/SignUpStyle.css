@@ -1,74 +1,87 @@
-.MyGarage-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 170vh;
-  }
-  .SignUp-container {
-    text-align: center;
-  }
-  .SignUp-heading {
-    color: black;
-    font-size: 40px;
-    padding-bottom: 25px;
-  }
-  .SignUp-form {
-    display: flex;
-    flex-direction: column;
-    gap: 45px;
-    width: 40vw;
-    padding-top: 25px;
-  }
-  .Remember-container {
-    display: flex;
-    justify-content: space-between;
-  }
-  .rememberme-inner {
-    display: flex;
-    padding-left: 10px;
-  }
-  .remember {
-    padding-left: 15px;
-    font-size: 16px;
-    font-style: inherit;
-  }
-  .forget-password {
-    color: rgb(44, 210, 141);
-    text-decoration: none;
-  }
-  .Forget-password {
-    font-size: 16px;
-    padding: 0px;
-    font-style: normal;
-  }
-  input{
-      width: 20px;
-  }
-  .SignUp-button{
-      background-color: #2cd28d;
-      border: 1px;
-      padding: 18px 15px;
-      border-radius: 0px 20px;
-      font-size: 1.2vw;
-      cursor: pointer;
-  }
-  .account{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  }
-  .account-text{
-      color: black;
-      font-size: 17px;
-  }
-  .SignIn-link{
-      color: #2cd28d;
-      font-size: 17px;
-  }
-  .error-text{
-      color: red;
-      text-align: right;
-      font-size: 10px;
-      padding: 0px;
-    }
-  
+.MyGarage-container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 145vh;
+}
+.SignUp-container {
+  text-align: center;
+  /* padding-top: 260px; */
+}
+.SignUp-heading {
+  color: black;
+  font-size: 40px;
+  padding-bottom: 25px;
+}
+.SignUp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 40vw;
+  padding-top: 25px;
+}
+.Remember-container {
+  display: flex;
+  justify-content: space-between;
+}
+.rememberme-inner {
+  display: flex;
+  padding-left: 10px;
+}
+.remember {
+  padding-left: 15px;
+  font-size: 16px;
+  font-style: inherit;
+}
+.forget-password {
+  color: rgb(44, 210, 141);
+  text-decoration: none;
+}
+.Forget-password {
+  font-size: 16px;
+  padding: 0px;
+  font-style: normal;
+}
+input {
+  width: 20px;
+}
+.SignUp-button {
+  background-color: #2cd28d;
+  border: 1px;
+  padding: 18px 15px;
+  border-radius: 0px 20px;
+  font-size: 1.2vw;
+  cursor: pointer;
+}
+.account {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.account-text {
+  color: black;
+  font-size: 17px;
+}
+.SignIn-link {
+  color: #2cd28d;
+  font-size: 17px;
+}
+.error-text {
+  color: red;
+  text-align: right;
+  font-size: 10px;
+  padding: 0px;
+}
+.Terms-message {
+  color: black;
+  font-size: 10px;
+}
+.Link {
+  font-size: 10px;
+  color: black;
+  text-decoration: underline;
+  padding: 0px;
+  font-style: normal;
+  cursor: pointer;
+  font-weight: bold;
+}

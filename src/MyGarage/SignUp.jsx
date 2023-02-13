@@ -28,35 +28,60 @@ const CssTextField = styled(TextField)({
   },
 });
 function SignUp() {
+  const [FullName, setFullName] = useState("");
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
+  const [MobileNumber, setMobileNumber] = useState("");
+  const [showFnameError, setShowFnameError] = useState(false);
   const [showEmailError, setShowEmailError] = useState(false);
   const [showPasswordError, setShowPasswordError] = useState(false);
+  const [showMobileNumberError, setShowMobileNumberError] = useState(false);
 
   const handelChange = (e) => {
     console.log("output", e.target.value);
+    if (e.target.name == "FullName") {
+      setFullName(e.target.value);
+    }
     if (e.target.name == "Email") {
       setEmail(e.target.value);
     }
     if (e.target.name == "Password") {
       setPassword(e.target.value);
     }
+    if (e.target.name == "MobileNumber") {
+      setMobileNumber(e.target.value);
+    }
   };
   const handleSubmit = () => {
+    if (FullName == "") {
+      setShowFnameError(true);
+    }
     if (Email == "") {
       setShowEmailError(true);
     }
     if (Password == "") {
       setShowPasswordError(true);
     }
+    if (MobileNumber == "") {
+      setShowMobileNumberError(true);
+    }
   };
 
   return (
     <>
-      <div className="MyGarage-container">
+      <div className="MyGarage-container2">
         <div className="SignUp-container">
           <p className="SignUp-heading">Sign Up</p>
           <form className="SignUp-form">
+            <CssTextField
+              label="Full Name *"
+              name="FullName"
+              id="custom-css-outlined-input"
+              onChange={handelChange}
+            />
+            {showFnameError == true ? (
+              <p className="error-text">This feild is required</p>
+            ) : null}
             <CssTextField
               label="Email Address *"
               name="Email"
@@ -76,6 +101,18 @@ function SignUp() {
             {showPasswordError == true ? (
               <p className="error-text">This feild is required</p>
             ) : null}
+
+            <CssTextField
+              label=" Mobile Number"
+              name=" MobileNumber "
+              id="custom-css-outlined-input"
+              onChange={handelChange}
+            />
+                
+            {showMobileNumberError == true ? (
+              <p className="error-text">This feild is required</p>
+            ) : null}
+
             <div className="Remember-container">
               <div className="rememberme-inner">
                 <input
@@ -98,14 +135,17 @@ function SignUp() {
               Sign In
             </button>
             <footer>
-              <p>
+              <p className="account-text">
                 Already have an account?
-                <Link to="/MyGarage">Sign In</Link>
+                <Link to="/MyGarage" className="SignIn-link">
+                  Sign In
+                </Link>
               </p>
-              <h5>
-                By continuing you agreeing to our <span>Terms of Service</span>
-                and <span>Privancy Pollcy</span>
-              </h5>
+              <p className="Terms-message">
+                By continuing you agreeing to our{" "}
+                <span className="Link">Terms of Service</span>
+                and <span className="Link">Privancy Pollcy</span>
+              </p>
             </footer>
           </form>
         </div>

@@ -81,9 +81,14 @@ button {
   padding-right: 120px;
 }
 .arrow {
-  padding: 0px 20px;
-  font-size: 20px;
-  color: gray;
+  /* padding: 0px 20px;
+  font-size: 20px; */
+  cursor: pointer;
+  opacity: 0.5;
+}
+.arrow img:hover{
+  transform: rotate(45deg);
+  transition: all 0.3s ease 0s;
 }
 .error-message{
   color: red;

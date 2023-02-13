@@ -54,7 +54,7 @@ function SignIn() {
 
   return (
     <>
-      <div className="MyGarage-container">
+      <div className="MyGarage-container1">
         <div className="SignIn-container">
           <p className="SignIn-heading">Sign In</p>
           <form className="SignIn-form">

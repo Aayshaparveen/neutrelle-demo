@@ -1,4 +1,4 @@
-.MyGarage-container {
+.MyGarage-container1 {
   /* background-color: aqua; */
   display: flex;
   justify-content: center;
@@ -7,7 +7,7 @@
 }
 .SignIn-container {
   text-align: center;
-  /* padding-top: 300px; */
+  padding-top: 110px;
 }
 .SignIn-heading {
   color: black;

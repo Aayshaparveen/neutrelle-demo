@@ -79,7 +79,8 @@ const ImpactCalculator = () => {
             {/* <Navigate to="./Regitration"/> */}
             <a href="./Registration">Enter details manually</a>
             <p className="arrow">
-              <ImArrowUpRight2 />
+              {/* <ImArrowUpRight2 /> */}
+              <img src="./image/icon-arrow.svg"/>
             </p>
           </div>
         </div>
