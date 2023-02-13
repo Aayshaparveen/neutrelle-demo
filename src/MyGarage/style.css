@@ -1,0 +1,75 @@
+.MyGarage-container {
+  /* background-color: aqua; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120vh;
+}
+.SignIn-container {
+  text-align: center;
+  /* padding-top: 300px; */
+}
+.SignIn-heading {
+  color: black;
+  font-size: 40px;
+  padding-bottom: 25px;
+}
+.SignIn-form {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  width: 40vw;
+  padding-top: 25px;
+}
+.Remember-container {
+  display: flex;
+  justify-content: space-between;
+}
+.rememberme-inner {
+  display: flex;
+  padding-left: 10px;
+}
+.remember {
+  padding-left: 15px;
+  font-size: 16px;
+  font-style: inherit;
+}
+.forget-password {
+  color: rgb(44, 210, 141);
+  text-decoration: none;
+}
+.Forget-password {
+  font-size: 16px;
+  padding: 0px;
+  font-style: normal;
+}
+input{
+    width: 20px;
+}
+.SignIn-button{
+    background-color: #2cd28d;
+    border: 1px;
+    padding: 18px 15px;
+    border-radius: 0px 20px;
+    font-size: 1.2vw;
+    cursor: pointer;
+}
+.account{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.account-text{
+    color: black;
+    font-size: 17px;
+}
+.SignUp-button{
+    color: #2cd28d;
+    font-size: 17px;
+}
+.error-text{
+    color: red;
+    text-align: right;
+    font-size: 10px;
+    padding: 0px;
+  }
