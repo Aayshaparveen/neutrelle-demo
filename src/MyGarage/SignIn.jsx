@@ -1,7 +1,7 @@
 import React from "react";
 import "./SignInStyle.css";
 import "./SignUp"
-import './ForgotPassword';
+// import './ForgotPassword';
 
 // import "./ForgotPasswordStyle";
 import TextField from "@mui/material/TextField";
