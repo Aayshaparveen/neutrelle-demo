@@ -1,5 +1,6 @@
 import React from "react";
-import "./style.css";
+import "./SignInStyle.css";
+import "./SignUp"
 import TextField from "@mui/material/TextField";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -102,7 +103,7 @@ function SignIn() {
                 Don't have an account?
                 </p>
                 <p>
-                <Link to="SignUp" className="SignUp-button">
+                <Link to="SignUp" className="SignUp-link">
                   SignUp
                 </Link>
 

@@ -2,12 +2,16 @@ import './App.css'
 import Navbar from './Navbar'
 import OurMission from './OurMission'
 import ImpactCalculator from './ImpactCalculator';
-import MyGarage from './MyGarage';
+import MyGarage from './MyGarage/SignIn';
+import SignUp from './MyGarage/SignUp';
+import SignIn from './MyGarage/SignIn';
+
 import Blog from './Blog';
 import ContactUs from './ContactUs';
 import Footer from './Footer';
 import Registration from './Cardeatils';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 
 function App() {
  
@@ -23,7 +27,8 @@ function App() {
         <Route path='/Blog' element={<Blog/>} />
         <Route path='/ContactUs' element={<ContactUs/>} />
         <Route path='/Registration' element={<Registration/>} />
-
+        <Route  path="/MyGarage" element={<SignIn/>}/>
+      <Route  path="/MyGarage/SignUp" element={<SignUp/>}/>
       </Routes>
    <Footer/>
    </BrowserRouter>
