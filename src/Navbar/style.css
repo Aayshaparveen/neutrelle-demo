@@ -117,7 +117,7 @@ h1{
 
 @media (max-width: 600px) {
   .navbar{
-    gap: 105px;
+    gap: 75px;
   }
   .logo {
     max-width: 44vw;
@@ -188,9 +188,9 @@ h1{
 }
 
 /* // for tablet */
-@media (max-width:9000 ) {
+@media (max-width:998 ) {
   .navbar{
     padding: 2rem 3rem 0rem 1rem;
-    background-color: #2cd28d;
+    
   }
 }

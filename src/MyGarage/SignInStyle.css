@@ -34,11 +34,11 @@
   font-size: 16px;
   font-style: inherit;
 }
-.forget-password {
+/* .forget-password {
+} */
+.Forget-password {
   color: rgb(44, 210, 141);
   text-decoration: none;
-}
-.Forget-password {
   font-size: 16px;
   padding: 0px;
   font-style: normal;

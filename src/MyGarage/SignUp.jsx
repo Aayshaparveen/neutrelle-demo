@@ -108,29 +108,13 @@ function SignUp() {
               id="custom-css-outlined-input"
               onChange={handelChange}
             />
+           
                 
             {showMobileNumberError == true ? (
               <p className="error-text">This feild is required</p>
             ) : null}
 
-            <div className="Remember-container">
-              <div className="rememberme-inner">
-                <input
-                  className="PrivateSwitchBase-input"
-                  type="checkbox"
-                  //   data-indeterminate="false"
-                  //   aria-label="controlled"
-                />
-                <span className="remember">Remember me</span>
-              </div>
-              <div>
-                <a className="forget-password" href="/forgot_password">
-                  <span className="Forget-password">
-                    I've forgotten my password
-                  </span>
-                </a>
-              </div>
-            </div>
+           
             <button onClick={handleSubmit} className="SignUp-button">
               Sign In
             </button>

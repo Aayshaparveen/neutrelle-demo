@@ -1,6 +1,9 @@
 import React from "react";
 import "./SignInStyle.css";
 import "./SignUp"
+import './ForgotPassword';
+
+// import "./ForgotPasswordStyle";
 import TextField from "@mui/material/TextField";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -88,10 +91,12 @@ function SignIn() {
                 <span className="remember">Remember me</span>
               </div>
                 <div>
-                  <a className="forget-password" href="/forgot_password">
-                    <span className="Forget-password">
+                  <a className="forget-password" >
+                    
+                      <Link to="ForgotPassword" className="Forget-password">
                       I've forgotten my password
-                    </span>
+                      </Link>
+                    
                   </a>
                 </div>
             </div>

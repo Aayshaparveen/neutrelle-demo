@@ -107,6 +107,7 @@ button {
   }
   .main-container {
     max-width: 100vw;
+    height: 30vh;
   }
   .main-box {
     border-radius: 0px;
