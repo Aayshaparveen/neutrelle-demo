@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
 import styled from "@emotion/styled";
-import { ImArrowUpRight2 } from "react-icons/im";
-// import Registration from './Registration';
 import "./style.css";
 
 
@@ -79,7 +77,7 @@ const ImpactCalculator = () => {
             {/* <Navigate to="./Regitration"/> */}
             <a href="./Registration">Enter details manually</a>
             <p className="arrow">
-              {/* <ImArrowUpRight2 /> */}
+            
               <img src="./image/icon-arrow.svg"/>
             </p>
           </div>

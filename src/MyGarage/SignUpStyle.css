@@ -85,3 +85,26 @@ input {
   cursor: pointer;
   font-weight: bold;
 }
+
+/* Responsive Mobile */
+@media (max-width:600px) {
+  .MyGarage-container2{
+    height: 85vh;
+  }
+  .SignUp-form{
+    width: 95vw;
+  }
+  .SignUp-heading{
+    padding-top: 70px;
+  }
+}
+
+/* Tab */
+@media (max-width:998px) {
+  .MyGarage-container2{
+    height: 80vh;
+  }
+  .SignUp-form{
+    width: 70vw;
+  }
+}

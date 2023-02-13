@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 120vh;
+  /* height: 120vh; */
 }
 .SignIn-container {
   text-align: center;
@@ -73,3 +73,18 @@ input{
     font-size: 10px;
     padding: 0px;
   }
+/* Responsive Mobile */
+@media (max-width:600px) {
+  .SignIn-form{
+    width: 100vw;
+  }
+}
+/* Tab */
+@media (max-width:998px) {
+  .MyGarage-container1{
+    height: 80vh;
+  }
+  .SignIn-form{
+    width: 70vw;
+  }
+}
