@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import "./style.css";
 import TextField from "@mui/material/TextField";
 import styled from "@emotion/styled";
+import NativeSelect from "@mui/material/NativeSelect";
+import InputBase from "@mui/material/InputBase";
 // import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
@@ -51,11 +53,28 @@ export default function ControlledOpenSelect() {
   const handleOpen = () => {
     setOpen(true);
   };
-
-  // function BasicDatePicker() {
   const [value, setValue] = React.useState(null);
-  // }
-  // const Registration = () => {
+
+  const BootstrapInput = styled(InputBase)(() => ({
+    "label + &": {
+      // marginTop: theme.spacing(3),
+    },
+    "& .MuiInputBase-input": {
+      borderRadius: 4,
+      position: "relative",
+      // backgroundColor: theme.palette.background.paper,
+      border: "1px solid #ced4da",
+      fontSize: 16,
+      padding: "10px 26px 10px 12px",
+      // transition: theme.transitions.create(['border-color', 'box-shadow']),
+      "&:focus": {
+        borderRadius: 4,
+        borderColor: "#80bdff",
+        boxShadow: "0 0 0 0.2rem rgba(0,123,255,.25)",
+      },
+    },
+  }));
+
   return (
     <div className="main-container2">
       <p className="heading2">Impact Calculator</p>
@@ -70,7 +89,7 @@ export default function ControlledOpenSelect() {
           />
         </div>
         <div className="details-box">
-          <p className="Registration-title">Car Basic Details</p>
+          <p className="Basic-title">Car Basic Details</p>
           <div className="Two-col">
             <div className="col-1">
               <FormControl sx={{ m: 1, minWidth: 120 }}>
@@ -104,6 +123,102 @@ export default function ControlledOpenSelect() {
               </LocalizationProvider>
             </div>
           </div>
+          <div className="variant-box">
+            <p className="variant-heading">Variant</p>
+            <div className="V-box">
+            <FormControl sx={{ m: 1, minWidth: 120 }}>
+              <Select
+                value={age}
+                onChange={handleChange}
+                displayEmpty
+                inputProps={{ "aria-label": "Without label" }}
+              >
+                <MenuItem value="">
+                  <em>Other</em>
+                </MenuItem>
+                <MenuItem value={1}>Petrol</MenuItem>
+                <MenuItem value={2}>Diesel</MenuItem>
+                <MenuItem value={3}>Electric</MenuItem>
+                <MenuItem value={3}>Petrol(MHEV)</MenuItem>
+                <MenuItem value={3}>Diesel(MHEV)</MenuItem>
+              </Select>
+            </FormControl>
+            </div>
+          </div>
+          <div className="Fuel-box">
+            <p className="Fuel-heading">Fuel&Mileage</p>
+            <div className="Two-col-1">
+              <div className="F-col1">
+                <TextField
+                  id="outlined-basic"
+                  label="Fuel Economy*"
+                  variant="outlined"
+                />
+              </div>
+              <div className="F-col2">
+                <FormControl sx={{ m: 1 }} variant="standard">
+                  {/* <InputLabel htmlFor="demo-customized-select-native">
+                  Age
+                </InputLabel> */}
+                  <NativeSelect
+                    id="demo-customized-select-native"
+                    value={age}
+                    onChange={handleChange}
+                    input={<BootstrapInput />}
+                  >
+                    {/* <option aria-label="None" value="" /> */}
+                    <option value={1}>Mpg</option>
+                    <option value={2}>Kmpl</option>
+                  </NativeSelect>
+                </FormControl>
+              </div>
+            </div>
+            <div className="Two-col-2">
+              <div className="F-col1">
+                <TextField
+                  id="outlined-basic"
+                  label="Mileage*"
+                  variant="outlined"
+                />
+              </div>
+              <div className="F-col2">
+                <FormControl sx={{ m: 1 }} variant="standard">
+                  {/* <InputLabel htmlFor="demo-customized-select-native">
+                  Age
+                </InputLabel> */}
+                  <NativeSelect
+                    id="demo-customized-select-native"
+                    value={age}
+                    onChange={handleChange}
+                    input={<BootstrapInput />}
+                  >
+                    {/* <option aria-label="None" value="" /> */}
+                    <option value={1}>Miles</option>
+                    <option value={2}>Km</option>
+                  </NativeSelect>
+                </FormControl>
+              </div>
+            </div>
+          </div>
+          <div className="btn">
+            <button className="impact-btn">Know your Impact</button>
+          </div>
+          <div className="bottom-container">
+          <div className="line-box">
+            <div className="left-line"></div>
+            <div className="text-div">
+              <p>OR</p>
+            </div>
+            <div className="right-line"></div>
+          </div>
+          <div className="details">
+            <a href="./ImpactCalculator">Find your vehicle</a>
+            <p className="arrow">
+            
+              <img src="./image/icon-arrow.svg"/>
+            </p>
+          </div>
+        </div>
         </div>
       </div>
     </div>

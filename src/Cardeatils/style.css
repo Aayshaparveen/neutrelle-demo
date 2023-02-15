@@ -15,6 +15,10 @@
   border-radius: 0px 50px;
   border: 1px solid rgb(236 230 230);
   padding: 3%;
+ 
+}
+.details-box{
+    padding-top: 25px;
 }
 .title2 {
   font-size: 1.5rem;
@@ -36,6 +40,11 @@
   color: black;
   font-size: 16px;
   padding: 0px;
+}
+.Basic-title{
+  color: black;
+    font-size: 16px;
+    padding: 0px 0px 0px 11px;
 }
 #custom-css-outlined-input{
   padding-right: 120px;
@@ -78,8 +87,86 @@ em{
 .col-1 .css-1869usk-MuiFormControl-root{
   min-width: 295px;
 }
+.col-1 .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
+  border-radius: 0px 20px;
+}
+.col-2 .css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root {
+  border-radius: 0px 20px;
+  
+}
 .Two-col{
   display: flex;
   align-items: center;
  
+}
+.css-1u3bzj6-MuiFormControl-root-MuiTextField-root{
+  width: 20vw;
+}
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
+  border-radius: 0px 20px !important;
+}
+.Fuel-box{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 30px;
+}
+.variant-box{
+  padding-top: 30px;
+}
+.variant-heading{
+  color: black;
+  padding: 0px 0px 0px 9px;
+  font-size: 16px;
+}
+.V-box .css-1869usk-MuiFormControl-root{
+  min-width: 290px;
+}
+.V-box .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root{
+  border-radius: 0px 20px;
+}
+.Fuel-heading{
+  color: black;
+  padding: 0px 0px 0px 9px;
+  font-size: 16px;
+}
+.Two-col-1{
+  display: flex;
+  align-items: center;
+}
+.Two-col-2{
+  display: flex;
+  align-items: center;
+}
+.F-col1 .css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+  width: 30vw;
+}
+.F-col2 .css-1kpyfua-MuiInputBase-root {
+  width: 15vw;
+}
+.F-col2 .css-1kpyfua-MuiInputBase-root .MuiInputBase-input {
+  border-radius: 0px 20px;
+  padding: 18px 0px 18px 15px
+}
+.btn{
+  padding-top: 30px;
+}
+.impact-btn{
+  background-color: #2cd28d;
+    border: 1px;
+    padding: 15px 33px;
+    border-radius: 0px 20px;
+    font-size: 1.2vw;
+    cursor: pointer;
+}
+.line-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 35px;
+}
+.details {
+  padding: 10px 0px 0px 0px;
+  display: flex;
+  align-items: center;
 }

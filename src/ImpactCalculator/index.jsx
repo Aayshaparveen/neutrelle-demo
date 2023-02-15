@@ -74,7 +74,6 @@ const ImpactCalculator = () => {
             <div className="right-line"></div>
           </div>
           <div className="details">
-            {/* <Navigate to="./Regitration"/> */}
             <a href="./Registration">Enter details manually</a>
             <p className="arrow">
             
