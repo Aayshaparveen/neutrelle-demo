@@ -33,25 +33,37 @@ const CssTextField = styled(TextField)({
 });
 function SignIn() {
   const [Email, setEmail] = useState("");
-  const [Password, setPassword] = useState("");
   const [showEmailError, setShowEmailError] = useState(false);
+ 
+  const [Password, setPassword] = useState("");
+  const [PasswordErrorMsg, setPasswordErrorMsg] = useState("");
   const [showPasswordError, setShowPasswordError] = useState(false);
 
   const handelChange = (e) => {
     console.log("output", e.target.value);
     if (e.target.name == "Email") {
       setEmail(e.target.value);
+      setShowEmailError(false);
+
     }
     if (e.target.name == "Password") {
       setPassword(e.target.value);
+       setPasswordErrorMsg("");
+      setShowPasswordError(false);
     }
   };
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault()
     if (Email == "") {
       setShowEmailError(true);
     }
     if (Password == "") {
       setShowPasswordError(true);
+      setPasswordErrorMsg("Password feild is required");
+    }
+    if(Password.length <8 && Password.length > 0){
+    setShowPasswordError(true);
+    setPasswordErrorMsg("Password must be alteast 8 characters");
     }
   };
 
@@ -78,7 +90,7 @@ function SignIn() {
               onChange={handelChange}
             />
             {showPasswordError == true ? (
-              <p className="error-text">This feild is required</p>
+              <p className="error-text">{PasswordErrorMsg}</p>
             ) : null}
             <div className="Remember-container">
               <div className="rememberme-inner">

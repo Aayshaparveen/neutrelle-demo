@@ -36,12 +36,12 @@ function SignUp() {
   const [showEmailError, setShowEmailError] = useState(false);
 
   const [Password, setPassword] = useState("");
-  const [showPasswordError, setShowPasswordError] = useState(false);
   const [PasswordErrorMsg, setPasswordErrorMsg] = useState("");
+  const [showPasswordError, setShowPasswordError] = useState(false);
   
-  const [MobileNumber, setMobileNumber] = useState("");
-  const [showMobileNumberError, setShowMobileNumberError] = useState(false);
-  const [MobileNumberErrorMsg, setMobileNumberErrorMsg] = useState("");
+  const [PhoneNo, setPhoneNo] = useState("");
+  const [PhoneNoErrorMsg, setPhoneNoErrorMsg] = useState("");
+  const [showPhoneNoError, setShowPhoneNoError] = useState(false);
 
   const handelChange = (e) => {
     console.log("output", e.target.value);
@@ -58,10 +58,10 @@ function SignUp() {
       setPasswordErrorMsg("");
       setShowPasswordError(false);
     }
-    if (e.target.name == "MobileNumber") {
-      setMobileNumber(e.target.value);
-      setMobileNumberErrorMsg("");
-      setShowMobileNumberError(false);
+    if (e.target.name == "PhoneNo") {
+      setPhoneNo(e.target.value);
+      setPhoneNoErrorMsg("");
+      setShowPhoneNoError(false);
     }
   };
   const handleSubmit = (e) => {
@@ -80,9 +80,13 @@ function SignUp() {
     setShowPasswordError(true);
     setPasswordErrorMsg("Password must be alteast 8 characters");
     }
-    if (MobileNumber == "") {
-      setShowMobileNumberError(true);
-      setMobileNumberErrorMsg("Mobile Number is required");
+    if (PhoneNo == "") {
+      setShowPhoneNoError(true);
+      setPhoneNoErrorMsg("Phone Number is required");
+    }
+    if(PhoneNo.length < 10 && PhoneNo.length > 0){
+       setShowPhoneNoError(true);
+       setPhoneNoErrorMsg("Phone No is invalid")
     }
    
   };
@@ -124,19 +128,20 @@ function SignUp() {
 
             <CssTextField
               label=" Mobile Number"
-              name=" MobileNumber "
+              name=" PhoneNo "
               id="custom-css-outlined-input"
               onChange={handelChange}
-              type="text"
+              // type="text"
               InputProps={{
                 startAdornment: <InputAdornment position="start">
                    +44
                    </InputAdornment>,
               }}
-            />     
-            {showMobileNumberError == true ? (
-              <p className="error-text">{MobileNumberErrorMsg}</p>
-            ) : null}
+              />
+              {showPhoneNoError == true ? (
+                       <p className="error-text">{PhoneNoErrorMsg}</p>
+                     ) : null}
+     
 
            
             <button onClick={handleSubmit} className="SignUp-button">

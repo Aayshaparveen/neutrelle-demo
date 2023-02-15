@@ -39,17 +39,21 @@ const CssTextField = styled(TextField)({
 />;
 const ContactUs = () => {
   const [FullName, setFullName] = useState("");
-  const [Email, setEmail] = useState("");
   const [showFnameError, setShowFnameError] = useState(false);
+  
+  const [Email, setEmail] = useState("");
   const [showEmailError, setShowEmailError] = useState(false);
 
   const handelChange = (e) => {
     console.log("output", e.target.value);
     if (e.target.name == "FullName") {
       setFullName(e.target.value);
+      setShowFnameError(false);
     }
     if (e.target.name == "Email") {
       setEmail(e.target.value);
+      setShowEmailError(false);
+    
     }
   };
   const handleSubmit = () => {
