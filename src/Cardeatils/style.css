@@ -83,6 +83,8 @@
 }
 em{
   font-style: normal;
+  color: gray;
+    font-weight: normal;
 }
 .col-1 .css-1869usk-MuiFormControl-root{
   min-width: 295px;
