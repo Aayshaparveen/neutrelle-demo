@@ -62,7 +62,7 @@ function SignIn() {
           <p className="SignIn-heading">Sign In</p>
           <form className="SignIn-form">
             <CssTextField
-              label="Email Address *"
+              label="Email Address"
               name="Email"
               id="custom-css-outlined-input"
               onChange={handelChange}
@@ -72,7 +72,7 @@ function SignIn() {
             ) : null}
 
             <CssTextField
-              label="Password *"
+              label="Password"
               name="Password"
               id="custom-css-outlined-input"
               onChange={handelChange}
@@ -91,13 +91,11 @@ function SignIn() {
                 <span className="remember">Remember me</span>
               </div>
                 <div>
-                  <a className="forget-password" >
                     
                       <Link to="ForgotPassword" className="Forget-password">
                       I've forgotten my password
                       </Link>
                     
-                  </a>
                 </div>
             </div>
             <button onClick={handleSubmit} className="SignIn-button">

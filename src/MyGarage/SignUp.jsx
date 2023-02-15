@@ -4,6 +4,7 @@ import TextField from "@mui/material/TextField";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import styled from "@emotion/styled";
+import InputAdornment from "@mui/material/InputAdornment";
 const CssTextField = styled(TextField)({
   "& label.Mui-focused": {
     color: "gray",
@@ -29,30 +30,42 @@ const CssTextField = styled(TextField)({
 });
 function SignUp() {
   const [FullName, setFullName] = useState("");
-  const [Email, setEmail] = useState("");
-  const [Password, setPassword] = useState("");
-  const [MobileNumber, setMobileNumber] = useState("");
   const [showFnameError, setShowFnameError] = useState(false);
+
+  const [Email, setEmail] = useState("");
   const [showEmailError, setShowEmailError] = useState(false);
+
+  const [Password, setPassword] = useState("");
   const [showPasswordError, setShowPasswordError] = useState(false);
+  const [PasswordErrorMsg, setPasswordErrorMsg] = useState("");
+  
+  const [MobileNumber, setMobileNumber] = useState("");
   const [showMobileNumberError, setShowMobileNumberError] = useState(false);
+  const [MobileNumberErrorMsg, setMobileNumberErrorMsg] = useState("");
 
   const handelChange = (e) => {
     console.log("output", e.target.value);
     if (e.target.name == "FullName") {
       setFullName(e.target.value);
+      setShowFnameError(false);
     }
     if (e.target.name == "Email") {
       setEmail(e.target.value);
+      setShowEmailError(false);
     }
     if (e.target.name == "Password") {
       setPassword(e.target.value);
+      setPasswordErrorMsg("");
+      setShowPasswordError(false);
     }
     if (e.target.name == "MobileNumber") {
       setMobileNumber(e.target.value);
+      setMobileNumberErrorMsg("");
+      setShowMobileNumberError(false);
     }
   };
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault()
     if (FullName == "") {
       setShowFnameError(true);
     }
@@ -61,10 +74,17 @@ function SignUp() {
     }
     if (Password == "") {
       setShowPasswordError(true);
+      setPasswordErrorMsg("Password feild is required");
+    }
+    if(Password.length <8 && Password.length > 0){
+    setShowPasswordError(true);
+    setPasswordErrorMsg("Password must be alteast 8 characters");
     }
     if (MobileNumber == "") {
       setShowMobileNumberError(true);
+      setMobileNumberErrorMsg("Mobile Number is required");
     }
+   
   };
 
   return (
@@ -99,7 +119,7 @@ function SignUp() {
               onChange={handelChange}
             />
             {showPasswordError == true ? (
-              <p className="error-text">This feild is required</p>
+              <p className="error-text">{PasswordErrorMsg}</p>
             ) : null}
 
             <CssTextField
@@ -107,11 +127,15 @@ function SignUp() {
               name=" MobileNumber "
               id="custom-css-outlined-input"
               onChange={handelChange}
-            />
-           
-                
+              type="text"
+              InputProps={{
+                startAdornment: <InputAdornment position="start">
+                   +44
+                   </InputAdornment>,
+              }}
+            />     
             {showMobileNumberError == true ? (
-              <p className="error-text">This feild is required</p>
+              <p className="error-text">{MobileNumberErrorMsg}</p>
             ) : null}
 
            

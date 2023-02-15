@@ -65,12 +65,13 @@ export default function ControlledOpenSelect() {
         <div className="details-box">
           <p className="Registration-title">Car Basic Details</p>
           <div className="car-deatils">
-            <div>
+            {/* <div>
               <FormControl sx={{ m: 1, minWidth: 120, color: "gray" }}>
                 <InputLabel id="demo-controlled-open-select-label">
                   Make
                 </InputLabel>
                 <Select
+                
                   labelId="demo-controlled-open-select-label"
                   id="demo-controlled-open-select"
                   open={open}
@@ -81,9 +82,7 @@ export default function ControlledOpenSelect() {
                   placeholder="Select One"
                   onChange={handleChange}
                 >
-                  {/* <MenuItem value="">
-            <em>None</em>
-          </MenuItem> */}
+                 
 
                   <MenuItem> Abarth</MenuItem>
                   <MenuItem>AC</MenuItem>
@@ -126,7 +125,27 @@ export default function ControlledOpenSelect() {
                   <MenuItem> Zenvo</MenuItem>
                 </Select>
               </FormControl>
-            </div>
+            </div> */}
+           <FormControl sx={{ m: 1, minWidth: 120 }}>
+        <Select
+          value={age}
+          onChange={handleChange}
+          displayEmpty
+          inputProps={{ 'aria-label': 'Without label' }}
+        >
+          <MenuItem value="">
+            <em>Make</em>
+          </MenuItem>
+          <MenuItem value={1}>Abarth</MenuItem>
+          <MenuItem value={2}>Bentley</MenuItem>
+          <MenuItem value={3}>Dodge</MenuItem>
+          <MenuItem value={3}>Infiniti</MenuItem>
+          <MenuItem value={3}>Volv</MenuItem>
+          
+
+        </Select>
+        {/* <FormHelperText>Without label</FormHelperText> */}
+        </FormControl>
           </div>
         </div>
       </div>

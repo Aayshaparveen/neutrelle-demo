@@ -75,7 +75,7 @@ const ContactUs = () => {
           </p>
           <form>
             <CssTextField
-              label="Your Name *"
+              label="Your Name"
               name="FullName"
               placeholder="Full Name"
               id="custom-css-outlined-input"
