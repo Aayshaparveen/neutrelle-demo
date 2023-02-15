@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.css";
 import TextField from "@mui/material/TextField";
 import styled from "@emotion/styled";
-import InputLabel from "@mui/material/InputLabel";
+// import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
+
 // import Button from '@mui/material/Button';
 
 const CssTextField = styled(TextField)({
@@ -48,6 +52,9 @@ export default function ControlledOpenSelect() {
     setOpen(true);
   };
 
+  // function BasicDatePicker() {
+  const [value, setValue] = React.useState(null);
+  // }
   // const Registration = () => {
   return (
     <div className="main-container2">
@@ -64,88 +71,38 @@ export default function ControlledOpenSelect() {
         </div>
         <div className="details-box">
           <p className="Registration-title">Car Basic Details</p>
-          <div className="car-deatils">
-            {/* <div>
-              <FormControl sx={{ m: 1, minWidth: 120, color: "gray" }}>
-                <InputLabel id="demo-controlled-open-select-label">
-                  Make
-                </InputLabel>
+          <div className="Two-col">
+            <div className="col-1">
+              <FormControl sx={{ m: 1, minWidth: 120 }}>
                 <Select
-                
-                  labelId="demo-controlled-open-select-label"
-                  id="demo-controlled-open-select"
-                  open={open}
-                  onClose={handleClose}
-                  onOpen={handleOpen}
                   value={age}
-                  label="Age"
-                  placeholder="Select One"
                   onChange={handleChange}
+                  displayEmpty
+                  inputProps={{ "aria-label": "Without label" }}
                 >
-                 
-
-                  <MenuItem> Abarth</MenuItem>
-                  <MenuItem>AC</MenuItem>
-
-                  <MenuItem>Ariel</MenuItem>
-                  <MenuItem>Aston Martin</MenuItem>
-                  <MenuItem>Audi</MenuItem>
-                  <MenuItem>BAC</MenuItem>
-                  <MenuItem> Bentley</MenuItem>
-                  <MenuItem>BMW</MenuItem>
-                  <MenuItem>Chevrolet</MenuItem>
-                  <MenuItem>Chrysler</MenuItem>
-                  <MenuItem> Citroen</MenuItem>
-                  <MenuItem> Dacia</MenuItem>
-                  <MenuItem>Dodge</MenuItem>
-                  <MenuItem>DS</MenuItem>
-                  <MenuItem>Ferrari</MenuItem>
-                  <MenuItem>Fiat</MenuItem>
-                  <MenuItem>Fisker</MenuItem>
-                  <MenuItem>Ford</MenuItem>
-                  <MenuItem>Ginetta</MenuItem>
-                  <MenuItem>GMC</MenuItem>
-                  <MenuItem>Holden</MenuItem>
-                  <MenuItem>Honda</MenuItem>
-                  <MenuItem>Hyundai</MenuItem>
-                  <MenuItem>Infiniti</MenuItem>
-                  <MenuItem>Isuzu</MenuItem>
-                  <MenuItem>Jaguar</MenuItem>
-                  <MenuItem>Jeep</MenuItem>
-                  <MenuItem> Renault</MenuItem>
-                  <MenuItem> Rimac</MenuItem>
-                  <MenuItem> Rivian</MenuItem>
-                  <MenuItem> ROVER</MenuItem>
-                  <MenuItem> Rolls Royce</MenuItem>
-                  <MenuItem> RUF</MenuItem>
-                  <MenuItem> Saab</MenuItem>
-                  <MenuItem>Vauxhall</MenuItem>
-                  <MenuItem> Volvo</MenuItem>
-                  <MenuItem> Volkswagen</MenuItem>
-                  <MenuItem> Zenvo</MenuItem>
+                  <MenuItem value="">
+                    <em>Make</em>
+                  </MenuItem>
+                  <MenuItem value={1}>Abarth</MenuItem>
+                  <MenuItem value={2}>Bentley</MenuItem>
+                  <MenuItem value={3}>Dodge</MenuItem>
+                  <MenuItem value={3}>Infiniti</MenuItem>
+                  <MenuItem value={3}>Volv</MenuItem>
                 </Select>
               </FormControl>
-            </div> */}
-           <FormControl sx={{ m: 1, minWidth: 120 }}>
-        <Select
-          value={age}
-          onChange={handleChange}
-          displayEmpty
-          inputProps={{ 'aria-label': 'Without label' }}
-        >
-          <MenuItem value="">
-            <em>Make</em>
-          </MenuItem>
-          <MenuItem value={1}>Abarth</MenuItem>
-          <MenuItem value={2}>Bentley</MenuItem>
-          <MenuItem value={3}>Dodge</MenuItem>
-          <MenuItem value={3}>Infiniti</MenuItem>
-          <MenuItem value={3}>Volv</MenuItem>
-          
-
-        </Select>
-        {/* <FormHelperText>Without label</FormHelperText> */}
-        </FormControl>
+            </div>
+            <div className="col-2">
+              <LocalizationProvider dateAdapter={AdapterDayjs}>
+                <DatePicker
+                  label="Manufacture Year"
+                  value={value}
+                  onChange={(newValue) => {
+                    setValue(newValue);
+                  }}
+                  renderInput={(params) => <TextField {...params} />}
+                />
+              </LocalizationProvider>
+            </div>
           </div>
         </div>
       </div>

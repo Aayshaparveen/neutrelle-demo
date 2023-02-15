@@ -38,7 +38,7 @@ function SignUp() {
   const [Password, setPassword] = useState("");
   const [PasswordErrorMsg, setPasswordErrorMsg] = useState("");
   const [showPasswordError, setShowPasswordError] = useState(false);
-  
+
   const [PhoneNo, setPhoneNo] = useState("");
   const [PhoneNoErrorMsg, setPhoneNoErrorMsg] = useState("");
   const [showPhoneNoError, setShowPhoneNoError] = useState(false);
@@ -65,7 +65,7 @@ function SignUp() {
     }
   };
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     if (FullName == "") {
       setShowFnameError(true);
     }
@@ -76,19 +76,26 @@ function SignUp() {
       setShowPasswordError(true);
       setPasswordErrorMsg("Password feild is required");
     }
-    if(Password.length <8 && Password.length > 0){
-    setShowPasswordError(true);
-    setPasswordErrorMsg("Password must be alteast 8 characters");
+    if (Password.length < 8 && Password.length > 0) {
+      setShowPasswordError(true);
+      setPasswordErrorMsg("Password must be alteast 8 characters");
     }
     if (PhoneNo == "") {
       setShowPhoneNoError(true);
       setPhoneNoErrorMsg("Phone Number is required");
     }
-    if(PhoneNo.length < 10 && PhoneNo.length > 0){
-       setShowPhoneNoError(true);
-       setPhoneNoErrorMsg("Phone No is invalid")
+    
+    if (PhoneNo.startsWith("0")) {
+      if ((PhoneNo.length < 11 && PhoneNo.length > 0) || PhoneNo.length > 11) {
+        setShowPhoneNoError(true);
+        setPasswordErrorMsg("Phone no is invalid");
+      }
+    } else {
+      if ((PhoneNo.length < 10 && PhoneNo.length > 0) || PhoneNo.length > 0) {
+        setShowPhoneNoError(true);
+        setPhoneNoErrorMsg("Phone no is invalid");
+      }
     }
-   
   };
 
   return (
@@ -133,17 +140,15 @@ function SignUp() {
               onChange={handelChange}
               // type="text"
               InputProps={{
-                startAdornment: <InputAdornment position="start">
-                   +44
-                   </InputAdornment>,
+                startAdornment: (
+                  <InputAdornment position="start">+44</InputAdornment>
+                ),
               }}
-              />
-              {showPhoneNoError == true ? (
-                       <p className="error-text">{PhoneNoErrorMsg}</p>
-                     ) : null}
-     
+            />
+            {showPhoneNoError == true ? (
+              <p className="error-text">{PhoneNoErrorMsg}</p>
+            ) : null}
 
-           
             <button onClick={handleSubmit} className="SignUp-button">
               Sign In
             </button>

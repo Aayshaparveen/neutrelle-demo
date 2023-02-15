@@ -110,9 +110,11 @@ function SignIn() {
                     
                 </div>
             </div>
-            <button onClick={handleSubmit} className="SignIn-button">
+            <div className="SignIn-button">
+            <button onClick={handleSubmit} >
               Sign In
             </button>
+            </div>
             <div className="account">
               <p className="account-text">
                 Don't have an account?

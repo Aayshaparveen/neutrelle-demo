@@ -75,3 +75,11 @@
 em{
   font-style: normal;
 }
+.col-1 .css-1869usk-MuiFormControl-root{
+  min-width: 295px;
+}
+.Two-col{
+  display: flex;
+  align-items: center;
+ 
+}
