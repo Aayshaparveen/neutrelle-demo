@@ -83,7 +83,7 @@
 }
 em{
   font-style: normal;
-  color: gray;
+  /* color: gray; */
     font-weight: normal;
 }
 .col-1 .css-1869usk-MuiFormControl-root{
@@ -92,9 +92,18 @@ em{
 .col-1 .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
   border-radius: 0px 20px;
 }
+.col-1 .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root.Mui-focused .MuiOutlinedInput-notchedOutline 
+  {
+    border-color: gray;
+    border-width: 1px;
+  }
 .col-2 .css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root {
   border-radius: 0px 20px;
-  
+  border-color: greenyellow;
+}
+ .col-2.css-o9k5xi-MuiInputBase-root.MuiOutlinedInput-notchedOutline {
+  border-color: gray;
+  border-width: 1px;
 }
 .Two-col{
   display: flex;
@@ -121,6 +130,10 @@ em{
   padding: 0px 0px 0px 9px;
   font-size: 16px;
 }
+.V-box .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: gray;
+  border-width: 1px;
+}
 .V-box .css-1869usk-MuiFormControl-root{
   min-width: 290px;
 }
@@ -131,6 +144,15 @@ em{
   color: black;
   padding: 0px 0px 0px 9px;
   font-size: 16px;
+}
+.F-col1 .css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline{
+border-color: gray;
+border-width: 1px;
+}
+.css-1kpyfua-MuiInputBase-root.MuiInputBase-input { 
+  border-radius: 0px !important ;
+  border-color: gray;
+  box-shadow: 0rem;
 }
 .Two-col-1{
   display: flex;
@@ -146,9 +168,9 @@ em{
 .F-col2 .css-1kpyfua-MuiInputBase-root {
   width: 15vw;
 }
-.F-col2 .css-1kpyfua-MuiInputBase-root .MuiInputBase-input {
-  border-radius: 0px 20px;
-  padding: 18px 0px 18px 15px
+.css-m3l1ig-MuiNativeSelect-select-MuiInputBase-input.css-m3l1ig-MuiNativeSelect-select-MuiInputBase-input.css-m3l1ig-MuiNativeSelect-select-MuiInputBase-input {
+  padding-right: 24px !important;
+  min-width: 140px !important;
 }
 .btn{
   padding-top: 30px;

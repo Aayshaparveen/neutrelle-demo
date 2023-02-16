@@ -1,6 +1,6 @@
 .Container {
   display: flex;
-  margin-top: 125px;
+  margin-top: 75px;
 }
 .contact-box {
   width: 579px;
@@ -88,6 +88,9 @@ form {
 .MuiFormControlLabel-root .MuiFormControlLabel-label {
   padding: 0px;
   font-style: normal;
+}
+form .css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+  width: 42vw;
 }
 .error-text{
   color: red;

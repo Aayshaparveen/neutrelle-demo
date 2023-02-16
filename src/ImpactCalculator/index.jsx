@@ -35,13 +35,14 @@ const ImpactCalculator = () => {
     console.log("output", e.target.value);
     if (e.target.name == "RegistrationNumber") {
       setRegistrationNumber(e.target.value);
+      setShowRnumberError(false);
     }
   };
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault()
     if(RegistrationNumber == ""){
         setShowRnumberError(true)
     }
-    // console.log("RegistrationNumber", RegistrationNumber);
   };
   return (
     <div className="main-container">

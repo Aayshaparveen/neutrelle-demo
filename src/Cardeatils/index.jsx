@@ -4,16 +4,14 @@ import TextField from "@mui/material/TextField";
 import styled from "@emotion/styled";
 import NativeSelect from "@mui/material/NativeSelect";
 import InputBase from "@mui/material/InputBase";
-// import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
+import InputLabel from '@mui/material/InputLabel';
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
-
-// import Button from '@mui/material/Button';
-
+import { Stack } from "@mui/system";
 const CssTextField = styled(TextField)({
   "& label.Mui-focused": {
     color: "gray",
@@ -53,27 +51,28 @@ export default function ControlledOpenSelect() {
   const handleOpen = () => {
     setOpen(true);
   };
-  const [value, setValue] = React.useState(null);
+  // const [value, setValue] = React.useState(null);
 
   const BootstrapInput = styled(InputBase)(() => ({
-    "label + &": {
-      // marginTop: theme.spacing(3),
-    },
+    "label + &": {},
     "& .MuiInputBase-input": {
-      borderRadius: 4,
+      borderRadius: "0px 20px",
       position: "relative",
-      // backgroundColor: theme.palette.background.paper,
       border: "1px solid #ced4da",
       fontSize: 16,
-      padding: "10px 26px 10px 12px",
-      // transition: theme.transitions.create(['border-color', 'box-shadow']),
+      padding: "18px 0px 18px 15px",
+      minWidth:"50px",
       "&:focus": {
-        borderRadius: 4,
-        borderColor: "#80bdff",
-        boxShadow: "0 0 0 0.2rem rgba(0,123,255,.25)",
+        borderRadius: "0px 20px",
+        // padding: "18px 0px 18px 15px",
+        // borderColor: "gray",
+        boxShadow: "0rem",
       },
     },
   }));
+    //  DatePickers() {
+    const [value, setValue] = React.useState(('2022-04-07'));
+  // }
 
   return (
     <div className="main-container2">
@@ -93,13 +92,17 @@ export default function ControlledOpenSelect() {
           <div className="Two-col">
             <div className="col-1">
               <FormControl sx={{ m: 1, minWidth: 120 }}>
+              {/* <InputLabel id="demo-simple-select-helper-label">Make</InputLabel> */}
                 <Select
+                
                   value={age}
                   onChange={handleChange}
                   displayEmpty
                   inputProps={{ "aria-label": "Without label" }}
+                  
                 >
-                  <MenuItem value="">
+                  <MenuItem value=""
+                  >
                     <em>Make</em>
                   </MenuItem>
                   <MenuItem value={1}>Abarth</MenuItem>
@@ -111,9 +114,11 @@ export default function ControlledOpenSelect() {
               </FormControl>
             </div>
             <div className="col-2">
+            <Stack>
               <LocalizationProvider dateAdapter={AdapterDayjs}>
                 <DatePicker
                   label="Manufacture Year"
+                  views={['year']}
                   value={value}
                   onChange={(newValue) => {
                     setValue(newValue);
@@ -121,28 +126,29 @@ export default function ControlledOpenSelect() {
                   renderInput={(params) => <TextField {...params} />}
                 />
               </LocalizationProvider>
+              </Stack>
             </div>
           </div>
           <div className="variant-box">
             <p className="variant-heading">Variant</p>
             <div className="V-box">
-            <FormControl sx={{ m: 1, minWidth: 120 }}>
-              <Select
-                value={age}
-                onChange={handleChange}
-                displayEmpty
-                inputProps={{ "aria-label": "Without label" }}
-              >
-                <MenuItem value="">
-                  <em>Other</em>
-                </MenuItem>
-                <MenuItem value={1}>Petrol</MenuItem>
-                <MenuItem value={2}>Diesel</MenuItem>
-                <MenuItem value={3}>Electric</MenuItem>
-                <MenuItem value={3}>Petrol(MHEV)</MenuItem>
-                <MenuItem value={3}>Diesel(MHEV)</MenuItem>
-              </Select>
-            </FormControl>
+              <FormControl sx={{ m: 1, minWidth: 120 }}>
+                <Select
+                  value={age}
+                  onChange={handleChange}
+                  displayEmpty
+                  inputProps={{ "aria-label": "Without label" }}
+                >
+                  <MenuItem value="">
+                    <em>Other</em>
+                  </MenuItem>
+                  <MenuItem value={1}>Petrol</MenuItem>
+                  <MenuItem value={2}>Diesel</MenuItem>
+                  <MenuItem value={3}>Electric</MenuItem>
+                  <MenuItem value={3}>Petrol(MHEV)</MenuItem>
+                  <MenuItem value={3}>Diesel(MHEV)</MenuItem>
+                </Select>
+              </FormControl>
             </div>
           </div>
           <div className="Fuel-box">
@@ -204,21 +210,20 @@ export default function ControlledOpenSelect() {
             <button className="impact-btn">Know your Impact</button>
           </div>
           <div className="bottom-container">
-          <div className="line-box">
-            <div className="left-line"></div>
-            <div className="text-div">
-              <p>OR</p>
+            <div className="line-box">
+              <div className="left-line"></div>
+              <div className="text-div">
+                <p>OR</p>
+              </div>
+              <div className="right-line"></div>
             </div>
-            <div className="right-line"></div>
+            <div className="details">
+              <a href="./ImpactCalculator">Find your vehicle</a>
+              <p className="arrow">
+                <img src="./image/icon-arrow.svg" />
+              </p>
+            </div>
           </div>
-          <div className="details">
-            <a href="./ImpactCalculator">Find your vehicle</a>
-            <p className="arrow">
-            
-              <img src="./image/icon-arrow.svg"/>
-            </p>
-          </div>
-        </div>
         </div>
       </div>
     </div>
