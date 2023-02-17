@@ -1,7 +1,7 @@
 .Service-container{
     background-color: white;
-    padding: 20vh 0px;
-    /* max-width: 81vw; */
+    padding: 15vh 0px;
+    margin-bottom: 30px;
     margin-top: 90px;
     margin-left: 55px;
     margin-right: 55px;
@@ -67,6 +67,10 @@ em {
     display: flex;
     flex-direction: column;
     padding-right: 85px;
-    min-width: 322px !important;
+    min-width: 340px !important;
     margin: 0px;
+    gap: 3px;
+}
+.col-2 .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
+    border-radius: 0px 20px;
 }
