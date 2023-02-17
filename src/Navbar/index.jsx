@@ -25,7 +25,7 @@ const Navbar = () => {
                 isActive ? "navbar-link bottom-dash" : "navbar-link"
               }
               onClick={() => setOpenMenu(false)}
-              to="/"
+              to="/OurMission"
               end
             >
               Our Mission

@@ -34,6 +34,7 @@ function SignUp() {
 
   const [Email, setEmail] = useState("");
   const [showEmailError, setShowEmailError] = useState(false);
+  const [EmailErrorMsg, setEmailErrorMsg] = useState("");
 
   const [Password, setPassword] = useState("");
   const [PasswordErrorMsg, setPasswordErrorMsg] = useState("");
@@ -51,6 +52,7 @@ function SignUp() {
     }
     if (e.target.name == "Email") {
       setEmail(e.target.value);
+      setEmailErrorMsg("");
       setShowEmailError(false);
     }
     if (e.target.name == "Password") {
@@ -70,7 +72,13 @@ function SignUp() {
       setShowFnameError(true);
     }
     if (Email == "") {
+      setEmailErrorMsg("This feild is required");
       setShowEmailError(true);
+    }
+    if (Email.length < 8 && Password.length > 0) {
+     
+      setShowEmailError(true);
+      setEmailErrorMsg("Enter a valid Email Address");
     }
     if (Password == "") {
       setShowPasswordError(true);
@@ -120,7 +128,7 @@ function SignUp() {
               onChange={handelChange}
             />
             {showEmailError == true ? (
-              <p className="error-text">This feild is required</p>
+              <p className="error-text">{EmailErrorMsg}</p>
             ) : null}
 
             <CssTextField

@@ -1,6 +1,6 @@
 import React from "react";
 import "./SignInStyle.css";
-import "./SignUp"
+import "./SignUp";
 // import './ForgotPassword';
 
 // import "./ForgotPasswordStyle";
@@ -34,7 +34,8 @@ const CssTextField = styled(TextField)({
 function SignIn() {
   const [Email, setEmail] = useState("");
   const [showEmailError, setShowEmailError] = useState(false);
- 
+  const [EmailErrorMsg, setEmailErrorMsg] = useState("");
+
   const [Password, setPassword] = useState("");
   const [PasswordErrorMsg, setPasswordErrorMsg] = useState("");
   const [showPasswordError, setShowPasswordError] = useState(false);
@@ -43,27 +44,34 @@ function SignIn() {
     console.log("output", e.target.value);
     if (e.target.name == "Email") {
       setEmail(e.target.value);
+      setEmailErrorMsg("");
       setShowEmailError(false);
-
     }
     if (e.target.name == "Password") {
       setPassword(e.target.value);
-       setPasswordErrorMsg("");
+      setPasswordErrorMsg("");
       setShowPasswordError(false);
     }
   };
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     if (Email == "") {
       setShowEmailError(true);
+      setEmailErrorMsg("This feild is required");
     }
+    if (Email.length < 8 && Password.length > 0) {
+     
+      setShowEmailError(true);
+      setEmailErrorMsg("Enter a valid Email Address");
+    }
+
     if (Password == "") {
       setShowPasswordError(true);
-      setPasswordErrorMsg("Password feild is required");
+      setPasswordErrorMsg("This feild is required");
     }
-    if(Password.length <8 && Password.length > 0){
-    setShowPasswordError(true);
-    setPasswordErrorMsg("Password must be alteast 8 characters");
+    if (Password.length < 8 && Password.length > 0) {
+      setShowPasswordError(true);
+      setPasswordErrorMsg("Password must be alteast 8 characters");
     }
   };
 
@@ -80,7 +88,7 @@ function SignIn() {
               onChange={handelChange}
             />
             {showEmailError == true ? (
-              <p className="error-text">This feild is required</p>
+              <p className="error-text">{EmailErrorMsg}</p>
             ) : null}
 
             <CssTextField
@@ -102,28 +110,21 @@ function SignIn() {
                 />
                 <span className="remember">Remember me</span>
               </div>
-                <div>
-                    
-                      <Link to="ForgotPassword" className="Forget-password">
-                      I've forgotten my password
-                      </Link>
-                    
-                </div>
+              <div>
+                <Link to="ForgotPassword" className="Forget-password">
+                  I've forgotten my password
+                </Link>
+              </div>
             </div>
             <div className="SignIn-button">
-            <button onClick={handleSubmit} >
-              Sign In
-            </button>
+              <button onClick={handleSubmit}>Sign In</button>
             </div>
             <div className="account">
-              <p className="account-text">
-                Don't have an account?
-                </p>
-                <p>
+              <p className="account-text">Don't have an account?</p>
+              <p>
                 <Link to="SignUp" className="SignUp-link">
                   SignUp
                 </Link>
-
               </p>
             </div>
           </form>

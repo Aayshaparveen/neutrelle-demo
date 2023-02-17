@@ -1,10 +1,12 @@
 import './App.css'
+import Home from './Home';
 import Navbar from './Navbar'
 import OurMission from './OurMission'
 import ImpactCalculator from './ImpactCalculator';
-import MyGarage from './MyGarage/SignIn';
-import SignUp from './MyGarage/SignUp';
-import SignIn from './MyGarage/SignIn';
+import MyGarage from './MyGarage';
+// import  from './pages/SignIn';
+import SignUp from './pages/SignUp';
+import SignIn from './pages/SignIn';
 import Blog from './Blog';
 import ContactUs from './ContactUs';
 import Footer from './Footer';
@@ -20,7 +22,8 @@ function App() {
    <BrowserRouter>
    <Navbar/>
       <Routes>
-        <Route path='/' element={<OurMission/>} />
+      <Route path='/' element={<Home/>} />
+        <Route path='/OurMission' element={<OurMission/>} />
         <Route path='/ImpactCalculator' element={<ImpactCalculator/>} />
         <Route path='/MyGarage' element={<MyGarage/>} />
         <Route path='/Blog' element={<Blog/>} />

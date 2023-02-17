@@ -1,0 +1,47 @@
+.mygarage-container {
+  padding: 20vh 0px;
+  max-width: 81vw;
+  margin: 0px auto;
+}
+.Top-box {
+  display: flex;
+  justify-content: space-between;
+}
+.Heading-contant1 {
+  display: flex;
+  flex-direction: column;
+}
+.My-Garage {
+  padding-left: 0px;
+  font-size: 30px;
+  font-style: normal;
+}
+.Details-of-all-of-yo {
+  padding-left: 0px;
+  font-size: 13px;
+  color: gray;
+  font-style: normal;
+}
+.Heading-contant2 {
+  display: flex;
+  align-items: center;
+}
+.heading-box {
+  display: flex;
+  flex-direction: column;
+  padding-right: 10px;
+}
+.Hey-good-morning {
+  padding-left: 0px;
+  font-size: 12px;
+  color: gray;
+  font-style: normal;
+}
+.Eva-Lee {
+  padding-left: 60px;
+  font-size: 15px;
+  font-style: normal;
+}
+.image-box img{
+    width: 50px;
+}
