@@ -6,6 +6,7 @@
 .Top-box {
   display: flex;
   justify-content: space-between;
+  padding-top: 50px;
 }
 .Heading-contant1 {
   display: flex;
@@ -44,4 +45,28 @@
 }
 .image-box img{
     width: 50px;
+}
+.Bottom-box{
+    /* width: 1180px; */
+    /* padding: 1px 41px 1px 1px; */
+    height: 727px;
+    margin: 35px 0px 0px 0px;
+    border-radius: 0px 35px;
+    border: solid 1px #e2e2e2;
+    background-color: antiquewhite;
+}
+.css-10d9dml-MuiTabs-indicator{
+    background-color: white !important;
+    width: 1px !important;
+    height: 20px !important;
+    display: none;
+}
+.Tab{
+    background-color: #e4f8e1;
+    width: 197px;
+  height: 727px;
+  border-radius: 0px 0px 0px 30px;
+}
+.css-35zqo5-MuiTabs-root {
+    padding-top: 20px;
 }

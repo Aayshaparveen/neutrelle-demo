@@ -4,7 +4,7 @@ import Navbar from './Navbar'
 import OurMission from './OurMission'
 import ImpactCalculator from './ImpactCalculator';
 import MyGarage from './MyGarage';
-// import  from './pages/SignIn';
+import ServicePage from './ServicePage';
 import SignUp from './pages/SignUp';
 import SignIn from './pages/SignIn';
 import Blog from './Blog';
@@ -31,6 +31,8 @@ function App() {
         <Route path='/Registration' element={<Registration/>} />
         <Route  path="/MyGarage" element={<SignIn/>}/>
       <Route  path="/MyGarage/SignUp" element={<SignUp/>}/>
+      <Route  path="/ServicePage" element={<ServicePage/>}/>
+
       </Routes>
    <Footer/>
    </BrowserRouter>

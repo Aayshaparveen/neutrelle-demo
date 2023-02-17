@@ -1,5 +1,6 @@
 import React from "react";
 import "./FooterStyle.css";
+import ServicePage from "./ServicePage";
 import { ImFacebook } from "react-icons/im";
 import { BsTwitter } from "react-icons/bs";
 import { AiOutlineInstagram } from "react-icons/ai";
@@ -23,7 +24,7 @@ const Footer = () => {
           {/* <h3>Privacy Policy</h3>
             <h3>Terms of Use</h3> */}
           <p className="last-para-link">
-            <a href="https://neutrelle.co.uk/privacy-policy/">Privacy Policy</a>
+            <a href="./ServicePage">Privacy Policy</a>
           </p>
           <p className="last-para-link">
             <a href="https://neutrelle.co.uk/terms-of-use/">Terms of Use</a>
