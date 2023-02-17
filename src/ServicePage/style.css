@@ -49,6 +49,11 @@ h1{
     padding: 50px 60px;
     justify-content: space-between;
 }
+em {
+    font-style: normal;
+    color: gray;
+    font-weight: normal;
+}
 .col-1{
     display: flex;
     flex-direction: column;
@@ -62,8 +67,6 @@ h1{
     display: flex;
     flex-direction: column;
     padding-right: 85px;
-}
-.css-1869usk-MuiFormControl-root{
     min-width: 322px !important;
     margin: 0px;
 }
