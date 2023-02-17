@@ -29,8 +29,8 @@ function App() {
         <Route path='/Blog' element={<Blog/>} />
         <Route path='/ContactUs' element={<ContactUs/>} />
         <Route path='/Registration' element={<Registration/>} />
-        <Route  path="/MyGarage" element={<SignIn/>}/>
-      <Route  path="/MyGarage/SignUp" element={<SignUp/>}/>
+        <Route  path="/pages/SignIn" element={<SignIn/>}/>
+      <Route  path="/pages/SignUp" element={<SignUp/>}/>
       <Route  path="/ServicePage" element={<ServicePage/>}/>
 
       </Routes>

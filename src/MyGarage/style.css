@@ -43,30 +43,52 @@
   font-size: 15px;
   font-style: normal;
 }
-.image-box img{
-    width: 50px;
+.image-box img {
+  width: 50px;
 }
-.Bottom-box{
-    /* width: 1180px; */
-    /* padding: 1px 41px 1px 1px; */
-    height: 727px;
-    margin: 35px 0px 0px 0px;
-    border-radius: 0px 35px;
-    border: solid 1px #e2e2e2;
-    background-color: antiquewhite;
+.Bottom-box {
+  height: 727px;
+  margin: 35px 0px 0px 0px;
+  border-radius: 0px 35px;
+  border: solid 1px #e2e2e2;
+  /* background-color: antiquewhite; */
 }
-.css-10d9dml-MuiTabs-indicator{
-    background-color: white !important;
-    width: 1px !important;
-    height: 20px !important;
-    display: none;
+.css-10d9dml-MuiTabs-indicator {
+  background-color: white !important;
+  width: 1px !important;
+  height: 20px !important;
+  display: none;
 }
-.Tab{
-    background-color: #e4f8e1;
-    width: 197px;
+.Tab {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #e4f8e1;
+  width: 197px;
   height: 727px;
   border-radius: 0px 0px 0px 30px;
 }
 .css-35zqo5-MuiTabs-root {
-    padding-top: 20px;
+  padding-top: 20px;
+}
+.car-icon {
+  padding-left: 30px;
+}
+.Logout {
+  display: flex;
+  color: gray;
+  gap: 10px;
+  padding-bottom: 60px;
+  padding-left: 20px;
+}
+.right-arrow {
+  width: 27px;
+  height: 24px;
+}
+.Logout p {
+  font-size: 17px;
+  padding: 0px;
+}
+.Logout-txt {
+  color: gray;
 }

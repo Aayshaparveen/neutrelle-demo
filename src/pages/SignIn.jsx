@@ -1,8 +1,7 @@
 import React from "react";
 import "./SignInStyle.css";
-import "./SignUp";
+import "../pages/SignUp";
 // import './ForgotPassword';
-
 // import "./ForgotPasswordStyle";
 import TextField from "@mui/material/TextField";
 import { Link } from "react-router-dom";
@@ -122,7 +121,7 @@ function SignIn() {
             <div className="account">
               <p className="account-text">Don't have an account?</p>
               <p>
-                <Link to="SignUp" className="SignUp-link">
+                <Link to="../pages/SignUp" className="SignUp-link">
                   SignUp
                 </Link>
               </p>

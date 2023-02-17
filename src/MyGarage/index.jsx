@@ -1,12 +1,18 @@
 import React from "react";
 import "./style.css";
+import "../pages/SignIn";
+
 import PropTypes from "prop-types";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { FaCarSide } from "react-icons/fa";
-
+import { CgBox } from "react-icons/cg";
+import {RiFileListLine} from "react-icons/ri"
+import {RiAccountBoxLine} from "react-icons/ri"
+import {BiArrowFromRight} from "react-icons/bi"
+import { Link } from "react-router-dom";
 const MyGarage = () => {
   function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -74,14 +80,22 @@ const MyGarage = () => {
               aria-label="Vertical tabs example"
               sx={{ borderRight: 1, borderColor: "divider" }}
             >
-                <div>
-
-              <FaCarSide />
-              <Tab label="My Vehicles" {...a11yProps(0)} />
-                </div>
-              <Tab label="Order" {...a11yProps(1)} />
+              <div>
+                <FaCarSide className="car-icon" />
+                <Tab label="My Vehicles" {...a11yProps(0)} />
+              </div>
+              <div>
+                <CgBox className="car-icon" />
+                <Tab label="Order" {...a11yProps(1)} />
+              </div>
+              <div>
+              <RiFileListLine className="car-icon" />
               <Tab label="Subscripitions" {...a11yProps(2)} />
+              </div>
+              <div>
+                <RiAccountBoxLine className="car-icon"/>
               <Tab label="Account" {...a11yProps(3)} />
+              </div>
             </Tabs>
             {/* <TabPanel value={value} index={0}>
         Item One
@@ -95,6 +109,14 @@ const MyGarage = () => {
       <TabPanel value={value} index={3}>
         Item Four
         </TabPanel> */}
+          <div className="Logout" >
+         < BiArrowFromRight className="right-arrow"/>
+          <p>
+                <Link to="../pages/SignIn" className="Logout-txt">
+                  Logout
+                </Link>
+              </p>
+          </div>
           </div>
         </div>
       </div>

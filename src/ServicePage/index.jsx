@@ -147,6 +147,8 @@ const Service = () => {
             </div>
           </div>
         </div>
+
+        
         <div className="Nature-box">
           <div className="Nature-heading">
             Nature of Allegation / Case Summary
