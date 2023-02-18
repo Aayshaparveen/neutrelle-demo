@@ -5,6 +5,8 @@ import TextField from "@mui/material/TextField";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
+import InputLabel from "@mui/material/InputLabel";
+
 const Service = () => {
   const CssTextField = styled(TextField)({
     "& label.Mui-focused": {
@@ -29,7 +31,15 @@ const Service = () => {
       },
     },
   });
-  const [age, setAge] = React.useState("");
+  // function ControlledOpenSelect() {
+    const [age, setAge] = React.useState("");
+    const [open, setOpen] = React.useState(false);
+
+    const handleChange = (event) => {
+      setAge(event.target.value);
+    };
+  
+  // const [age, setAge] = React.useState("");
 
   return (
     <>
@@ -52,10 +62,11 @@ const Service = () => {
             </div>
             {/* <CssTextField  id="custom-css-outlined-input" /> */}
             <div className="Category">
-              <label>Category</label>
+              <InputLabel>Category</InputLabel>
               <FormControl sx={{ m: 1, minWidth: 120 }}>
                 <Select
                   value={age}
+                  onChange={handleChange}
                   displayEmpty
                   inputProps={{ "aria-label": "Without label" }}
                 >
@@ -75,6 +86,7 @@ const Service = () => {
               <FormControl sx={{ m: 1, minWidth: 120 }}>
                 <Select
                   value={age}
+                  onChange={handleChange}
                   displayEmpty
                   inputProps={{ "aria-label": "Without label" }}
                 >
@@ -148,7 +160,6 @@ const Service = () => {
           </div>
         </div>
 
-        
         <div className="Nature-box">
           <div className="Nature-heading">
             Nature of Allegation / Case Summary
@@ -157,7 +168,7 @@ const Service = () => {
             <div className="Nature-col-1">
               <div className="Summary">
                 <label>Summary of Allegation</label>
-                <input type="text" />
+                <textarea type="text" />
               </div>
               <div className="Case">
                 <label>
@@ -205,35 +216,36 @@ const Service = () => {
               </div>
               <div className="Date-Allegend">
                 <label>Date of Allegend</label>
-                <input type="date"/>
+                <input type="date" />
               </div>
             </div>
             <div className="Nature-col-2">
-                <div className="Reported1">
-                    <label>Date Reported / Initiated</label>
-                    <input type="date"/>
-                </div>
-                <div className="Reportaing-stage">
-                    <label>Duration of Reportaing Stage (in days)</label>
-                </div>
-                <div className="Reported2">
-                    <label>Reported
-                    <select>
+              <div className="Reported1">
+                <label>Date Reported / Initiated</label>
+                <input type="date" />
+              </div>
+              <div className="Reportaing-stage">
+                <label>Duration of Reportaing Stage (in days)</label>
+              </div>
+              <div className="Reported2">
+                <label>
+                  Reported
+                  <select>
                     <option value="">Other</option>
                     <option value="">Case1</option>
                     <option value="">Case2</option>
                     <option value="">Case3</option>
                     <option value="">Case4</option>
                   </select>
-                    </label>
-                    
-                </div>
-                <div className="Complainanat">
-                    <label>Complainant Name</label>
-                    <input type="text"/>
-                </div>
-                <div className="Complainanat-Category">
-                  <label>Complainanat Category
+                </label>
+              </div>
+              <div className="Complainanat">
+                <label>Complainant Name</label>
+                <input type="text" />
+              </div>
+              <div className="Complainanat-Category">
+                <label>
+                  Complainanat Category
                   <select>
                     <option value=""></option>
                     <option value="">Category1</option>
@@ -242,11 +254,11 @@ const Service = () => {
                     <option value="">Category4</option>
                     <option value="">Category5</option>
                   </select>
-                    </label> 
-
-                </div>
-                <div className="Manager">
-                <label>HR Case Manager
+                </label>
+              </div>
+              <div className="Manager">
+                <label>
+                  HR Case Manager
                   <select>
                     <option value=""></option>
                     <option value="">Case1</option>
@@ -255,10 +267,11 @@ const Service = () => {
                     <option value="">Case4</option>
                     <option value="">Case5</option>
                   </select>
-                    </label> 
-                </div>
-                <div className="Informal">
-                <label>Informal Case Action
+                </label>
+              </div>
+              <div className="Informal">
+                <label>
+                  Informal Case Action
                   <select>
                     <option value=""></option>
                     <option value="">Case1</option>
@@ -267,8 +280,8 @@ const Service = () => {
                     <option value="">Case4</option>
                     <option value="">Case5</option>
                   </select>
-                    </label> 
-                </div>
+                </label>
+              </div>
             </div>
           </div>
         </div>

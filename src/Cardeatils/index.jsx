@@ -44,13 +44,13 @@ export default function ControlledOpenSelect() {
     setAge(event.target.value);
   };
 
-  const handleClose = () => {
-    setOpen(false);
-  };
+  // const handleClose = () => {
+  //   setOpen(false);
+  // };
 
-  const handleOpen = () => {
-    setOpen(true);
-  };
+  // const handleOpen = () => {
+  //   setOpen(true);
+  // };
   // const [value, setValue] = React.useState(null);
 
   const BootstrapInput = styled(InputBase)(() => ({

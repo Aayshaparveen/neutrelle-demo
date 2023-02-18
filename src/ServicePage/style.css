@@ -48,6 +48,7 @@ h1 {
 .Form-col {
   display: flex;
   padding: 50px 0px;
+  color: gray;
   /* justify-content: space-between; */
 }
 em {
@@ -77,13 +78,13 @@ label {
 .Title-box {
   width: 295px;
   height: 45px;
-  border: 2px solid gray;
+  border: 1px solid gray;
   border-radius: 0px 20px;
 }
 .Category {
   display: flex;
   gap: 10px;
-  padding-left: 112px;
+  padding-left: 122px;
 }
 .Primary {
   display: flex;
@@ -131,6 +132,7 @@ label {
 }
 .Two-colum{
     display: flex;
+    color: gray;
 }
 .Nature-col-1 {
   padding-top: 20px;
@@ -144,8 +146,9 @@ label {
   gap: 10px;
   padding-left: 2px;
 }
-.Summary input {
+.Summary textarea {
   width: 275px;
+  color: gray;
   height: 40px;
   border-radius: 0px 20px;
   border-color: gray;
@@ -155,6 +158,7 @@ label {
   padding-left: 70px;
 }
 .Case select {
+  color: gray;
   width: 22vw;
   height: 45px;
   border-radius: 0px 20px;
@@ -167,6 +171,7 @@ label {
   padding-left: 62px;
 }
 .Suspension input {
+  color: gray;
   width: 21vw;
   height: 45px;
   border-radius: 0px 20px;
@@ -179,6 +184,7 @@ label {
   padding-left: 12px;
 }
 .Return input {
+  color: gray;
   width: 21vw;
   height: 45px;
   border-radius: 0px 20px;
@@ -186,7 +192,8 @@ label {
   border: 2px solid darkgray;
 }
 .Characteristics select{
-    width: 22vw;
+  color: gray;
+  width: 22vw;
     height: 45px;
     border-radius: 0px 20px;
     border-color: gray;
@@ -197,7 +204,8 @@ label {
 }
 .Respondent select{
     width: 22vw;
-    height: 45px;
+  color: gray;
+  height: 45px;
     border-radius: 0px 20px;
     border-color: gray;
     border: 2px solid darkgray;
@@ -209,7 +217,8 @@ label {
 }
 .Date-Allegend input{
     width: 21vw;
-    height: 45px;
+  color: gray;
+  height: 45px;
     border-radius: 0px 20px;
     border-color: gray;
     border: 2px solid darkgray;
@@ -228,7 +237,8 @@ label {
 }
 .Reported1 input{
     width: 21vw;
-    height: 45px;
+  color: gray;
+  height: 45px;
     border-radius: 0px 20px;
     border-color: gray;
     padding: 0px 10px;
@@ -239,7 +249,8 @@ label {
     padding-top: 20px;
 }
 .Reported2 select {
-    width: 22vw;
+  color: gray;
+  width: 22vw;
     height: 50px;
     border-radius: 0px 20px;
     border-color: gray;
@@ -251,7 +262,8 @@ label {
     padding-left: 55px;
 }
 .Complainanat input{
-    width: 20vw;
+  color: gray;
+  width: 20vw;
     height: 45px;
     border-radius: 0px 20px;
     border-color: gray;
@@ -262,7 +274,8 @@ label {
     padding-left: 25px;
 }
 .Complainanat-Category select{
-    width: 22vw;
+  color: gray;
+  width: 22vw;
     height: 50px;
     border-radius: 0px 20px;
     border-color: gray;
@@ -272,7 +285,8 @@ label {
     padding-left: 80px;
 }
 .Manager select{
-    width: 22vw;
+  color: gray;
+  width: 22vw;
     height: 50px;
     border-radius: 0px 20px;
     border-color: gray;
@@ -283,7 +297,8 @@ label {
 }
 .Informal select{
     width: 22vw;
-    height: 50px;
+  color: gray;
+  height: 50px;
     border-radius: 0px 20px;
     border-color: gray;
     border: 2px solid darkgray
