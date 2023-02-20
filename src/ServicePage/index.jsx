@@ -12,6 +12,7 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { differenceInDays, endOfDay, set, startOfDay } from "date-fns";
+
 const Service = () => {
   const CssTextField = styled(TextField)({
     "& label.Mui-focused": {
@@ -37,36 +38,58 @@ const Service = () => {
     },
   });
   // function ControlledOpenSelect() {
-  const [age, setAge] = useState("");
-  const [open, setOpen] = useState(false);
-  const [value1, setValue1] = useState(null);
-  const [value2, setValue2] = useState(null);
-  const [Startdate, setStartdate] = useState(null);
-  const [Enddate, setEnddate] = useState(null);
+  // const [value1, setValue1] = useState(null);
+  // const [value2, setValue2] = useState(null);
+  // const [age, setAge] = useState("");
+  const [category, setCategory] = useState("");
+  const [primary, setPrimary] = useState("");
+  const [queue, setQueue] = useState("");
+  const [assigned, setAssigned] = useState("");
+  const [channel, setChannel] = useState("");
+  const [startdate, setStartdate] = useState(null);
+  const [enddate, setEnddate] = useState(null);
+  const [duration, setDuration] = useState("");
+  const [diff, setdifferenceInDays] = useState("");
 
-  const handleChange = (event) => {
-    setAge(event.target.value);
-    setOpen(event.target.value);
-    
+  const handleCategory = (event) => {
+    setCategory(event.target.value);
   };
- 
+  const handlePrimary = (event) => {
+    setPrimary(event.target.value);
+  };
+  const handleQueue = (event) => {
+    setQueue(event.target.value);
+  };
+  const handleAssigned = (event) => {
+    setAssigned(event.target.value);
+  };
+  const handlechannel = (event) => {
+    setChannel(event.target.value);
+  };
 
   // datedifference
-
-  const handelStartDate = () => {
-    setStartdate(value1);
-    if (Enddate) {
-      const diff = differenceInDays(new Date(Enddate), new Date(date));
+  const handelStartDate = (e) => {
+    setStartdate(e);
+    if (enddate) {
+      const diff = differenceInDays(new Date(enddate), new Date(e));
       setDuration(diff);
     }
   };
   const handelEndDate = (e) => {
-    setEnddate(e.target.value);
-    if (Startdate) {
-      const diff = differenceInDays(new Date(Enddate), new Date(date));
+    setEnddate(e);
+    if (startdate) {
+      const diff = differenceInDays(new Date(enddate), new Date(e));
+      console.log("startdate", startdate.$D);
+      let daysLeft = enddate - startdate;
+      console.log("daysLeft", daysLeft);
+
       setDuration(diff);
     }
   };
+  // const handelduration = (e) =>{
+  //     setDuration(differenceInDays);
+
+  // }
 
   return (
     <>
@@ -92,8 +115,8 @@ const Service = () => {
               <InputLabel>Category</InputLabel>
               <FormControl sx={{ m: 1, minWidth: 120 }}>
                 <Select
-                  value={age}
-                  onChange={handleChange}
+                  value={category}
+                  onChange={handleCategory}
                   displayEmpty
                   inputProps={{ "aria-label": "Without label" }}
                 >
@@ -112,8 +135,8 @@ const Service = () => {
 
               <FormControl sx={{ m: 1, minWidth: 120 }}>
                 <Select
-                  value={age}
-                  onChange={handleChange}
+                  value={primary}
+                  onChange={handlePrimary}
                   displayEmpty
                   inputProps={{ "aria-label": "Without label" }}
                 >
@@ -134,7 +157,8 @@ const Service = () => {
 
               <FormControl sx={{ m: 1, minWidth: 120 }}>
                 <Select
-                  value={age}
+                  value={queue}
+                  onChange={handleQueue}
                   displayEmpty
                   inputProps={{ "aria-label": "Without label" }}
                 >
@@ -152,7 +176,8 @@ const Service = () => {
               <label>Assigned to</label>
               <FormControl sx={{ m: 1, minWidth: 120 }}>
                 <Select
-                  value={age}
+                  value={assigned}
+                  onChange={handleAssigned}
                   displayEmpty
                   inputProps={{ "aria-label": "Without label" }}
                 >
@@ -170,7 +195,8 @@ const Service = () => {
               <label>Channel Type</label>
               <FormControl sx={{ m: 1, minWidth: 120 }}>
                 <Select
-                  value={age}
+                  value={channel}
+                  onChange={handlechannel}
                   displayEmpty
                   inputProps={{ "aria-label": "Without label" }}
                 >
@@ -247,9 +273,10 @@ const Service = () => {
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                   <DatePicker
                     name="Startdate"
-                    value={value1}
-                    // onChange={(newValue) => {
-                    //   setValue1(newValue);
+                    value={startdate}
+                    // onChange={(e) => {
+                    //   console.log("e",e)
+                    //   // setValue1(newValue);
                     // }}
                     onChange={handelStartDate}
                     renderInput={(params) => <TextField {...params} />}
@@ -264,7 +291,7 @@ const Service = () => {
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                   <DatePicker
                     name="Enddate"
-                    value={value2}
+                    value={enddate}
                     // onChange={(newValue) => {
                     //   setValue2(newValue);
                     // }}
@@ -275,7 +302,10 @@ const Service = () => {
               </div>
               <div className="Reportaing-stage">
                 <label>Duration of Reportaing Stage (in days)</label>
-                
+                {duration}
+                {/* <input name="duration" onChange={handelduration}
+                value={duration}
+                /> */}
               </div>
               <div className="Reported2">
                 <label>
