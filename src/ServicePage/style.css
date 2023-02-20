@@ -218,13 +218,13 @@ label {
     gap: 10px;
     padding-left: 82px;
 }
-.Date-Allegend input{
+.Date-Allegend .css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root {
     width: 21vw;
   color: gray;
   height: 45px;
     border-radius: 0px 20px;
     border-color: gray;
-    border: 2px solid darkgray;
+    /* border: 2px solid darkgray; */
 }
 
 .Nature-col-2 {
@@ -238,14 +238,14 @@ label {
     display: flex;
     gap: 10px;
 }
-.Reported1 input{
+.Reported1 .css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root {
     width: 21vw;
   color: gray;
   height: 45px;
     border-radius: 0px 20px;
     border-color: gray;
     padding: 0px 10px;
-    border: 2px solid darkgray;
+    /* border: 2px solid darkgray; */
 }
 .Reported2{
     padding-left: 140px;

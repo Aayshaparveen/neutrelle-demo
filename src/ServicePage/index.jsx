@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.css";
 // import styled from "@eCotion/styled";
 // import { styled } from "@material-ui/styles";
-import { styled } from '@mui/material/styles';
+import { styled } from "@mui/material/styles";
 import TextField from "@mui/material/TextField";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import InputLabel from "@mui/material/InputLabel";
-
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+import { differenceInDays, endOfDay, set, startOfDay } from "date-fns";
 const Service = () => {
   const CssTextField = styled(TextField)({
     "& label.Mui-focused": {
@@ -34,14 +37,36 @@ const Service = () => {
     },
   });
   // function ControlledOpenSelect() {
-    const [age, setAge] = React.useState("");
-    const [open, setOpen] = React.useState(false);
+  const [age, setAge] = useState("");
+  const [open, setOpen] = useState(false);
+  const [value1, setValue1] = useState(null);
+  const [value2, setValue2] = useState(null);
+  const [Startdate, setStartdate] = useState(null);
+  const [Enddate, setEnddate] = useState(null);
 
-    const handleChange = (event) => {
-      setAge(event.target.value);
-    };
-  
-  // const [age, setAge] = React.useState("");
+  const handleChange = (event) => {
+    setAge(event.target.value);
+    setOpen(event.target.value);
+    
+  };
+ 
+
+  // datedifference
+
+  const handelStartDate = () => {
+    setStartdate(value1);
+    if (Enddate) {
+      const diff = differenceInDays(new Date(Enddate), new Date(date));
+      setDuration(diff);
+    }
+  };
+  const handelEndDate = (e) => {
+    setEnddate(e.target.value);
+    if (Startdate) {
+      const diff = differenceInDays(new Date(Enddate), new Date(date));
+      setDuration(diff);
+    }
+  };
 
   return (
     <>
@@ -218,16 +243,39 @@ const Service = () => {
               </div>
               <div className="Date-Allegend">
                 <label>Date of Allegend</label>
-                <input type="date" />
+
+                <LocalizationProvider dateAdapter={AdapterDayjs}>
+                  <DatePicker
+                    name="Startdate"
+                    value={value1}
+                    // onChange={(newValue) => {
+                    //   setValue1(newValue);
+                    // }}
+                    onChange={handelStartDate}
+                    renderInput={(params) => <TextField {...params} />}
+                  />
+                </LocalizationProvider>
               </div>
             </div>
             <div className="Nature-col-2">
               <div className="Reported1">
                 <label>Date Reported / Initiated</label>
-                <input type="date" />
+
+                <LocalizationProvider dateAdapter={AdapterDayjs}>
+                  <DatePicker
+                    name="Enddate"
+                    value={value2}
+                    // onChange={(newValue) => {
+                    //   setValue2(newValue);
+                    // }}
+                    onChange={handelEndDate}
+                    renderInput={(params) => <TextField {...params} />}
+                  />
+                </LocalizationProvider>
               </div>
               <div className="Reportaing-stage">
                 <label>Duration of Reportaing Stage (in days)</label>
+                
               </div>
               <div className="Reported2">
                 <label>
