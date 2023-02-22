@@ -68,7 +68,7 @@ const Service = () => {
   const handlechannel = (event) => {
     setChannel(event.target.value);
   };
-   const handlenature = (event) => {
+  const handlenature = (event) => {
     setNature(event.target.value);
   };
 
@@ -95,6 +95,8 @@ const Service = () => {
   //     setDuration(differenceInDays);
 
   // }
+  const [value1, setValue1] =useState(null);
+  const [value2, setValue2] =useState(null);
 
   return (
     <>
@@ -229,33 +231,49 @@ const Service = () => {
                 <textarea type="text" />
               </div>
               <div className="Case">
-                <label>
-                  Nature of Case
-                </label>
+                <label>Nature of Case</label>
                 <FormControl sx={{ m: 1, minWidth: 120 }}>
-                <Select
-                  value={nature}
-                  onChange={handlenature}
-                  displayEmpty
-                  inputProps={{ "aria-label": "Without label" }}
-                >
-                  <MenuItem value="">
-                    <em></em>
-                  </MenuItem>
-                  <MenuItem value={1}>Case1</MenuItem>
-                  <MenuItem value={2}>Case2</MenuItem>
-                  <MenuItem value={3}>Case3</MenuItem>
-                  <MenuItem value={3}>Case4</MenuItem>
-                </Select>
-              </FormControl>
+                  <Select
+                    value={nature}
+                    onChange={handlenature}
+                    displayEmpty
+                    inputProps={{ "aria-label": "Without label" }}
+                  >
+                    <MenuItem value="">
+                      <em></em>
+                    </MenuItem>
+                    <MenuItem value={1}>Case1</MenuItem>
+                    <MenuItem value={2}>Case2</MenuItem>
+                    <MenuItem value={3}>Case3</MenuItem>
+                    <MenuItem value={3}>Case4</MenuItem>
+                  </Select>
+                </FormControl>
               </div>
               <div className="Suspension">
                 <label>Suspension Date</label>
-                <input type="date" />
+                {/* <input type="date" /> */}
+                <LocalizationProvider dateAdapter={AdapterDayjs}>
+                  <DatePicker
+                    value={value1}
+                    onChange={(newValue) => {
+                      setValue1(newValue);
+                    }}
+                    renderInput={(params) => <TextField {...params} />}
+                  />
+                </LocalizationProvider>
               </div>
               <div className="Return">
                 <label>Suspension Return Date </label>
-                <input type="date" />
+                {/* <input type="date" /> */}
+                <LocalizationProvider dateAdapter={AdapterDayjs}>
+                  <DatePicker
+                    value={value2}
+                    onChange={(newValue) => {
+                      setValue2(newValue);
+                    }}
+                    renderInput={(params) => <TextField {...params} />}
+                  />
+                </LocalizationProvider>
               </div>
               <div className="Characteristics">
                 <label>

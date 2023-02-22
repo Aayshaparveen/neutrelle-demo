@@ -175,26 +175,26 @@ label {
   gap: 10px;
   padding-left: 62px;
 }
-.Suspension input {
+.Suspension .css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root  {
   color: gray;
   width: 21vw;
   height: 45px;
   border-radius: 0px 20px;
   border-color: gray;
-  border: 2px solid darkgray;
+  /* border: 2px solid darkgray; */
 }
 .Return {
   display: flex;
   gap: 10px;
   padding-left: 12px;
 }
-.Return input {
+.Return .css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root  {
   color: gray;
   width: 21vw;
   height: 45px;
   border-radius: 0px 20px;
   border-color: gray;
-  border: 2px solid darkgray;
+  /* border: 2px solid darkgray; */
 }
 .Characteristics select{
   color: gray;
