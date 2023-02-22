@@ -11,8 +11,8 @@ import InputLabel from "@mui/material/InputLabel";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-import { differenceInDays, endOfDay, set, startOfDay } from "date-fns";
-
+import { differenceInDays } from "date-fns";
+import AddIcon from "@mui/icons-material/Add";
 const Service = () => {
   const CssTextField = styled(TextField)({
     "& label.Mui-focused": {
@@ -91,12 +91,8 @@ const Service = () => {
       setDuration(diff);
     }
   };
-  // const handelduration = (e) =>{
-  //     setDuration(differenceInDays);
-
-  // }
-  const [value1, setValue1] =useState(null);
-  const [value2, setValue2] =useState(null);
+  const [value1, setValue1] = useState(null);
+  const [value2, setValue2] = useState(null);
 
   return (
     <>
@@ -130,10 +126,11 @@ const Service = () => {
                   <MenuItem value="">
                     <em></em>
                   </MenuItem>
-                  <MenuItem value={1}>Category1</MenuItem>
-                  <MenuItem value={2}>Category2</MenuItem>
-                  <MenuItem value={3}>Category3</MenuItem>
-                  <MenuItem value={4}>Category4</MenuItem>
+                  <MenuItem value={1}>Enquiry: Sick Leave</MenuItem>
+                  <MenuItem value={2}>Enquiry: Annual Leave</MenuItem>
+                  <MenuItem value={3}>Enquiry: Maternity Leave</MenuItem>
+                  <MenuItem value={4}>ER Case: Grievance</MenuItem>
+                  <MenuItem value={5}>ER Case: Capability</MenuItem>
                 </Select>
               </FormControl>
             </div>
@@ -153,10 +150,11 @@ const Service = () => {
                   <MenuItem value={1}>Category1</MenuItem>
                   <MenuItem value={2}>Category2</MenuItem>
                   <MenuItem value={3}>Category3</MenuItem>
-                  <MenuItem value={3}>Category4</MenuItem>
+                  <MenuItem value={4}>Category4</MenuItem>
                 </Select>
               </FormControl>
             </div>
+            <div className="Case-status">Case Status</div>
           </div>
           <div className="col-2">
             <div className="Queue">
@@ -217,6 +215,12 @@ const Service = () => {
                 </Select>
               </FormControl>
             </div>
+            <div className="attachment">
+              <p>Attachment</p>
+              {/* <input type="file"/> */}
+              <AddIcon className="add-icon" />
+            </div>
+            <div className="service-type">Service Request Type</div>
           </div>
         </div>
 
@@ -269,7 +273,7 @@ const Service = () => {
                   <DatePicker
                     value={value2}
                     onChange={(newValue) => {
-                      setValue2(newValue);
+                      newValue;
                     }}
                     renderInput={(params) => <TextField {...params} />}
                   />

@@ -1,0 +1,59 @@
+.Home-Title {
+  width: 50vw;
+  height: 100vh;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.Help-nature-to-rever {
+  padding: 0px;
+  font-size: 39px;
+  font-style: normal;
+  display: flex;
+  margin-top: 22%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+.Make-a-difference-by {
+  padding: 0px;
+  font-size: 20px;
+  font-style: normal;
+  margin-left: 145px;
+  font-weight: normal;
+}
+.Make-your-Impact {
+  background-color: #2cd28d;
+  border: 1px;
+  padding: 15px 0px;
+  border-radius: 0px 20px;
+  font-size: 1.2vw;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-left: 150px;
+  margin-right: 350px;
+}
+.You-can-calculate {
+  padding: 0px;
+  font-style: normal;
+  font-size: 13px;
+  margin-left: 140px;
+}
+.Img-box {
+  display: flex;
+}
+.car-img {
+  margin-top: -174px;
+}
+.car-img img {
+  margin-left: -715px;
+}
+.side-img{
+    margin-top: -330px;
+    margin-left: -315px;
+    overflow: hidden;
+}
+.side-img img{
+    width: 81vw;
+    height: 130vh;
+}

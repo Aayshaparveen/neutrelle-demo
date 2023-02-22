@@ -86,12 +86,15 @@ label {
   gap: 10px;
   padding-left: 122px;
 }
-.Category .css-1869usk-MuiFormControl-root{
+.Category .css-1869usk-MuiFormControl-root {
   min-width: 297px !important;
 }
 .Primary {
   display: flex;
   gap: 10px;
+}
+.Case-status{
+  padding-left: 100px;
 }
 .col-2 {
   display: flex;
@@ -125,6 +128,24 @@ label {
   gap: 10px;
   padding-left: 45px;
 }
+.attachment {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding-left: 45px;
+  gap: 15px;
+}
+.attachment p {
+  color: gray;
+  font-size: 15px;
+}
+.add-icon.css-i4bv87-MuiSvgIcon-root {
+  color: blue;
+  cursor: pointer;
+} 
+.service-type {
+  padding-left: 50px;
+}
 .Nature-box {
   display: flex;
   flex-direction: column;
@@ -133,9 +154,9 @@ label {
   padding-left: 55px;
   font-size: 20px;
 }
-.Two-colum{
-    display: flex;
-    color: gray;
+.Two-colum {
+  display: flex;
+  color: gray;
 }
 .Nature-col-1 {
   padding-top: 20px;
@@ -162,7 +183,7 @@ label {
   gap: 0px;
   padding-left: 70px;
 }
-.Case .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root  {
+.Case .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
   color: gray;
   width: 22vw;
   height: 45px;
@@ -175,136 +196,134 @@ label {
   gap: 10px;
   padding-left: 62px;
 }
-.Suspension .css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root  {
+.Suspension .css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root {
   color: gray;
   width: 21vw;
   height: 45px;
   border-radius: 0px 20px;
   border-color: gray;
-  /* border: 2px solid darkgray; */
 }
 .Return {
   display: flex;
   gap: 10px;
   padding-left: 12px;
 }
-.Return .css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root  {
+.Return .css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root {
   color: gray;
   width: 21vw;
   height: 45px;
   border-radius: 0px 20px;
   border-color: gray;
-  /* border: 2px solid darkgray; */
 }
-.Characteristics select{
+.Characteristics select {
   color: gray;
   width: 22vw;
-    height: 45px;
-    border-radius: 0px 20px;
-    border-color: gray;
-    border: 2px solid darkgray;
+  height: 45px;
+  border-radius: 0px 20px;
+  border-color: gray;
+  border: 2px solid darkgray;
 }
-.Respondent{
-    padding-left: 109px;
+.Respondent {
+  padding-left: 109px;
 }
-.Respondent select{
-    width: 22vw;
+.Respondent select {
+  width: 22vw;
   color: gray;
   height: 45px;
-    border-radius: 0px 20px;
-    border-color: gray;
-    border: 2px solid darkgray;
+  border-radius: 0px 20px;
+  border-color: gray;
+  border: 2px solid darkgray;
 }
 .Date-Allegend {
-    display: flex;
-    gap: 10px;
-    padding-left: 82px;
+  display: flex;
+  gap: 10px;
+  padding-left: 82px;
 }
 .Date-Allegend .css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root {
-    width: 21vw;
+  width: 21vw;
   color: gray;
   height: 45px;
-    border-radius: 0px 20px;
-    border-color: gray;
-    /* border: 2px solid darkgray; */
+  border-radius: 0px 20px;
+  border-color: gray;
+  /* border: 2px solid darkgray; */
 }
 
 .Nature-col-2 {
-    padding-top: 20px;
+  padding-top: 20px;
   padding-left: 55px;
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 .Reported1 {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 .Reported1 .css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root {
-    width: 21vw;
+  width: 21vw;
   color: gray;
   height: 45px;
-    border-radius: 0px 20px;
-    border-color: gray;
-    padding: 0px 10px;
-    /* border: 2px solid darkgray; */
+  border-radius: 0px 20px;
+  border-color: gray;
+  padding: 0px 10px;
+  /* border: 2px solid darkgray; */
 }
-.Reported2{
-    padding-left: 140px;
-    padding-top: 20px;
+.Reported2 {
+  padding-left: 140px;
+  padding-top: 20px;
 }
 .Reported2 select {
   color: gray;
   width: 22vw;
-    height: 50px;
-    border-radius: 0px 20px;
-    border-color: gray;
-    border: 2px solid darkgray;
+  height: 50px;
+  border-radius: 0px 20px;
+  border-color: gray;
+  border: 2px solid darkgray;
 }
 .Complainanat {
-    display: flex;
-    gap: 10px;
-    padding-left: 55px;
+  display: flex;
+  gap: 10px;
+  padding-left: 55px;
 }
-.Complainanat input{
+.Complainanat input {
   color: gray;
   width: 20vw;
-    height: 45px;
-    border-radius: 0px 20px;
-    border-color: gray;
-    padding: 0px 10px;
-    border: 2px solid darkgray;
+  height: 45px;
+  border-radius: 0px 20px;
+  border-color: gray;
+  padding: 0px 10px;
+  border: 2px solid darkgray;
 }
 .Complainanat-Category {
-    padding-left: 25px;
+  padding-left: 25px;
 }
-.Complainanat-Category select{
+.Complainanat-Category select {
   color: gray;
   width: 22vw;
-    height: 50px;
-    border-radius: 0px 20px;
-    border-color: gray;
-    border: 2px solid darkgray
+  height: 50px;
+  border-radius: 0px 20px;
+  border-color: gray;
+  border: 2px solid darkgray;
 }
 .Manager {
-    padding-left: 80px;
+  padding-left: 80px;
 }
-.Manager select{
+.Manager select {
   color: gray;
   width: 22vw;
-    height: 50px;
-    border-radius: 0px 20px;
-    border-color: gray;
-    border: 2px solid darkgray
+  height: 50px;
+  border-radius: 0px 20px;
+  border-color: gray;
+  border: 2px solid darkgray;
 }
 .Informal {
-    padding-left: 60px;
+  padding-left: 60px;
 }
-.Informal select{
-    width: 22vw;
+.Informal select {
+  width: 22vw;
   color: gray;
   height: 50px;
-    border-radius: 0px 20px;
-    border-color: gray;
-    border: 2px solid darkgray
+  border-radius: 0px 20px;
+  border-color: gray;
+  border: 2px solid darkgray;
 }
