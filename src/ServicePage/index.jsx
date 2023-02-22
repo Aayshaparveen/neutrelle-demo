@@ -12,6 +12,7 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { differenceInDays } from "date-fns";
+import { Button } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 const Service = () => {
   const CssTextField = styled(TextField)({
@@ -217,8 +218,13 @@ const Service = () => {
             </div>
             <div className="attachment">
               <p>Attachment</p>
-              {/* <input type="file"/> */}
-              <AddIcon className="add-icon" />
+              {/* <AddIcon className="add-icon">
+              <input type="file" />
+              </AddIcon> */}
+              <Button variant="contained" component="label"  className="add-icon-1">
+                <AddIcon className="add-icon-2"/>
+                <input type="file" hidden />
+              </Button>
             </div>
             <div className="service-type">Service Request Type</div>
           </div>

@@ -139,10 +139,17 @@ label {
   color: gray;
   font-size: 15px;
 }
-.add-icon.css-i4bv87-MuiSvgIcon-root {
+.add-icon-1.css-sghohy-MuiButtonBase-root-MuiButton-root {
+  background-color: white;
+  box-shadow: none;
+}
+.add-icon-1.css-sghohy-MuiButtonBase-root-MuiButton-root:hover {
+  background-color: white;
+  box-shadow: none;
+}
+.add-icon-2.css-i4bv87-MuiSvgIcon-root  {
   color: blue;
-  cursor: pointer;
-} 
+}
 .service-type {
   padding-left: 50px;
 }
