@@ -46,6 +46,8 @@ const Service = () => {
   const [queue, setQueue] = useState("");
   const [assigned, setAssigned] = useState("");
   const [channel, setChannel] = useState("");
+  const [nature, setNature] = useState("");
+
   const [startdate, setStartdate] = useState(null);
   const [enddate, setEnddate] = useState(null);
   const [duration, setDuration] = useState("");
@@ -65,6 +67,9 @@ const Service = () => {
   };
   const handlechannel = (event) => {
     setChannel(event.target.value);
+  };
+   const handlenature = (event) => {
+    setNature(event.target.value);
   };
 
   // datedifference
@@ -226,14 +231,23 @@ const Service = () => {
               <div className="Case">
                 <label>
                   Nature of Case
-                  <select>
-                    <option value="">Other</option>
-                    <option value="">Case1</option>
-                    <option value="">Case2</option>
-                    <option value="">Case3</option>
-                    <option value="">Case4</option>
-                  </select>
                 </label>
+                <FormControl sx={{ m: 1, minWidth: 120 }}>
+                <Select
+                  value={nature}
+                  onChange={handlenature}
+                  displayEmpty
+                  inputProps={{ "aria-label": "Without label" }}
+                >
+                  <MenuItem value="">
+                    <em></em>
+                  </MenuItem>
+                  <MenuItem value={1}>Case1</MenuItem>
+                  <MenuItem value={2}>Case2</MenuItem>
+                  <MenuItem value={3}>Case3</MenuItem>
+                  <MenuItem value={3}>Case4</MenuItem>
+                </Select>
+              </FormControl>
               </div>
               <div className="Suspension">
                 <label>Suspension Date</label>
@@ -274,10 +288,6 @@ const Service = () => {
                   <DatePicker
                     name="Startdate"
                     value={startdate}
-                    // onChange={(e) => {
-                    //   console.log("e",e)
-                    //   // setValue1(newValue);
-                    // }}
                     onChange={handelStartDate}
                     renderInput={(params) => <TextField {...params} />}
                   />
@@ -292,20 +302,13 @@ const Service = () => {
                   <DatePicker
                     name="Enddate"
                     value={enddate}
-                    // onChange={(newValue) => {
-                    //   setValue2(newValue);
-                    // }}
                     onChange={handelEndDate}
                     renderInput={(params) => <TextField {...params} />}
                   />
                 </LocalizationProvider>
               </div>
               <div className="Reportaing-stage">
-                <label>Duration of Reportaing Stage (in days)</label>
-                {duration}
-                {/* <input name="duration" onChange={handelduration}
-                value={duration}
-                /> */}
+                <label>Duration of Reportaing Stage (in days) {duration}</label>
               </div>
               <div className="Reported2">
                 <label>

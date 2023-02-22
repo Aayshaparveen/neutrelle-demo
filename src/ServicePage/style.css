@@ -158,9 +158,11 @@ label {
   border: 2px solid darkgray;
 }
 .Case {
+  display: flex;
+  gap: 0px;
   padding-left: 70px;
 }
-.Case select {
+.Case .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root  {
   color: gray;
   width: 22vw;
   height: 45px;
