@@ -24,32 +24,32 @@ const Home = () => {
             <img src="./image/illustration-landscape.png" />
           </div>
           <div className="bottom-text">
-            <span class="How-it-works">How it works?</span>
+            <span className="How-it-works">How it works?</span>
           </div>
           <div className="Three-col">
             <div className="Calculate-box">
               <img src="./image/icon-calculate-1.png" />
-              <span class="Calculate-your-impact">Calculate your impact</span>
-              <span class="Enter-a-few-basic-de">
+              <span className="Calculate-your-impact">Calculate your impact</span>
+              <span className="Enter-a-few-basic-de">
                 Enter a few basic details of your car
               </span>
             </div>
             <div className="Monthly-box">
               <img src="./image/icon-contribute-1.png" />
-              <span class="Contribute-mothly-or">
+              <span className="Contribute-mothly-or">
                 Contribute mothly or one time
               </span>
-              <span class="You-can-choose-a-mon">
+              <span className="You-can-choose-a-mon">
                 You can choose a monthly base contribution or ontime. Your
                 choice.
               </span>
             </div>
             <div className="Trees-box">
               <img src="./image/icon-plant-tree-1.png" />
-              <span class="Check-planted-trees">
+              <span className="Check-planted-trees">
                 Check planted trees on your behalf
               </span>
-              <span class="Instantly-check-how">
+              <span className="Instantly-check-how">
                 Instantly check how many trees we plant on your behalf. We’ll
                 also keep you posted
               </span>
@@ -57,13 +57,24 @@ const Home = () => {
           </div>
         </div>
         <div className="Home-title2">
-          <span class="How-your-contributio">
+          <span className="How-your-contributio">
             How your contribution will make the impact
           </span>
-          <span class="These-are-rough-esti">
+          <span className="These-are-rough-esti">
             These are rough estimation, check your empact by entering your car
             details
           </span>
+        </div>
+        <div className="impact-box">
+          <div className="heading-box">
+
+          <img src="./image/impact-car.PNG"></img>
+          <span className="Your-Car">Your Car</span>
+          <span className="Estimated-carbon-emi">Estimated carbon emission</span>
+          <span className="tCO2e-year">
+            0.00137 tCO2e /year • 4 miles/ltr milage
+          </span>
+          </div>
         </div>
       </div>
     </>
