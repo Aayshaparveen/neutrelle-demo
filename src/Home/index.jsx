@@ -56,6 +56,15 @@ const Home = () => {
             </div>
           </div>
         </div>
+        <div className="Home-title2">
+          <span class="How-your-contributio">
+            How your contribution will make the impact
+          </span>
+          <span class="These-are-rough-esti">
+            These are rough estimation, check your empact by entering your car
+            details
+          </span>
+        </div>
       </div>
     </>
   );
