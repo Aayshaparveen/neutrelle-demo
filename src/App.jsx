@@ -9,6 +9,7 @@ import SignUp from "./pages/SignUp";
 import SignIn from "./pages/SignIn";
 import Blog from "./Blog";
 import ContactUs from "./ContactUs";
+// import Dropzone from "./Dropzone";
 import Footer from "./Footer";
 import Registration from "./Cardeatils";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -31,6 +32,7 @@ function App() {
           <Route path="/pages/SignUp" element={<SignUp />} />
           <Route path="/ServicePage" element={<ServicePage />} />
         </Routes>
+       
         <Footer />
       </BrowserRouter>
     </>

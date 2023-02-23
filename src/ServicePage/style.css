@@ -334,3 +334,15 @@ label {
   border-color: gray;
   border: 2px solid darkgray;
 }
+.description-field{
+  margin-top: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.css-md26zr-MuiInputBase-root-MuiOutlinedInput-root {
+  height: 20vh;
+  border-radius: 0px 35px !important;
+}
+.css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+  border-color: gray !important;
+}

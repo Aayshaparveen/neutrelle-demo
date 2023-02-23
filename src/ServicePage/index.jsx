@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import "./style.css";
-// import styled from "@eCotion/styled";
-// import { styled } from "@material-ui/styles";
 import { styled } from "@mui/material/styles";
 import TextField from "@mui/material/TextField";
 import MenuItem from "@mui/material/MenuItem";
@@ -12,8 +10,9 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { differenceInDays } from "date-fns";
-import { Button } from "@mui/material";
-import AddIcon from "@mui/icons-material/Add";
+// import { Button } from "@mui/material";
+// import AddIcon from "@mui/icons-material/Add";
+import Dropzone from "../Dropzone";
 const Service = () => {
   const CssTextField = styled(TextField)({
     "& label.Mui-focused": {
@@ -218,13 +217,11 @@ const Service = () => {
             </div>
             <div className="attachment">
               <p>Attachment</p>
-              {/* <AddIcon className="add-icon">
-              <input type="file" />
-              </AddIcon> */}
-              <Button variant="contained" component="label"  className="add-icon-1">
+              {/* <Button variant="contained" component="label"  className="add-icon-1">
                 <AddIcon className="add-icon-2"/>
                 <input type="file" hidden />
-              </Button>
+              </Button> */}
+              <Dropzone />
             </div>
             <div className="service-type">Service Request Type</div>
           </div>
@@ -395,6 +392,9 @@ const Service = () => {
               </div>
             </div>
           </div>
+        </div>
+        <div className="description-field">
+          <TextField fullWidth label="Detailed Description" id="fullWidth" />
         </div>
       </div>
     </>
