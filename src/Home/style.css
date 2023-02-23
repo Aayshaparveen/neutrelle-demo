@@ -22,7 +22,7 @@
   margin-left: 145px;
   font-weight: normal;
 }
-.Make-your-Impact {
+.Make-your-Impact1 {
   background-color: #2cd28d;
   border: 1px;
   padding: 15px 0px;
@@ -72,7 +72,6 @@
 .How-it-works {
   font-size: 25px;
   font-style: normal;
- 
 }
 .Three-col {
   display: flex;
@@ -150,35 +149,312 @@
   font-style: normal;
   width: 24vw;
 }
-.Home-title2{
+.Home-title2 {
   display: flex;
   flex-direction: column;
   padding-top: 100px;
   padding-left: 100px;
 }
-.How-your-contributio{
-  font-size: 20px;
+.How-your-contributio {
+  font-size: 25px;
   font-style: normal;
   padding: 0px;
 }
-.These-are-rough-esti{
+.These-are-rough-esti {
   font-size: 15px;
   color: gray;
   font-style: normal;
   padding: 0px;
 }
-.impact-box{
- border: 1px solid gray;
+.impact-box {
+  border: 1px solid #e2e2e2;
+  margin: 50px 100px 20px 100px;
+  padding-bottom: 80px;
+  border-radius: 0px 30px;
 }
-.impact-box img{
-
+.headingbox {
+  display: flex;
+  padding: 35px 0px 0px 30px;
 }
-.Your-car{
-
+.carimg {
+  width: 6vw;
 }
-.Estimated-carbon-emi{
-
+.carimg img {
+  width: 5vw;
 }
-.tCO2e-year{
+.three-span {
+  display: flex;
+  flex-direction: column;
+}
+.Your-Car {
+  font-size: 20px;
+  font-style: normal;
+  padding: 0px;
+}
+.Estimated-carbon-emi {
+  font-size: 16px;
+  color: gray;
+  font-style: normal;
+  padding: 0px;
+}
+.tCO2e-year {
+  font-size: 16px;
+  font-style: normal;
+  padding: 0px;
+}
+.hr-line {
+  margin: 20px 0px;
+  height: 0px;
+  background-color: #e2e2e2;
+}
+.hr-line:hover {
+  background-color: #e2e2e2;
+  height: 0px;
+}
+.css-14pt78w-MuiSlider-rail {
+  width: 37% !important;
+  /* padding: 0px !important; */
+}
+.css-1aznpnh-MuiSlider-root {
+  padding: 0px !important;
+  width: 20vw !important;
+  color: rgba(0, 0, 0, 0.1) !important;
+}
+.css-eg0mwd-MuiSlider-thumb {
+  padding: 0px !important;
+}
+.css-1tfve6q-MuiSlider-mark {
+  padding: 0px !important;
+}
+.css-6cwnna-MuiSlider-mark {
+  padding-left: 0px !important;
+}
+.bottombox {
+  display: flex;
+  justify-content: space-between;
+}
+.impact-box-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-left: 110px;
+  margin-top: 50px;
+}
+.impact-div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.Impact-level {
+  padding: 0px;
+  font-size: 20px;
+  font-style: normal;
+}
+.contribute-div {
+  display: flex;
+  flex-direction: column;
+}
+.Your-contribution {
+  padding: 0px;
+  font-size: 20px;
+  font-style: normal;
+}
+.Two-btn {
+  background-color: lightgray;
+  border-radius: 0px 20px;
+  width: 20vw;
+  height: 8vh;
+}
+.btn-one {
+  border-radius: 0px 20px;
+  height: 8vh;
+  width: 9vw;
+  background-color: lightgray;
+}
+.btn-two {
+  border-radius: 0px 20px;
+  height: 7vh;
+  width: 10.5vw;
+  background-color: white;
+}
+.impact-box-2 {
+  display: flex;
+  flex-direction: column;
+  margin-right: 130px;
+  text-align: center;
+  margin-top: 50px;
+}
+.Trees-planted {
+  padding: 0px;
+  font-size: 25px;
+  font-style: normal;
+  padding-bottom: 50px;
+}
+.Tree-img-box {
+  padding-bottom: 50px;
+  display: flex;
+}
+.Tree-img-1 {
+  width: 10vw;
+}
+.Tree-img-2 {
+  margin-top: -30px;
+  margin-bottom: 30px;
+  width: 10vw;
+}
+.Tree-img-3 {
+  width: 10vw;
+}
+.Month {
+  padding: 0px;
+  font-size: 20px;
+  font-style: normal;
+  text-align: center;
+}
+.One-year {
+  padding: 0px;
+  font-size: 15px;
+  font-style: normal;
+  text-align: center;
+  color: gray;
+}
+.Make-your-Impact2 {
+  width: 15vw;
+  background-color: #2cd28d;
+  border: 1px;
+  padding: 20px 0px;
+  border-radius: 0px 20px;
+  font-size: 1.2vw;
+  cursor: pointer;
+  /* margin-top: 5px; */
+  /* float: right; */
+  margin-left: 78%;
+}
+.Last-box {
+  height: 50vh;
+  padding-bottom: 150px;
+  margin-top: 50px;
+  text-align: center;
+  background-color: rgba(252, 249, 249, 0.879);
+}
+.what-impact-div {
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+.What-impacts-do-we-m {
+  font-size: 25px;
+  font-style: normal;
+  padding: 0px;
+}
+.Four-img {
+  display: flex;
+  gap: 50px;
+  width: 70vw;
+  margin-left: 200px;
+  align-items: center;
+  text-align: center;
+}
 
+.Img1 img {
+  width: 7vw;
+  float: right;
+  padding-top: 30px;
+  padding-left: 35px;
+}
+.Img2 img {
+  width: 7vw;
+  float: right;
+  padding-top: 30px;
+  padding-left: 35px;
+}
+.Img3 img {
+  width: 7vw;
+  float: right;
+  padding-top: 30px;
+  padding-left: 35px;
+}
+.Img4 img {
+  width: 7vw;
+  float: right;
+  padding-top: 30px;
+  padding-left: 35px;
+}
+.Img1 {
+  width: 20vw;
+  height: 28vh;
+  border-radius: 0px 25px;
+  background-color: #fcf5eb;
+}
+.Img1-span1{
+  margin-left: -55px;
+    width: 107px;
+}
+.Reforestation-in-the {
+  font-size: 15px;
+  /* margin: 59px  0px 0px -125px; */
+  font-style: normal;
+  padding: 0px;
+}
+.Img2 {
+  width: 20vw;
+  height: 28vh;
+  background-color: #e6f4fb;
+  border-radius: 0px 25px;
+}
+.Img2-span2{
+  margin-left: -55px;
+    width: 130px;
+}
+.Closing-the-loop-for {
+  font-size: 15px;
+  font-style: normal;
+  padding: 0px;
+}
+.Img3 {
+  width: 20vw;
+  height: 28vh;
+  background-color: #fcfaea;
+  border-radius: 0px 25px;
+}
+.Img3-span3{
+  margin-left: -32px;
+    width: 85px;
+}
+.Fuelling-the-Future {
+  font-size: 15px;
+  font-style: normal;
+  padding: 0px;
+}
+.Img4 {
+  width: 20vw;
+  height: 28vh;
+  background-color: #e9f9f1;
+  border-radius: 0px 25px;
+}
+.Img4-span4{
+  margin-left: -40px;
+    width: 86px;
+}
+.Planting-for-People{
+  font-size: 15px;
+  font-style: normal;
+  padding: 0px;
+}
+.Find-out-more{
+padding-left: 45%;
+  font-size: 20px;
+  font-style: normal;
+}
+.Details-box{
+  padding: 40px 0px 0px 0px;
+    display: flex;
+    align-items: center
+}
+.Arrow{
+  cursor: pointer;
+  color: black ;
+}
+.Arrow img:hover{
+  transform: rotate(45deg);
+  transition: all 0.3s ease 0s;
 }

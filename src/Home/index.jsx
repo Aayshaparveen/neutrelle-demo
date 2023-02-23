@@ -1,6 +1,26 @@
 import React from "react";
 import "./style.css";
+import Slider from "@mui/material/Slider";
 const Home = () => {
+  const marks = [
+    {
+      value: 0,
+      label: "Single",
+    },
+    {
+      value: 20,
+      label: "Double",
+    },
+    {
+      value: 37,
+      label: "Tripple",
+    },
+  ];
+
+  function valuetext(value) {
+    return `${value}°C`;
+  }
+
   return (
     <>
       <div className="Home-container">
@@ -11,7 +31,7 @@ const Home = () => {
           <span className="Make-a-difference-by">
             Make a difference by contributing today
           </span>
-          <button className="Make-your-Impact">Make your Impact</button>
+          <button className="Make-your-Impact1">Make your Impact</button>
           <span className="You-can-calculate">
             * You can calculate how your contribution will make this impact
           </span>
@@ -29,7 +49,9 @@ const Home = () => {
           <div className="Three-col">
             <div className="Calculate-box">
               <img src="./image/icon-calculate-1.png" />
-              <span className="Calculate-your-impact">Calculate your impact</span>
+              <span className="Calculate-your-impact">
+                Calculate your impact
+              </span>
               <span className="Enter-a-few-basic-de">
                 Enter a few basic details of your car
               </span>
@@ -66,14 +88,107 @@ const Home = () => {
           </span>
         </div>
         <div className="impact-box">
-          <div className="heading-box">
+          <div className="headingbox">
+            <div className="carimg">
+              <img src="./image/impact-car.PNG" />
+            </div>
+            <div className="three-span">
+              <span className="Your-Car">Your Car</span>
+              <span className="Estimated-carbon-emi">
+                Estimated carbon emission
+              </span>
+              <span className="tCO2e-year">
+                0.00137 tCO2e /year • 4 miles/ltr milage
+              </span>
+            </div>
+          </div>
+          <hr className="hr-line" />
+          <div className="bottombox">
+            <div className="impact-box-1">
+              <div className="impact-div">
+                <span className="Impact-level">Impact level</span>
+                <Slider
+                  aria-label="Custom marks"
+                  defaultValue={2}
+                  // valueLabelDisplay="auto"
+                  getAriaValueText={valuetext}
+                  step={3}
+                  marks={marks}
+                />
+              </div>
+              <div className="contribution-div">
+                <span class="Your-contribution">Your contribution</span>
+                <div className="Two-btn">
+                  <button className="btn-one">One Time</button>
+                  <button className="btn-two">Monthly</button>
+                </div>
+              </div>
+            </div>
+            <div className="impact-box-2">
+              <span class="Trees-planted">3 Trees planted</span>
+              <div className="Tree-img-box">
+                <img src="./image/icon-plant-1.png" className="Tree-img-1" />
+                <img src="./image/icon-plant-1.png" className="Tree-img-2" />
+                <img src="./image/icon-plant-1.png" className="Tree-img-3" />
+              </div>
+              <span class="Month">£0.84 /Month</span>
+              <span class="One-year">One year</span>
+            </div>
+          </div>
+        </div>
+        <button className="Make-your-Impact2">Make your Impact</button>
+        <div className="Last-box">
+          <div className="what-impact-div">
+            <span class="What-impacts-do-we-m">What impacts do we make?</span>
+          </div>
 
-          <img src="./image/impact-car.PNG"></img>
-          <span className="Your-Car">Your Car</span>
-          <span className="Estimated-carbon-emi">Estimated carbon emission</span>
-          <span className="tCO2e-year">
-            0.00137 tCO2e /year • 4 miles/ltr milage
-          </span>
+          <div className="Four-img">
+            <div className="Img1">
+              <div className="Img1-span1">
+                <span class="Reforestation-in-the">
+                  Reforestation in the UK
+                </span>
+              </div>
+              <img src="./image/illustration-Reforestation-in-the-UK.png" />
+            </div>
+            <div className="Img2">
+              <div className="Img2-span2">
+                <span class="Closing-the-loop-for">
+                  Closing the loop for Motorsport
+                </span>
+              </div>
+              <img src="./image/illustration-Closing-the-loop-for-Motorsport-1.png" />
+            </div>
+            <div className="Img3">
+              <div className="Img3-span3">
+                <span class="Fuelling-the-Future">Fuelling the Future</span>
+              </div>
+              <img src="./image/icon-plant-1.png" />
+            </div>
+            <div className="Img4">
+              <div className="Img4-span4">
+                <span class="Planting-for-People">Planting for People</span>
+              </div>
+              <img src="./image/illustration-Fuelling-the-Future-1.png" />
+            </div>
+          </div>
+          <div className="Details-box">
+            <span class="Find-out-more">Find out more</span>
+            <p className="Arrow">
+              <img src="./image/icon-arrow.svg" />
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="last-impact">
+        <div className="section">
+          <div className="box1">
+            <h2>Let's decarbonise our World!</h2>
+          </div>
+          <div className="box2">
+            <button className="impact-button">
+              <a href="./ImpactCalculator">Make your Impact</a>
+            </button>
           </div>
         </div>
       </div>
