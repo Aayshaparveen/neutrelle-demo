@@ -1,5 +1,5 @@
-import React from "React";
-import { useDropzone } from "React-dropzone";
+import React from "react";
+import { useDropzone } from "react-dropzone";
 import "./style.css";
 function Dropzone({ open }) {
   const { getRootProps, getInputProps, isDragActive, acceptedFiles } =
