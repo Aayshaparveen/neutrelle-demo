@@ -1,26 +1,8 @@
-import React from "react";
+import React, {useState} from "react";
 import "./style.css";
 import Slider from "@mui/material/Slider";
 const Home = () => {
-  const marks = [
-    {
-      value: 0,
-      label: "Single",
-    },
-    {
-      value: 20,
-      label: "Double",
-    },
-    {
-      value: 37,
-      label: "Tripple",
-    },
-  ];
-
-  function valuetext(value) {
-    return `${value}°C`;
-  }
-
+  
   return (
     <>
       <div className="Home-container">
@@ -41,7 +23,7 @@ const Home = () => {
             <img src="./image/illustration-car.png" />
           </div>
           <div className="side-img">
-            <img src="./image/illustration-landscape.png" />
+            <img src="./image/illustration-landscape-1-e1672209294981.png" />
           </div>
           <div className="bottom-text">
             <span className="How-it-works">How it works?</span>
@@ -107,45 +89,48 @@ const Home = () => {
             <div className="impact-box-1">
               <div className="impact-div">
                 <span className="Impact-level">Impact level</span>
-                <Slider
-                  aria-label="Custom marks"
-                  defaultValue={2}
-                  // valueLabelDisplay="auto"
-                  getAriaValueText={valuetext}
-                  step={3}
-                  marks={marks}
-                />
+                {/* <Slider defaultValue={30} aria-label="Disabled slider" /> */}
+                <Slider defaultValue={0} step={3} marks min={3} max={9}  />
+                <div className="lable-div">
+
+                <p className="first"> Single</p>
+                <p className="second">Double</p>
+                <p className="third">Tripple</p>
+                </div>
               </div>
               <div className="contribution-div">
-                <span class="Your-contribution">Your contribution</span>
+                <span className="Your-contribution">Your contribution</span>
                 <div className="Two-btn">
                   <button className="btn-one">One Time</button>
                   <button className="btn-two">Monthly</button>
                 </div>
               </div>
             </div>
+               
             <div className="impact-box-2">
-              <span class="Trees-planted">3 Trees planted</span>
+              <span className="Trees-planted">3 Trees planted</span>
               <div className="Tree-img-box">
                 <img src="./image/icon-plant-1.png" className="Tree-img-1" />
                 <img src="./image/icon-plant-1.png" className="Tree-img-2" />
                 <img src="./image/icon-plant-1.png" className="Tree-img-3" />
               </div>
-              <span class="Month">£0.84 /Month</span>
-              <span class="One-year">One year</span>
+              <span className="Month">£0.84 /Month</span>
+              <span className="One-year">One year</span>
             </div>
           </div>
         </div>
         <button className="Make-your-Impact2">Make your Impact</button>
         <div className="Last-box">
           <div className="what-impact-div">
-            <span class="What-impacts-do-we-m">What impacts do we make?</span>
+            <span className="What-impacts-do-we-m">
+              What impacts do we make?
+            </span>
           </div>
 
           <div className="Four-img">
             <div className="Img1">
               <div className="Img1-span1">
-                <span class="Reforestation-in-the">
+                <span className="Reforestation-in-the">
                   Reforestation in the UK
                 </span>
               </div>
@@ -153,7 +138,7 @@ const Home = () => {
             </div>
             <div className="Img2">
               <div className="Img2-span2">
-                <span class="Closing-the-loop-for">
+                <span className="Closing-the-loop-for">
                   Closing the loop for Motorsport
                 </span>
               </div>
@@ -161,19 +146,19 @@ const Home = () => {
             </div>
             <div className="Img3">
               <div className="Img3-span3">
-                <span class="Fuelling-the-Future">Fuelling the Future</span>
+                <span className="Fuelling-the-Future">Fuelling the Future</span>
               </div>
               <img src="./image/icon-plant-1.png" />
             </div>
             <div className="Img4">
               <div className="Img4-span4">
-                <span class="Planting-for-People">Planting for People</span>
+                <span className="Planting-for-People">Planting for People</span>
               </div>
               <img src="./image/illustration-Fuelling-the-Future-1.png" />
             </div>
           </div>
           <div className="Details-box">
-            <span class="Find-out-more">Find out more</span>
+            <span className="Find-out-more">Find out more</span>
             <p className="Arrow">
               <img src="./image/icon-arrow.svg" />
             </p>

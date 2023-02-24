@@ -126,7 +126,7 @@ const OurMission = () => {
             dioxide in the atmosphere.
           </h2>
           <br />
-          <span>- Ross Brawn</span>
+          <span className="Ross">- Ross Brawn</span>
           <div className="last-img-box2">
             <img src="./image/icon-quote-right-1.png"></img>
           </div>

@@ -11,6 +11,7 @@
 }
 .blog-container1 {
   display: flex;
+  justify-content: space-between;
 }
 .Blog1 {
   display: flex;
@@ -135,6 +136,7 @@
 }
 .blog-container2 {
   display: flex;
+  justify-content: space-between;
   padding-top: 20px;
 }
 .Blog4 {

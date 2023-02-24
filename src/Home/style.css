@@ -60,7 +60,7 @@
 
 .side-img {
   margin-top: -850px;
-  margin-left: 400px;
+  margin-left: 600px;
   overflow: hidden;
 }
 .side-img img {
@@ -211,9 +211,9 @@
   background-color: #e2e2e2;
   height: 0px;
 }
-.css-14pt78w-MuiSlider-rail {
+/* .css-14pt78w-MuiSlider-rail {
   width: 37% !important;
-  /* padding: 0px !important; */
+  padding: 0px !important;
 }
 .css-1aznpnh-MuiSlider-root {
   padding: 0px !important;
@@ -228,7 +228,7 @@
 }
 .css-6cwnna-MuiSlider-mark {
   padding-left: 0px !important;
-}
+} */
 .bottombox {
   display: flex;
   justify-content: space-between;
@@ -245,14 +245,41 @@
   flex-direction: column;
   gap: 20px;
 }
+.css-187mznn-MuiSlider-root {
+  color: rgba(0, 0, 0, 0.1) !important;
+}
+.css-eg0mwd-MuiSlider-thumb:hover{
+  box-shadow: 0px rgba(0, 0, 0, 0.1) !important;
+}
+.lable-div {
+  display: flex;
+  margin-top: -15px;
+  color: gray;
+}
+.first {
+  font-size: 15px;
+  font-weight: normal;
+  width: 8vw;
+}
+.second {
+  font-size: 15px;
+  font-weight: normal;
+  width: 8vw;
+}
+.third {
+  font-size: 15px;
+  font-weight: normal;
+}
 .Impact-level {
   padding: 0px;
   font-size: 20px;
   font-style: normal;
 }
-.contribute-div {
+.contribution-div {
   display: flex;
   flex-direction: column;
+  margin-top: 45px;
+  gap: 20px;
 }
 .Your-contribution {
   padding: 0px;
@@ -385,9 +412,9 @@
   border-radius: 0px 25px;
   background-color: #fcf5eb;
 }
-.Img1-span1{
+.Img1-span1 {
   margin-left: -55px;
-    width: 107px;
+  width: 107px;
 }
 .Reforestation-in-the {
   font-size: 15px;
@@ -401,9 +428,9 @@
   background-color: #e6f4fb;
   border-radius: 0px 25px;
 }
-.Img2-span2{
+.Img2-span2 {
   margin-left: -55px;
-    width: 130px;
+  width: 130px;
 }
 .Closing-the-loop-for {
   font-size: 15px;
@@ -416,9 +443,9 @@
   background-color: #fcfaea;
   border-radius: 0px 25px;
 }
-.Img3-span3{
+.Img3-span3 {
   margin-left: -32px;
-    width: 85px;
+  width: 85px;
 }
 .Fuelling-the-Future {
   font-size: 15px;
@@ -431,30 +458,30 @@
   background-color: #e9f9f1;
   border-radius: 0px 25px;
 }
-.Img4-span4{
+.Img4-span4 {
   margin-left: -40px;
-    width: 86px;
+  width: 86px;
 }
-.Planting-for-People{
+.Planting-for-People {
   font-size: 15px;
   font-style: normal;
   padding: 0px;
 }
-.Find-out-more{
-padding-left: 45%;
+.Find-out-more {
+  padding-left: 45%;
   font-size: 20px;
   font-style: normal;
 }
-.Details-box{
+.Details-box {
   padding: 40px 0px 0px 0px;
-    display: flex;
-    align-items: center
+  display: flex;
+  align-items: center;
 }
-.Arrow{
+.Arrow {
   cursor: pointer;
-  color: black ;
+  color: black;
 }
-.Arrow img:hover{
+.Arrow img:hover {
   transform: rotate(45deg);
   transition: all 0.3s ease 0s;
 }

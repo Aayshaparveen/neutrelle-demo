@@ -15,13 +15,13 @@
 }
 .left-img {
   margin-top: 16rem;
-  width: 241px;
+  width: 310px;
   height: 280px;
   margin-left: -0.5rem;
 }
 .right-img {
   margin-top: 0rem;
-  width: 241px;
+  width: 310px;
   margin-left: 9px;
   height: 280px;
 }
@@ -114,7 +114,7 @@
   width: 4vw;
 }
 .last-img-box2 {
-  margin: -10px 410px;
+  margin: -10px 590px;
 }
 .last-img-box2 img {
   width: 4vw;
@@ -126,7 +126,7 @@
   text-align: center;
   font-weight: 500;
 }
-span {
+.Ross {
   padding-left: 45%;
   font-size: 20px;
   font-style: italic;
