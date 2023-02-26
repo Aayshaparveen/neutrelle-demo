@@ -56,17 +56,26 @@
   border: none;
   border-radius: 0;
   box-shadow: none;
+  /* background: url(./image/illustration-landscape.png) no-repeat ; */
+  /* background-size: cover; */
 }
 
 .side-img {
   margin-top: -850px;
-  margin-left: 600px;
+  margin-left: 400px;
   overflow: hidden;
+}
+.side-img::before{
+  --e-transform-translateY: 330px;
+    --e-transform-scale: 2.2;
 }
 .side-img img {
   width: 81vw;
   height: 130vh;
   margin-left: 20px;
+}
+.bottom-text{
+  text-align: center;
 }
 
 .How-it-works {

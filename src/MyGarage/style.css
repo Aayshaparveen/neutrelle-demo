@@ -52,32 +52,32 @@
   margin: 35px 0px 0px 0px;
   border-radius: 0px 35px;
   border: solid 1px #e2e2e2;
-  /* background-color: antiquewhite; */
+  background-color: antiquewhite;
+}
+.Left-div {
+  background-color: #e4f8e1;
+  border-radius: 0px 0px 0px 35px;
+}
+.css-aym9vq-MuiButtonBase-root-MuiTab-root {
+  color: black !important;
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 20px !important;
+  padding: 0px !important;
+}
+.css-aym9vq-MuiButtonBase-root-MuiTab-root > .MuiTab-iconWrapper {
+  width: 20px;
+  height: 20px;
+}
+.css-aym9vq-MuiButtonBase-root-MuiTab-root > .MuiTab-iconWrapper {
+  width: 20px;
+}
+.css-lfwcke-MuiTabs-flexContainer {
+  padding-left: 30px;
+  align-items: flex-start !important;
 }
 .css-10d9dml-MuiTabs-indicator {
-  background-color: #2cd28d !important;
- padding-left: 5px;
-
-  height: 50px !important;
-  /* display: none; */
-}
-.Tab {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: #e4f8e1;
-  width: 197px;
-  height: 727px;
-  border-radius: 0px 0px 0px 30px;
-}
-.css-7ozjwe {
-  position: none;
-}
-.css-35zqo5-MuiTabs-root {
-  padding-top: 20px;
-}
-.car-icon {
-  padding-left: 30px;
+  background-color: #58da71 !important;
 }
 .Logout {
   display: flex;
@@ -85,6 +85,7 @@
   gap: 10px;
   padding-bottom: 60px;
   padding-left: 20px;
+  margin-top: 350px;
 }
 .right-arrow {
   width: 27px;
@@ -132,8 +133,8 @@
   align-items: center;
   display: flex;
 }
-.color-box{
-  border-radius:50%; 
+.color-box {
+  border-radius: 50%;
   border: solid 2px #58da71;
   width: 2vw;
   height: 3vh;
@@ -194,11 +195,6 @@
 hr {
   background-color: #e2e2e2;
   margin: 30px;
-  height: 2px;
-}
-hr:hover {
-  height: 2px;
-  background-color: blue;
 }
 .second-box {
   display: flex;

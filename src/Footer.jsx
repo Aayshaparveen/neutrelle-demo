@@ -18,7 +18,7 @@ const Footer = () => {
             className="bottom-logo"
             src="https://neutrelle.ismartapps.tech/wp-content/uploads/2022/07/logo-neutrelle-bw.png"
           ></img>
-          <p>&copy; Neutrelle LTD 2023</p>
+          <p className="Neutrelle">&copy; Neutrelle LTD 2023</p>
         </div>
         <div className="last-box">
           {/* <h3>Privacy Policy</h3>

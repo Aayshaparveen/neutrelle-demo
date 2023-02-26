@@ -49,7 +49,6 @@ h1 {
   display: flex;
   padding: 50px 0px;
   color: gray;
-  /* justify-content: space-between; */
 }
 em {
   font-style: normal;
@@ -192,11 +191,9 @@ label {
 }
 .Case .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
   color: gray;
-  width: 22vw;
+  width: 21vw;
   height: 45px;
   border-radius: 0px 20px;
-  border-color: gray;
-  border: 2px solid darkgray;
 }
 .Suspension {
   display: flex;
@@ -222,24 +219,20 @@ label {
   border-radius: 0px 20px;
   border-color: gray;
 }
-.Characteristics select {
+.Characteristics .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root  {
   color: gray;
-  width: 22vw;
+  width: 21vw;
   height: 45px;
   border-radius: 0px 20px;
-  border-color: gray;
-  border: 2px solid darkgray;
 }
 .Respondent {
   padding-left: 109px;
 }
-.Respondent select {
-  width: 22vw;
+.Respondent .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root{
+  width: 21vw;
   color: gray;
   height: 45px;
   border-radius: 0px 20px;
-  border-color: gray;
-  border: 2px solid darkgray;
 }
 .Date-Allegend {
   display: flex;
@@ -252,7 +245,6 @@ label {
   height: 45px;
   border-radius: 0px 20px;
   border-color: gray;
-  /* border: 2px solid darkgray; */
 }
 
 .Nature-col-2 {
@@ -279,18 +271,16 @@ label {
   padding-left: 140px;
   padding-top: 20px;
 }
-.Reported2 select {
+.Reported2 .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root  {
   color: gray;
-  width: 22vw;
+  width: 21vw;
   height: 50px;
   border-radius: 0px 20px;
-  border-color: gray;
-  border: 2px solid darkgray;
 }
 .Complainanat {
   display: flex;
   gap: 10px;
-  padding-left: 55px;
+  padding-left: 54px;
 }
 .Complainanat input {
   color: gray;
@@ -304,35 +294,29 @@ label {
 .Complainanat-Category {
   padding-left: 25px;
 }
-.Complainanat-Category select {
+.Complainanat-Category .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root  {
   color: gray;
-  width: 22vw;
+  width: 21vw;
   height: 50px;
   border-radius: 0px 20px;
-  border-color: gray;
-  border: 2px solid darkgray;
 }
 .Manager {
   padding-left: 80px;
 }
-.Manager select {
+.Manager .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root  {
   color: gray;
-  width: 22vw;
+  width: 21vw;
   height: 50px;
   border-radius: 0px 20px;
-  border-color: gray;
-  border: 2px solid darkgray;
 }
 .Informal {
   padding-left: 60px;
 }
-.Informal select {
-  width: 22vw;
+.Informal .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
+  width: 21vw;
   color: gray;
   height: 50px;
   border-radius: 0px 20px;
-  border-color: gray;
-  border: 2px solid darkgray;
 }
 .description-field{
   margin-top: 50px;

@@ -13,7 +13,7 @@
   display: flex;
   gap: 20px;
 }
-p {
+.Neutrelle {
   color: gray;
   padding: 15px;
   font-size: 10px;

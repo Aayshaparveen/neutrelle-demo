@@ -10,8 +10,6 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { differenceInDays } from "date-fns";
-// import { Button } from "@mui/material";
-// import AddIcon from "@mui/icons-material/Add";
 import Dropzone from "../Dropzone";
 const Service = () => {
   const CssTextField = styled(TextField)({
@@ -31,22 +29,23 @@ const Service = () => {
         borderColor: "transparent",
       },
       "&.Mui-focused fieldset": {
-        // borderColor: 'black',
         border: "1px solid black",
         borderRadius: "1px 15px",
       },
     },
   });
-  // function ControlledOpenSelect() {
-  // const [value1, setValue1] = useState(null);
-  // const [value2, setValue2] = useState(null);
-  // const [age, setAge] = useState("");
   const [category, setCategory] = useState("");
   const [primary, setPrimary] = useState("");
   const [queue, setQueue] = useState("");
   const [assigned, setAssigned] = useState("");
   const [channel, setChannel] = useState("");
   const [nature, setNature] = useState("");
+  const [characteristics, setCharacteristics] = useState("");
+  const [respondent, setRespondent] = useState("");
+  const [reported, setReported] = useState("");
+  const [complainanat, setComplainanat] = useState("");
+  const [manager, setManager] = useState("");
+  const [informal, setInformal] = useState("");
 
   const [startdate, setStartdate] = useState(null);
   const [enddate, setEnddate] = useState(null);
@@ -70,6 +69,24 @@ const Service = () => {
   };
   const handlenature = (event) => {
     setNature(event.target.value);
+  };
+  const handlecharacteristics = (event) => {
+    setCharacteristics(event.target.value);
+  };
+  const handlerespondent = (event) => {
+    setRespondent(event.target.value);
+  };
+  const handlereported = (event) => {
+    setReported(event.target.value);
+  };
+  const handlecomplainanat = (event) => {
+    setComplainanat(event.target.value);
+  };
+  const handlemanager = (event) => {
+    setManager(event.target.value);
+  };
+  const handleinformal = (event) => {
+    setInformal(event.target.value);
   };
 
   // datedifference
@@ -217,16 +234,11 @@ const Service = () => {
             </div>
             <div className="attachment">
               <p>Attachment</p>
-              {/* <Button variant="contained" component="label"  className="add-icon-1">
-                <AddIcon className="add-icon-2"/>
-                <input type="file" hidden />
-              </Button> */}
               <Dropzone />
             </div>
             <div className="service-type">Service Request Type</div>
           </div>
         </div>
-
         <div className="Nature-box">
           <div className="Nature-heading">
             Nature of Allegation / Case Summary
@@ -258,7 +270,6 @@ const Service = () => {
               </div>
               <div className="Suspension">
                 <label>Suspension Date</label>
-                {/* <input type="date" /> */}
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                   <DatePicker
                     value={value1}
@@ -271,12 +282,11 @@ const Service = () => {
               </div>
               <div className="Return">
                 <label>Suspension Return Date </label>
-                {/* <input type="date" /> */}
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                   <DatePicker
                     value={value2}
                     onChange={(newValue) => {
-                      newValue;
+                      setValue2(newValue);
                     }}
                     renderInput={(params) => <TextField {...params} />}
                   />
@@ -285,25 +295,43 @@ const Service = () => {
               <div className="Characteristics">
                 <label>
                   Profected Characteristics
-                  <select>
-                    <option value="">Characteristics1</option>
-                    <option value="">Characteristics2</option>
-                    <option value="">Characteristics3</option>
-                    <option value="">Characteristics4</option>
-                    <option value="">Characteristics5</option>
-                  </select>
+                  <FormControl sx={{ m: 1, minWidth: 120 }}>
+                    <Select
+                      value={characteristics}
+                      onChange={handlecharacteristics}
+                      displayEmpty
+                      inputProps={{ "aria-label": "Without label" }}
+                    >
+                      <MenuItem value="">
+                        <em></em>
+                      </MenuItem>
+                      <MenuItem value={1}>Characteristics1</MenuItem>
+                      <MenuItem value={2}>Characteristics2</MenuItem>
+                      <MenuItem value={3}>Characteristics3</MenuItem>
+                      <MenuItem value={3}>Characteristics4</MenuItem>
+                    </Select>
+                  </FormControl>
                 </label>
               </div>
               <div className="Respondent">
                 <label>
                   Respondent
-                  <select>
-                    <option value=""> Respondent1</option>
-                    <option value=""> Respondent2</option>
-                    <option value=""> Respondent3</option>
-                    <option value=""> Respondent4</option>
-                    <option value=""> Respondent5</option>
-                  </select>
+                  <FormControl sx={{ m: 1, minWidth: 120 }}>
+                    <Select
+                      value={respondent}
+                      onChange={handlerespondent}
+                      displayEmpty
+                      inputProps={{ "aria-label": "Without label" }}
+                    >
+                      <MenuItem value="">
+                        <em></em>
+                      </MenuItem>
+                      <MenuItem value={1}>Respondent1</MenuItem>
+                      <MenuItem value={2}>Respondent2</MenuItem>
+                      <MenuItem value={3}>Respondent3</MenuItem>
+                      <MenuItem value={3}>Respondent4</MenuItem>
+                    </Select>
+                  </FormControl>
                 </label>
               </div>
               <div className="Date-Allegend">
@@ -338,56 +366,90 @@ const Service = () => {
               <div className="Reported2">
                 <label>
                   Reported
-                  <select>
-                    <option value="">Other</option>
-                    <option value="">Case1</option>
-                    <option value="">Case2</option>
-                    <option value="">Case3</option>
-                    <option value="">Case4</option>
-                  </select>
+                  <FormControl sx={{ m: 1, minWidth: 120 }}>
+                    <Select
+                      value={reported}
+                      onChange={handlereported}
+                      displayEmpty
+                      inputProps={{ "aria-label": "Without label" }}
+                    >
+                      <MenuItem value="">
+                        <em></em>
+                      </MenuItem>
+                      <MenuItem value={1}>Case1</MenuItem>
+                      <MenuItem value={2}>Case2</MenuItem>
+                      <MenuItem value={3}>Case3</MenuItem>
+                      <MenuItem value={3}>Case4</MenuItem>
+                    </Select>
+                  </FormControl>
                 </label>
               </div>
               <div className="Complainanat">
                 <label>Complainant Name</label>
                 <input type="text" />
               </div>
+
               <div className="Complainanat-Category">
                 <label>
                   Complainanat Category
-                  <select>
-                    <option value=""></option>
-                    <option value="">Category1</option>
-                    <option value="">Category2</option>
-                    <option value="">Category3</option>
-                    <option value="">Category4</option>
-                    <option value="">Category5</option>
-                  </select>
+                  <FormControl sx={{ m: 1, minWidth: 120 }}>
+                    <Select
+                      value={complainanat}
+                      onChange={handlecomplainanat}
+                      displayEmpty
+                      inputProps={{ "aria-label": "Without label" }}
+                    >
+                      <MenuItem value="">
+                        <em></em>
+                      </MenuItem>
+                      <MenuItem value={1}>Category1</MenuItem>
+                      <MenuItem value={2}>Category2</MenuItem>
+                      <MenuItem value={3}>Category3</MenuItem>
+                      <MenuItem value={3}>Category4</MenuItem>
+                    </Select>
+                  </FormControl>
                 </label>
               </div>
               <div className="Manager">
                 <label>
                   HR Case Manager
-                  <select>
-                    <option value=""></option>
-                    <option value="">Case1</option>
-                    <option value="">Case2</option>
-                    <option value="">Case3</option>
-                    <option value="">Case4</option>
-                    <option value="">Case5</option>
-                  </select>
+                  <FormControl sx={{ m: 1, minWidth: 120 }}>
+                    <Select
+                      value={manager}
+                      onChange={handlemanager}
+                      displayEmpty
+                      inputProps={{ "aria-label": "Without label" }}
+                    >
+                      <MenuItem value="">
+                        <em></em>
+                      </MenuItem>
+                      <MenuItem value={1}>Case1</MenuItem>
+                      <MenuItem value={2}>Case2</MenuItem>
+                      <MenuItem value={3}>Case3</MenuItem>
+                      <MenuItem value={3}>Case4</MenuItem>
+                    </Select>
+                  </FormControl>
                 </label>
               </div>
               <div className="Informal">
                 <label>
                   Informal Case Action
-                  <select>
-                    <option value=""></option>
-                    <option value="">Case1</option>
-                    <option value="">Case2</option>
-                    <option value="">Case3</option>
-                    <option value="">Case4</option>
-                    <option value="">Case5</option>
-                  </select>
+                  <FormControl sx={{ m: 1, minWidth: 120 }}>
+                    <Select
+                      value={informal}
+                      onChange={handleinformal}
+                      displayEmpty
+                      inputProps={{ "aria-label": "Without label" }}
+                    >
+                      <MenuItem value="">
+                        <em></em>
+                      </MenuItem>
+                      <MenuItem value={1}>Case1</MenuItem>
+                      <MenuItem value={2}>Case2</MenuItem>
+                      <MenuItem value={3}>Case3</MenuItem>
+                      <MenuItem value={3}>Case4</MenuItem>
+                    </Select>
+                  </FormControl>
                 </label>
               </div>
             </div>

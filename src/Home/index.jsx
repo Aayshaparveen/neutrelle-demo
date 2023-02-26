@@ -21,9 +21,9 @@ const Home = () => {
         <div className="Img-box">
           <div className="car-img">
             <img src="./image/illustration-car.png" />
-          </div>
           <div className="side-img">
-            <img src="./image/illustration-landscape-1-e1672209294981.png" />
+            <img src="./image/illustration-landscape.png" />
+          </div>
           </div>
           <div className="bottom-text">
             <span className="How-it-works">How it works?</span>
