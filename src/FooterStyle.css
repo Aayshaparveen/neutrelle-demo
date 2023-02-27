@@ -27,7 +27,7 @@
 
 .last-box {
   display: flex;
-  /* gap: 25px; */
+  gap: 25px;
   margin: 0px -60px;
 }
 .last-para-link a{

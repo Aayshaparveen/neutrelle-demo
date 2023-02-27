@@ -39,42 +39,47 @@
   font-size: 13px;
   margin-left: 140px;
 }
-.Img-box {
+.Img-box{
   display: flex;
-  background-color: rgb(226, 236, 233);
-  flex-direction: column;
-  height: 120vh;
 }
 .car-img {
-  margin-top: -174px;
+  transform: perspective(var(--e-transform-perspective,0)) rotate(var(--e-transform-rotateZ,0)) rotateX(var(--e-transform-rotateX,0)) rotateY(var(--e-transform-rotateY,0)) translate(var(--e-transform-translate,0)) translateX(var(--e-transform-translateX,0)) translateY(var(--e-transform-translateY,0)) scaleX(calc(var(--e-transform-flipX, 1) * var(--e-transform-scaleX, var(--e-transform-scale, 1)))) scaleY(calc(var(--e-transform-flipY, 1) * var(--e-transform-scaleY, var(--e-transform-scale, 1)))) skewX(var(--e-transform-skewX,0)) skewY(var(--e-transform-skewY,0));
+  transform-origin: var(--e-transform-origin-y) var(--e-transform-origin-x);
+  margin: 5em 0em 0em 0em;
+  padding: 0em 0em 0em 0em;
+  --e-transform-translateX: -312px;
+  --e-transform-scale: 2;
 }
 .car-img img {
-  margin-left: -700px;
-  width: 100vw;
-  height: 80vh;
-  /* max-width: 100%; */
-  border: none;
-  border-radius: 0;
-  box-shadow: none;
-  /* background: url(./image/illustration-landscape.png) no-repeat ; */
-  /* background-size: cover; */
+  width: 45vw;
+  margin-top: -10px;
+}
+.side-img {
+  overflow: hidden;
+  margin: -25em 0em 0em -20em;
+  --e-transform-translateX: 0px;
+  --e-transform-translateY: 330px;
+  --e-transform-scale: 2.2;
 }
 
-.side-img {
-  margin-top: -850px;
-  margin-left: 400px;
-  overflow: hidden;
-}
-.side-img::before{
-  --e-transform-translateY: 330px;
-    --e-transform-scale: 2.2;
-}
 .side-img img {
-  width: 81vw;
-  height: 130vh;
-  margin-left: 20px;
+  width: 100vw;
+  vertical-align: middle;
+  display: inline-block;
+  
 }
-.bottom-text{
+.middel-container {
+  display: flex;
+  background-color: #46FF6F1A;
+  flex-direction: column;
+  overflow: hidden;
+  transition:  0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  margin-top: -18em;
+  margin-bottom: 0em;
+  padding: 15em 4em 5em 5em;
+
+}
+.bottom-text {
   text-align: center;
 }
 
@@ -92,7 +97,6 @@
   display: flex;
   gap: 15px;
   flex-direction: column;
-  /* background-color: #2cd28d; */
   text-align: center;
   align-items: center;
 }
@@ -220,24 +224,6 @@
   background-color: #e2e2e2;
   height: 0px;
 }
-/* .css-14pt78w-MuiSlider-rail {
-  width: 37% !important;
-  padding: 0px !important;
-}
-.css-1aznpnh-MuiSlider-root {
-  padding: 0px !important;
-  width: 20vw !important;
-  color: rgba(0, 0, 0, 0.1) !important;
-}
-.css-eg0mwd-MuiSlider-thumb {
-  padding: 0px !important;
-}
-.css-1tfve6q-MuiSlider-mark {
-  padding: 0px !important;
-}
-.css-6cwnna-MuiSlider-mark {
-  padding-left: 0px !important;
-} */
 .bottombox {
   display: flex;
   justify-content: space-between;
@@ -257,7 +243,7 @@
 .css-187mznn-MuiSlider-root {
   color: rgba(0, 0, 0, 0.1) !important;
 }
-.css-eg0mwd-MuiSlider-thumb:hover{
+.css-eg0mwd-MuiSlider-thumb:hover {
   box-shadow: 0px rgba(0, 0, 0, 0.1) !important;
 }
 .lable-div {
@@ -480,7 +466,10 @@
   padding-left: 45%;
   font-size: 20px;
   font-style: normal;
+  color: black;
+  text-decoration: none;
 }
+
 .Details-box {
   padding: 40px 0px 0px 0px;
   display: flex;

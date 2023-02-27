@@ -11,6 +11,7 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { differenceInDays } from "date-fns";
 import Dropzone from "../Dropzone";
+import OutlinedInput from "@mui/material/OutlinedInput";
 const Service = () => {
   const CssTextField = styled(TextField)({
     "& label.Mui-focused": {
@@ -127,10 +128,11 @@ const Service = () => {
             <div className="Title">
               <label>
                 Title
-                <input type="text" className="Title-box" />
+                <FormControl sx={{ width: "29ch" }}>
+                  <OutlinedInput />
+                </FormControl>
               </label>
             </div>
-            {/* <CssTextField  id="custom-css-outlined-input" /> */}
             <div className="Category">
               <InputLabel>Category</InputLabel>
               <FormControl sx={{ m: 1, minWidth: 120 }}>
@@ -386,7 +388,9 @@ const Service = () => {
               </div>
               <div className="Complainanat">
                 <label>Complainant Name</label>
-                <input type="text" />
+                <FormControl sx={{ width: "29ch" }}>
+                  <OutlinedInput />
+                </FormControl>
               </div>
 
               <div className="Complainanat-Category">
