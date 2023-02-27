@@ -44,7 +44,7 @@
 .Basic-title{
   color: black;
     font-size: 16px;
-    padding: 0px 0px 0px 11px;
+    padding: 0px 0px 0px 12px;
 }
 #custom-css-outlined-input{
   padding-right: 120px;
@@ -108,6 +108,7 @@ em{
 .Two-col{
   display: flex;
   align-items: center;
+  padding-left: 12px;
  
 }
 .css-1u3bzj6-MuiFormControl-root-MuiTextField-root{
@@ -193,4 +194,7 @@ border-width: 1px;
   padding: 10px 0px 0px 0px;
   display: flex;
   align-items: center;
+}
+.col-1{
+  padding-left: 0px;
 }

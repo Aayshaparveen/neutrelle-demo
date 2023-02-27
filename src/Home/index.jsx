@@ -18,14 +18,14 @@ const Home = () => {
             * You can calculate how your contribution will make this impact
           </span>
         </div>
-          <div className="Img-box">
-            <div className="car-img">
-              <img src="./image/illustration-car.png" />
-            </div>
-            <div className="side-img">
-              <img src="./image/illustration-landscape.png" />
-            </div>
+        <div className="Img-box">
+          <div className="car-img">
+            <img src="./image/illustration-car.png" />
           </div>
+          <div className="side-img">
+            <img src="./image/illustration-landscape.png" />
+          </div>
+        </div>
         <div className="middel-container">
           <div className="bottom-text">
             <span className="How-it-works">How it works?</span>
@@ -91,7 +91,7 @@ const Home = () => {
             <div className="impact-box-1">
               <div className="impact-div">
                 <span className="Impact-level">Impact level</span>
-                {/* <Slider defaultValue={30} aria-label="Disabled slider" /> */}
+
                 <Slider defaultValue={0} step={3} marks min={3} max={9} />
                 <div className="lable-div">
                   <p className="first"> Single</p>
@@ -159,7 +159,9 @@ const Home = () => {
             </div>
           </div>
           <div className="Details-box">
-            <Link to ="./Blog" className="Find-out-more">Find out more</Link>
+            <Link to="./Blog" className="Find-out-more">
+              Find out more
+            </Link>
             <p className="Arrow">
               <img src="./image/icon-arrow.svg" />
             </p>

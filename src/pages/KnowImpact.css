@@ -1,0 +1,192 @@
+.Impact-heading {
+  margin-top: 100px;
+}
+.Impact-text {
+  text-align: left;
+  padding: auto;
+  margin-left: 140px;
+  font-size: 45px;
+}
+.Impact-box {
+  border: 1px solid #e2e2e2;
+  margin: 50px 100px 20px 100px;
+  padding-bottom: 80px;
+  border-radius: 0px 30px;
+}
+.Impact-heading-box {
+  display: flex;
+  justify-content: space-between;
+}
+.left-text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 45px;
+  margin-top: 20px;
+}
+.Mercedese-Benz-2 {
+  font-size: 20px;
+}
+
+.Sb-box-right {
+  background-color: #ffef04;
+  border: 2px solid black;
+  margin-right: 85px;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-top: 30px;
+}
+.SB71-HJN-2 {
+  font-size: 20px;
+  font-style: normal;
+  padding: 0px;
+  font-weight: 600;
+}
+hr {
+  background-color: #e2e2e2;
+  margin: 25px 0px 0px 0px;
+}
+.Two-box {
+  display: flex;
+  justify-content: space-between;
+}
+.Box-1 {
+  margin-top: 40px;
+  width: 50vw;
+}
+.milage-box {
+  margin-left: 40px;
+  display: flex;
+  gap: 20px;
+}
+.css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+  width: 15vw !important;
+}
+.Two-btn1 {
+  background-color: lightgray;
+  border-radius: 0px 20px;
+  width: 10.2vw;
+  height: 8vh;
+}
+.btn-one-km {
+  border-radius: 0px 20px;
+  height: 8vh;
+  width: 5vw;
+  background-color: lightgray;
+}
+.btn-two-mi {
+  border-radius: 0px 20px;
+  height: 7vh;
+  width: 5vw;
+  background-color: white;
+}
+.first {
+  font-size: 15px;
+  font-weight: normal;
+  width: 5vw;
+}
+.second {
+  font-size: 15px;
+  font-weight: normal;
+  width: 5vw;
+}
+.third {
+  font-size: 15px;
+  font-weight: normal;
+  width: 5vw;
+}
+.Two-btn2 {
+  background-color: lightgray;
+  border-radius: 0px 20px;
+  width: 16vw;
+  height: 8vh;
+  margin-left: 45px;
+  margin-top: 50px;
+}
+.impact-div-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-left: 40px;
+}
+.css-187mznn-MuiSlider-root {
+  color: rgba(0, 0, 0, 0.1) !important;
+  width: 55% !important;
+}
+.Two-btn2 {
+  background-color: lightgray;
+  border-radius: 0px 20px;
+  width: 20vw;
+  height: 8vh;
+  margin-left: 45px;
+  margin-top: 50px;
+}
+.imp-hr {
+  background-color: #e2e2e2;
+  margin: 30px 5px 30px 35px;
+}
+.Last-two-containt {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.Add-btn {
+  margin-left: 40px;
+  background-color: #2cd28d;
+  border: 1px;
+  padding: 15px 15px;
+  border-radius: 0px 20px;
+  font-size: 1.2vw;
+  cursor: pointer;
+}
+.text {
+  display: flex;
+  margin-right: 25px;
+  flex-direction: column;
+}
+.Box-2 {
+  background-color: whitesmoke;
+  width: 50vw;
+}
+.Your-impact {
+  background-color: #cbe4d8;
+  text-align: center;
+  margin: 30px 250px 30px 250px;
+  padding: 10px 0px;
+  border-radius: 0px 20px;
+  width: 10vw;
+}
+.YOUR-IMPACT {
+  font-size: 15px;
+}
+.Two-images {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 30px;
+}
+.first-circle {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    margin-left: 50px;
+}
+.first-circle img {
+    width: 10vw;
+}
+.second-tree {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-right: 85px;
+    margin-top: 42px;
+}
+.second-tree img{
+    width: 5vw;
+}
+.num {
+font-size: 15px;
+}
+.-Trees-planted {
+    font-size: 20px;
+    margin-top: 20px;
+}

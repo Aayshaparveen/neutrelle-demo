@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
 import styled from "@emotion/styled";
 import "./style.css";
-
-
+import { Link } from "react-router-dom";
 const CssTextField = styled(TextField)({
   "& label.Mui-focused": {
     color: "gray",
@@ -75,7 +74,7 @@ const ImpactCalculator = () => {
             <div className="right-line"></div>
           </div>
           <div className="details">
-            <a href="./Registration">Enter details manually</a>
+            <Link to="/Cardeatils">Enter details manually</Link>
             <p className="arrow">
             
               <img src="./image/icon-arrow.svg"/>

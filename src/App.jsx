@@ -10,7 +10,8 @@ import SignIn from "./pages/SignIn";
 import Blog from "./Blog";
 import ContactUs from "./ContactUs";
 import Footer from "./Footer";
-import Registration from "./Cardeatils";
+import Cardeatils from "./Cardeatils";
+import KnowImpact from "./pages/KnowImpact";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -25,10 +26,12 @@ function App() {
           <Route path="/MyGarage" element={<MyGarage />} />
           <Route path="/Blog" element={<Blog />} />
           <Route path="/ContactUs" element={<ContactUs />} />
-          <Route path="/Registration" element={<Registration />} />
+          <Route path="/Cardeatils" element={<Cardeatils />} />
           <Route path="/pages/SignIn" element={<SignIn />} />
           <Route path="/pages/SignUp" element={<SignUp />} />
+          <Route path="/pages/KnowImpact" element={<KnowImpact/>} />
           <Route path="/ServicePage" element={<ServicePage />} />
+          
         </Routes>
        
         <Footer />

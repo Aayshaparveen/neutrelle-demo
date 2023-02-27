@@ -4,7 +4,6 @@ import TextField from "@mui/material/TextField";
 import styled from "@emotion/styled";
 import NativeSelect from "@mui/material/NativeSelect";
 import InputBase from "@mui/material/InputBase";
-// import InputLabel from '@mui/material/InputLabel';
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
@@ -12,6 +11,7 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import { Stack } from "@mui/system";
+import { Link } from "react-router-dom";
 const CssTextField = styled(TextField)({
   "& label.Mui-focused": {
     color: "gray",
@@ -44,15 +44,6 @@ export default function ControlledOpenSelect() {
     setAge(event.target.value);
   };
 
-  // const handleClose = () => {
-  //   setOpen(false);
-  // };
-
-  // const handleOpen = () => {
-  //   setOpen(true);
-  // };
-  // const [value, setValue] = React.useState(null);
-
   const BootstrapInput = styled(InputBase)(() => ({
     "label + &": {},
     "& .MuiInputBase-input": {
@@ -61,18 +52,15 @@ export default function ControlledOpenSelect() {
       border: "1px solid #ced4da",
       fontSize: 16,
       padding: "18px 0px 18px 15px",
-      minWidth:"50px",
+      minWidth: "50px",
       "&:focus": {
         borderRadius: "0px 20px",
-        // padding: "18px 0px 18px 15px",
-        // borderColor: "gray",
         boxShadow: "0rem",
       },
     },
   }));
-    //  DatePickers() {
-    const [value, setValue] = React.useState(('2022-04-07'));
-  // }
+  const [value, setValue] = React.useState("2022-04-07");
+
 
   return (
     <div className="main-container2">
@@ -92,17 +80,14 @@ export default function ControlledOpenSelect() {
           <div className="Two-col">
             <div className="col-1">
               <FormControl sx={{ m: 1, minWidth: 120 }}>
-              {/* <InputLabel id="demo-simple-select-helper-label">Make</InputLabel> */}
+                {/* <InputLabel id="demo-simple-select-helper-label">Make</InputLabel> */}
                 <Select
-                
                   value={age}
                   onChange={handleChange}
                   displayEmpty
                   inputProps={{ "aria-label": "Without label" }}
-                  
                 >
-                  <MenuItem value=""
-                  >
+                  <MenuItem value="">
                     <em>Make</em>
                   </MenuItem>
                   <MenuItem value={1}>Abarth</MenuItem>
@@ -114,18 +99,18 @@ export default function ControlledOpenSelect() {
               </FormControl>
             </div>
             <div className="col-2">
-            <Stack>
-              <LocalizationProvider dateAdapter={AdapterDayjs}>
-                <DatePicker
-                  label="Manufacture Year"
-                  views={['year']}
-                  value={value}
-                  onChange={(newValue) => {
-                    setValue(newValue);
-                  }}
-                  renderInput={(params) => <TextField {...params} />}
-                />
-              </LocalizationProvider>
+              <Stack>
+                <LocalizationProvider dateAdapter={AdapterDayjs}>
+                  <DatePicker
+                    label="Manufacture Year"
+                    views={["year"]}
+                    value={value}
+                    onChange={(newValue) => {
+                      setValue(newValue);
+                    }}
+                    renderInput={(params) => <TextField {...params} />}
+                  />
+                </LocalizationProvider>
               </Stack>
             </div>
           </div>
@@ -163,16 +148,12 @@ export default function ControlledOpenSelect() {
               </div>
               <div className="F-col2">
                 <FormControl sx={{ m: 1 }} variant="standard">
-                  {/* <InputLabel htmlFor="demo-customized-select-native">
-                  Age
-                </InputLabel> */}
                   <NativeSelect
                     id="demo-customized-select-native"
                     value={age}
                     onChange={handleChange}
                     input={<BootstrapInput />}
                   >
-                    {/* <option aria-label="None" value="" /> */}
                     <option value={1}>Mpg</option>
                     <option value={2}>Kmpl</option>
                   </NativeSelect>
@@ -207,7 +188,10 @@ export default function ControlledOpenSelect() {
             </div>
           </div>
           <div className="btn">
+            <Link to="../pages/KnowImpact">
+
             <button className="impact-btn">Know your Impact</button>
+            </Link>
           </div>
           <div className="bottom-container">
             <div className="line-box">
