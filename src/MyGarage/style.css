@@ -140,7 +140,13 @@
   height: 3vh;
 }
 .vehicles-logo img {
-  width: 7vw;
+  width: 5vw;
+  border-radius: 50%;
+  border: 10px solid;
+  border-left-color: #58da71;
+  border-top-color: #33c5ff;
+  border-right-color: #6142ea;
+  border-bottom-color: #c3c3c3;
 }
 .deatils-box {
   display: flex;

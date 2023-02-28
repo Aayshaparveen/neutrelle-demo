@@ -82,12 +82,12 @@ hr {
 .first {
   font-size: 15px;
   font-weight: normal;
-  width: 5vw;
+  width: 8vw;
 }
 .second {
   font-size: 15px;
   font-weight: normal;
-  width: 5vw;
+  width: 8vw;
 }
 .third {
   font-size: 15px;
@@ -143,6 +143,13 @@ hr {
   margin-right: 25px;
   flex-direction: column;
 }
+.Month {
+  padding: 0px;
+  font-size: 20px;
+  font-style: normal;
+  text-align: center;
+  font-weight: 600;
+}
 .Box-2 {
   background-color: whitesmoke;
   width: 50vw;
@@ -172,6 +179,13 @@ hr {
 }
 .first-circle img {
     width: 10vw;
+   
+    border-radius: 50%;
+    border: 10px solid;
+    border-left-color: #58da71;
+    border-top-color: #33c5ff;
+    border-right-color: #6142ea;
+    border-bottom-color: #c3c3c3;
 }
 .second-tree {
     display: flex;

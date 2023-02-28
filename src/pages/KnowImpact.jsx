@@ -64,7 +64,7 @@ const KnowImpact = () => {
             </div>
             <div className="Two-images">
               <div className="first-circle">
-                <img src="../image/circle.png" />
+                <img src="../image/mercedes_logos.png" />
                 <span className="-tCO2e">0.06614 tCO2e</span>
               </div>
               <div className="second-tree">

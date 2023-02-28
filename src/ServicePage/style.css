@@ -142,13 +142,15 @@ label {
   color: gray;
   font-size: 15px;
 }
-.attachment-text{
-   margin-left: 55px;
+.attachment-text {
+  margin-left: 55px;
+}
+.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
+  padding-right: 95px !important;
 }
 .Category2 {
   display: flex;
   gap: 10px;
-  
 }
 .Category .css-1869usk-MuiFormControl-root {
   min-width: 297px !important;
