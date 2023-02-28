@@ -92,7 +92,9 @@ label {
   display: flex;
   gap: 10px;
 }
-.Case-status{
+.Case-status {
+  display: flex;
+  gap: 20px;
   padding-left: 100px;
 }
 .col-2 {
@@ -128,29 +130,34 @@ label {
   padding-left: 45px;
 }
 .attachment {
+  margin-top: -40px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   text-align: center;
-  padding-left: 67px;
+  padding-left: 170px;
   gap: 15px;
 }
 .attachment p {
   color: gray;
   font-size: 15px;
 }
-.add-icon-1.css-sghohy-MuiButtonBase-root-MuiButton-root {
-  background-color: white;
-  box-shadow: none;
+.attachment-text{
+   margin-left: 55px;
 }
-.add-icon-1.css-sghohy-MuiButtonBase-root-MuiButton-root:hover {
-  background-color: white;
-  box-shadow: none;
+.Category2 {
+  display: flex;
+  gap: 10px;
+  
 }
-.add-icon-2.css-i4bv87-MuiSvgIcon-root  {
-  color: blue;
+.Category .css-1869usk-MuiFormControl-root {
+  min-width: 297px !important;
 }
 .service-type {
-  padding-left: 50px;
+  margin-top: 20px;
+  display: flex;
+  gap: 40px;
+  padding-left: 0px;
 }
 .Nature-box {
   display: flex;
@@ -219,7 +226,8 @@ label {
   border-radius: 0px 20px;
   border-color: gray;
 }
-.Characteristics .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root  {
+.Characteristics
+  .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
   color: gray;
   width: 21vw;
   height: 45px;
@@ -228,7 +236,8 @@ label {
 .Respondent {
   padding-left: 109px;
 }
-.Respondent .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root{
+.Respondent
+  .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
   width: 21vw;
   color: gray;
   height: 45px;
@@ -271,7 +280,7 @@ label {
   padding-left: 140px;
   padding-top: 20px;
 }
-.Reported2 .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root  {
+.Reported2 .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
   color: gray;
   width: 21vw;
   height: 50px;
@@ -292,7 +301,8 @@ label {
 .Complainanat-Category {
   padding-left: 25px;
 }
-.Complainanat-Category .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root  {
+.Complainanat-Category
+  .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
   color: gray;
   width: 21vw;
   height: 50px;
@@ -301,7 +311,7 @@ label {
 .Manager {
   padding-left: 80px;
 }
-.Manager .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root  {
+.Manager .css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
   color: gray;
   width: 21vw;
   height: 50px;
@@ -316,7 +326,7 @@ label {
   height: 50px;
   border-radius: 0px 20px;
 }
-.description-field{
+.description-field {
   margin-top: 50px;
   margin-left: 100px;
   margin-right: 100px;

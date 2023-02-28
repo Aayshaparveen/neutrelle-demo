@@ -31,7 +31,6 @@ function App() {
           <Route path="/pages/SignUp" element={<SignUp />} />
           <Route path="/pages/KnowImpact" element={<KnowImpact/>} />
           <Route path="/ServicePage" element={<ServicePage />} />
-          
         </Routes>
        
         <Footer />

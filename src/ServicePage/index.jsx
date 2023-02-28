@@ -12,6 +12,7 @@ import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { differenceInDays } from "date-fns";
 import Dropzone from "../Dropzone";
 import OutlinedInput from "@mui/material/OutlinedInput";
+// import AddIcon from '@mui/icons-material/Add';
 const Service = () => {
   const CssTextField = styled(TextField)({
     "& label.Mui-focused": {
@@ -145,11 +146,11 @@ const Service = () => {
                   <MenuItem value="">
                     <em></em>
                   </MenuItem>
-                  <MenuItem value={1}>Enquiry: Sick Leave</MenuItem>
-                  <MenuItem value={2}>Enquiry: Annual Leave</MenuItem>
-                  <MenuItem value={3}>Enquiry: Maternity Leave</MenuItem>
-                  <MenuItem value={4}>ER Case: Grievance</MenuItem>
-                  <MenuItem value={5}>ER Case: Capability</MenuItem>
+                  <MenuItem value="Enquiry">Enquiry: Sick Leave</MenuItem>
+                  <MenuItem value="Enquiry">Enquiry: Annual Leave</MenuItem>
+                  <MenuItem value="Enquiry">Enquiry: Maternity Leave</MenuItem>
+                  <MenuItem value="Case">ER Case: Grievance</MenuItem>
+                  <MenuItem value="Case">ER Case: Capability</MenuItem>
                 </Select>
               </FormControl>
             </div>
@@ -173,7 +174,10 @@ const Service = () => {
                 </Select>
               </FormControl>
             </div>
-            <div className="Case-status">Case Status</div>
+            <div className="Case-status">
+              Case Status
+              <div>New</div>
+            </div>
           </div>
           <div className="col-2">
             <div className="Queue">
@@ -230,15 +234,40 @@ const Service = () => {
                   <MenuItem value={1}>Queue1</MenuItem>
                   <MenuItem value={2}>Queue2</MenuItem>
                   <MenuItem value={3}>Queue3</MenuItem>
-                  <MenuItem value={3}>Queue4</MenuItem>
+                  <MenuItem value={4}>Queue4</MenuItem>
                 </Select>
               </FormControl>
             </div>
+              <p className="attachment-text">Attachment</p>
             <div className="attachment">
-              <p>Attachment</p>
+              {/* <AddIcon/> */}
+              <div className="Category2">
+              <FormControl sx={{ m: 1, minWidth: 120 }}>
+              {/* <InputLabel>Category</InputLabel> */}
+                <Select
+                  value={category}
+                 placeholder="Category"
+                  onChange={handleCategory}
+                  displayEmpty
+                  inputProps={{ "aria-label": "Without label" }}
+                >
+                  <MenuItem value="">
+                    <em></em>
+                  </MenuItem>
+                  <MenuItem value="Enquiry">Enquiry: Sick Leave</MenuItem>
+                  <MenuItem value="Enquiry">Enquiry: Annual Leave</MenuItem>
+                  <MenuItem value="Enquiry">Enquiry: Maternity Leave</MenuItem>
+                  <MenuItem value="Case">ER Case: Grievance</MenuItem>
+                  <MenuItem value="Case">ER Case: Capability</MenuItem>
+                </Select>
+              </FormControl>
+            </div>
               <Dropzone />
             </div>
-            <div className="service-type">Service Request Type</div>
+            <div className="service-type">
+              Service Request Type
+              <div>{category}</div>
+            </div>
           </div>
         </div>
         <div className="Nature-box">
