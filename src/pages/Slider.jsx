@@ -1,6 +1,7 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
+import { useState } from "react";
 
 const marks = [
   {
@@ -18,18 +19,24 @@ const marks = [
 ];
 
 export default function DiscreteSliderMarks() {
+  const [impactlevel, setImpactlevel] = useState(1);
+  const handelImpactlevel = (event) => {
+    setImpactlevel(event.target.value);
+    // console.log(event.target.value);
+  };
   return (
     <Box>
       <Slider
-       sx={{ 
-             
-        }}
-      className="slider"
+        style={
+          impactlevel == 1
+            ? { color: "rgb(88, 218, 113)" }
+            : impactlevel == 2
+            ? { color: "rgb(51, 197, 255)" }
+            : { color: "rgb(97, 66, 234)" }
+        }
+        className="slider"
+        onChange={handelImpactlevel}
         aria-label="Custom marks"
-        // defaultValue={20}
-        // getAriaValueText={valuetext}
-        // step={20}
-        // valueLabelDisplay="auto"
         max={3}
         min={1}
         marks={marks}

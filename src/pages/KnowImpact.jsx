@@ -1,6 +1,6 @@
 import React from "react";
 import "./KnowImpact.css";
-import Slider from "@mui/material/Slider";
+import Slider from "../pages/Slider";
 import TextField from "@mui/material/TextField";
 const KnowImpact = () => {
   return (
@@ -36,12 +36,7 @@ const KnowImpact = () => {
             <div className="impact-div-2">
               <span className="Impact-level">Impact level</span>
 
-              <Slider defaultValue={0} step={3} marks min={3} max={9} />
-              <div className="lable-div">
-                <p className="first"> Single</p>
-                <p className="second">Double</p>
-                <p className="third">Tripple</p>
-              </div>
+              <Slider/>
             </div>
             <div className="Two-btn2">
               <button className="btn-one">One Time</button>

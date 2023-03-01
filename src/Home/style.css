@@ -240,7 +240,7 @@
   flex-direction: column;
   gap: 20px;
 }
-.css-1aznpnh-MuiSlider-root {
+/* .css-1aznpnh-MuiSlider-root {
   color: gray !important;
   height: 10px !important;
 }
@@ -263,13 +263,8 @@
 }
 .css-14pt78w-MuiSlider-rail {
   width: 103% !important;
-}
-.slider{
-  /* color: aqua; */
-}
-.single{
-  background-color: aqua;
-}
+} */
+
 .Impact-level {
   padding: 0px;
   font-size: 20px;
