@@ -238,12 +238,11 @@ const Service = () => {
                 </Select>
               </FormControl>
             </div>
-              <p className="attachment-text">Attachment</p>
+              <div className="attachment-text">Attachment</div>
             <div className="attachment">
               {/* <AddIcon/> */}
               <div className="Category2">
               <FormControl sx={{ m: 1, minWidth: 120 }}>
-              {/* <InputLabel>Category</InputLabel> */}
                 <Select
                   value={category}
                  placeholder="Category"

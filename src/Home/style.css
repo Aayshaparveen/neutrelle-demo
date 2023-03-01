@@ -240,30 +240,35 @@
   flex-direction: column;
   gap: 20px;
 }
-.css-187mznn-MuiSlider-root {
-  color: rgba(0, 0, 0, 0.1) !important;
+.css-1aznpnh-MuiSlider-root {
+  color: gray !important;
+  height: 10px !important;
 }
-.css-eg0mwd-MuiSlider-thumb:hover {
-  box-shadow: 0px rgba(0, 0, 0, 0.1) !important;
+.css-6cwnna-MuiSlider-mark {
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50% !important;
 }
-.lable-div {
-  display: flex;
-  margin-top: -15px;
-  color: gray;
+.css-1tfve6q-MuiSlider-mark{
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50% !important;
+  
 }
-.first {
-  font-size: 15px;
-  font-weight: normal;
-  width: 8vw;
+.css-1gv0vcd-MuiSlider-track{
+  background-color: #2cd28d !important;
 }
-.second {
-  font-size: 15px;
-  font-weight: normal;
-  width: 8vw;
+.css-eg0mwd-MuiSlider-thumb{
+  background-color: lightgreen !important;
 }
-.third {
-  font-size: 15px;
-  font-weight: normal;
+.css-14pt78w-MuiSlider-rail {
+  width: 103% !important;
+}
+.slider{
+  /* color: aqua; */
+}
+.single{
+  background-color: aqua;
 }
 .Impact-level {
   padding: 0px;

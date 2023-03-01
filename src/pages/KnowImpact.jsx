@@ -6,7 +6,7 @@ const KnowImpact = () => {
   return (
     <>
       <div className="Impact-heading">
-        <p className="Impact-text"> Impact Calculator</p>
+        <div className="Impact-text"> Impact Calculator</div>
       </div>
       <div className="Impact-box">
         <div className="Impact-heading-box">

@@ -61,22 +61,24 @@ export default function ControlledOpenSelect() {
   }));
   const [value, setValue] = React.useState("2022-04-07");
 
-
+  function scrollWin() {
+    window.scrollTo(200, 0);
+  }
   return (
     <div className="main-container2">
-      <p className="heading2">Impact Calculator</p>
+      <div className="heading2">Impact Calculator</div>
       <div className="main-box2">
         <h2 className="title2">Check your car's Impact</h2>
-        <p className="sub-title2">Enter your car details to check</p>
+        <div className="sub-title2">Enter your car details to check</div>
         <div className="Registration-box2">
-          <p className="Registration-title">Registration</p>
+          <div className="Registration-title">Registration</div>
           <CssTextField
             label="Enter Registration Number*"
             id="custom-css-outlined-input"
           />
         </div>
         <div className="details-box">
-          <p className="Basic-title">Car Basic Details</p>
+          <div className="Basic-title">Car Basic Details</div>
           <div className="Two-col">
             <div className="col-1">
               <FormControl sx={{ m: 1, minWidth: 120 }}>
@@ -115,7 +117,7 @@ export default function ControlledOpenSelect() {
             </div>
           </div>
           <div className="variant-box">
-            <p className="variant-heading">Variant</p>
+            <div className="variant-heading">Variant</div>
             <div className="V-box">
               <FormControl sx={{ m: 1, minWidth: 120 }}>
                 <Select
@@ -137,7 +139,7 @@ export default function ControlledOpenSelect() {
             </div>
           </div>
           <div className="Fuel-box">
-            <p className="Fuel-heading">Fuel&Mileage</p>
+            <div className="Fuel-heading">Fuel&Mileage</div>
             <div className="Two-col-1">
               <div className="F-col1">
                 <TextField
@@ -190,28 +192,29 @@ export default function ControlledOpenSelect() {
           <div className="btn">
             <Link to="../pages/KnowImpact">
 
-            <button className="impact-btn">Know your Impact</button>
+            <button onClick={scrollWin} className="impact-btn">Know your Impact</button>
             </Link>
           </div>
           <div className="bottom-container">
             <div className="line-box">
               <div className="left-line"></div>
               <div className="text-div">
-                <p>OR</p>
+                <div>OR</div>
               </div>
               <div className="right-line"></div>
             </div>
             <div className="details">
               <a href="./ImpactCalculator">Find your vehicle</a>
-              <p className="arrow">
+              <div className="arrow">
                 <img src="./image/icon-arrow.svg" />
-              </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    
   );
+ 
 }
-
 // export default Registration;

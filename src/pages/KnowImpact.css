@@ -42,7 +42,7 @@
   font-weight: 600;
 }
 hr {
-  background-color: #e2e2e2;
+border: 2px solid whitesmoke;
   margin: 25px 0px 0px 0px;
 }
 .Two-box {

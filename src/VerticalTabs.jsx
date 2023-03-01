@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
-  return (
+  return  (
     <div
       role="tabpanel"
       hidden={value !== index}
@@ -23,7 +23,7 @@ function TabPanel(props) {
       {...other}
     >
       {value === index && (
-        <Box sx={{ p: 3 }}>
+        <Box>
           <Typography>{children}</Typography>
         </Box>
       )}
@@ -86,11 +86,10 @@ export default function VerticalTabs() {
         </Tabs>
         <div className="Logout">
           <BiArrowFromRight className="right-arrow" />
-          
-            <Link to="../pages/SignIn" className="Logout-txt">
-              Logout
-            </Link>
-          
+
+          <Link to="../pages/SignIn" className="Logout-txt">
+            Logout
+          </Link>
         </div>
       </div>
       <TabPanel value={value} index={0}>
@@ -115,7 +114,7 @@ export default function VerticalTabs() {
                 <span className="Trees-Planted">12 Trees Planted</span>
               </div>
             </div>
-            <hr />
+            <hr/>
             <div className="second-box">
               <div className="sb-col-1">
                 <span className="num">40,000</span>

@@ -27,6 +27,7 @@ const Navbar = () => {
               onClick={() => setOpenMenu(false)}
               to="/OurMission"
               end
+            
             >
               Our Mission
             </NavLink>
