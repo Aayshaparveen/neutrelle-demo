@@ -318,3 +318,29 @@ hr {
   margin-left: 30px;
   margin-top: 40px;
 }
+@media (max-width: 600px) {
+  .mygarage-container {
+    padding: 10vh 0vh;
+  }
+  .Top-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .Heading-contant2 {
+    display: flex;
+    align-items: center;
+    border: 2px solid #e2e2e2;
+    width: 92vw;
+    margin-left: -30px;
+    gap: 190px;
+  }
+  .Bottom-box{
+    margin-left: -40px;
+    display: flex;
+    height: 727px;
+     border-radius: 0px ;
+  margin-top: 0px;
+  }
+}

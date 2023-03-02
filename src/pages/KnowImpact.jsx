@@ -1,8 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import "./KnowImpact.css";
-import Slider from "../pages/Slider";
 import TextField from "@mui/material/TextField";
+import Box from "@mui/material/Box";
+import Slider from "@mui/material/Slider";
+const marks = [
+  {
+    value: 1,
+    label: "Single",
+  },
+  {
+    value: 2,
+    label: "Double",
+  },
+  {
+    value: 3,
+    label: "Tripple",
+  },
+];
+
 const KnowImpact = () => {
+  const [impactlevel, setImpactlevel] = useState(1);
+  const handelImpactlevel = (event) => {
+    setImpactlevel(event.target.value);
+    console.log(event.target.value);
+  };
   return (
     <>
       <div className="Impact-heading">
@@ -35,8 +56,22 @@ const KnowImpact = () => {
             </div>
             <div className="impact-div-2">
               <span className="Impact-level">Impact level</span>
-
-              <Slider/>
+              <Box>
+                <Slider
+                  style={
+                    impactlevel == 1
+                      ? { color: "rgb(88, 218, 113)" }
+                      : impactlevel == 2
+                      ? { color: "rgb(51, 197, 255)" }
+                      : { color: "rgb(97, 66, 234)" }
+                  }
+                  onChange={handelImpactlevel}
+                  aria-label="Custom marks"
+                  max={3}
+                  min={1}
+                  marks={marks}
+                />
+              </Box>
             </div>
             <div className="Two-btn2">
               <button className="btn-one">One Time</button>
@@ -59,15 +94,24 @@ const KnowImpact = () => {
             </div>
             <div className="Two-images">
               <div className="first-circle">
-                <img src="../image/mercedes_logos.png" />
+                <img
+                  src="../image/mercedes_logos.png"
+                  // onChange={handelImpactlevel}
+                  style={
+                    impactlevel == 1
+                      ? { color: "rgb(88, 218, 113)" }
+                      : impactlevel == 2
+                      ? { color: "rgb(51, 197, 255)" }
+                      : { color: "rgb(97, 66, 234)" }
+                  }
+                />
                 <span className="-tCO2e">0.06614 tCO2e</span>
               </div>
               <div className="second-tree">
                 <div className="tree-img">
-
-                <img src="../image/icon-plant-1.png" className="Tree-img-1" />
-                <img src="../image/icon-plant-1.png" className="Tree-img-2" />
-                <img src="../image/icon-plant-1.png" className="Tree-img-3" />
+                  <img src="../image/icon-plant-1.png" className="Tree-img-1" />
+                  <img src="../image/icon-plant-1.png" className="Tree-img-2" />
+                  <img src="../image/icon-plant-1.png" className="Tree-img-3" />
                 </div>
                 <span className="num">+7</span>
                 <span className="-Trees-planted">10 Trees planted</span>

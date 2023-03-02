@@ -39,11 +39,29 @@
   font-size: 13px;
   margin-left: 140px;
 }
-.Img-box{
+.Img-box {
   display: flex;
 }
 .car-img {
-  transform: perspective(var(--e-transform-perspective,0)) rotate(var(--e-transform-rotateZ,0)) rotateX(var(--e-transform-rotateX,0)) rotateY(var(--e-transform-rotateY,0)) translate(var(--e-transform-translate,0)) translateX(var(--e-transform-translateX,0)) translateY(var(--e-transform-translateY,0)) scaleX(calc(var(--e-transform-flipX, 1) * var(--e-transform-scaleX, var(--e-transform-scale, 1)))) scaleY(calc(var(--e-transform-flipY, 1) * var(--e-transform-scaleY, var(--e-transform-scale, 1)))) skewX(var(--e-transform-skewX,0)) skewY(var(--e-transform-skewY,0));
+  transform: perspective(var(--e-transform-perspective, 0))
+    rotate(var(--e-transform-rotateZ, 0)) rotateX(var(--e-transform-rotateX, 0))
+    rotateY(var(--e-transform-rotateY, 0))
+    translate(var(--e-transform-translate, 0))
+    translateX(var(--e-transform-translateX, 0))
+    translateY(var(--e-transform-translateY, 0))
+    scaleX(
+      calc(
+        var(--e-transform-flipX, 1) *
+          var(--e-transform-scaleX, var(--e-transform-scale, 1))
+      )
+    )
+    scaleY(
+      calc(
+        var(--e-transform-flipY, 1) *
+          var(--e-transform-scaleY, var(--e-transform-scale, 1))
+      )
+    )
+    skewX(var(--e-transform-skewX, 0)) skewY(var(--e-transform-skewY, 0));
   transform-origin: var(--e-transform-origin-y) var(--e-transform-origin-x);
   margin: 5em 0em 0em 0em;
   padding: 0em 0em 0em 0em;
@@ -66,18 +84,16 @@
   width: 100vw;
   vertical-align: middle;
   display: inline-block;
-  
 }
 .middel-container {
   display: flex;
-  background-color: #46FF6F1A;
+  background-color: #46ff6f1a;
   flex-direction: column;
   overflow: hidden;
-  transition:  0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  transition: 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
   margin-top: -18em;
   margin-bottom: 0em;
   padding: 15em 4em 5em 5em;
-
 }
 .bottom-text {
   text-align: center;
@@ -240,31 +256,6 @@
   flex-direction: column;
   gap: 20px;
 }
-/* .css-1aznpnh-MuiSlider-root {
-  color: gray !important;
-  height: 10px !important;
-}
-.css-6cwnna-MuiSlider-mark {
-  width: 8px !important;
-  height: 8px !important;
-  border-radius: 50% !important;
-}
-.css-1tfve6q-MuiSlider-mark{
-  width: 8px !important;
-  height: 8px !important;
-  border-radius: 50% !important;
-  
-}
-.css-1gv0vcd-MuiSlider-track{
-  background-color: #2cd28d !important;
-}
-.css-eg0mwd-MuiSlider-thumb{
-  background-color: lightgreen !important;
-}
-.css-14pt78w-MuiSlider-rail {
-  width: 103% !important;
-} */
-
 .Impact-level {
   padding: 0px;
   font-size: 20px;
@@ -482,4 +473,181 @@
 .Arrow img:hover {
   transform: rotate(45deg);
   transition: all 0.3s ease 0s;
+}
+/* Responsive */
+@media (max-width: 600px) {
+  .Home-container {
+    margin-top: 80px;
+    overflow: hidden;
+    width: 112vw;
+  }
+  .Home-Title {
+    width: 100vw;
+    height: 70vh;
+  }
+  .Help-nature-to-rever {
+    font-size: 37px;
+    margin-right: 0px;
+    margin-left: 8%;
+  }
+  .Make-a-difference-by {
+    font-size: 22px;
+    margin-left: 38px;
+  }
+  .Make-your-Impact1 {
+    font-size: 7.2vw;
+    margin-left: 33px;
+    margin-right: 0px;
+  }
+  .You-can-calculate {
+    margin-left: 48px;
+    font-size: 13px;
+  }
+  .car-img {
+    margin-left: 57%;
+  }
+  .side-img {
+    margin: -4em 0em 0em -20em;
+  }
+  .middel-container {
+    margin-top: 0px;
+    padding: 50px 0px 0px 0px;
+    display: flex;
+  }
+  .bottom-text {
+    margin-right: 100px;
+  }
+  .Three-col {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0px;
+    gap: 50px;
+    margin-bottom: 55px;
+  }
+  .Calculate-box img {
+    width: 25vw;
+  }
+  .Calculate-your-impact {
+    width: 80vw;
+    font-size: 25px;
+  }
+  .Monthly-box img {
+    width: 25vw;
+  }
+  .Contribute-mothly-or {
+    width: 56vw;
+    font-size: 25px;
+  }
+  .You-can-choose-a-mon {
+    width: 85vw;
+  }
+  .Trees-box img {
+    width: 25vw;
+  }
+  .Check-planted-trees {
+    width: 68vw;
+    font-size: 25px;
+  }
+  .Instantly-check-how {
+    width: 75vw;
+  }
+  .Home-title2 {
+    padding-left: 15px;
+  }
+  .How-your-contributio {
+    font-size: 28px;
+  }
+  .These-are-rough-esti {
+    font-size: 19px;
+  }
+  .impact-box {
+    margin: 0px;
+  }
+  .carimg img {
+    width: 15vw;
+  }
+  .three-span {
+    margin-left: 50px;
+  }
+  .bottombox {
+    display: flex;
+    flex-direction: column;
+  }
+  .impact-box-1 {
+    text-align: center;
+    margin-left: 50px;
+  }
+  .Impact-level {
+    margin-right: 60px;
+    font-size: 30px;
+  }
+  .css-eg0mwd-MuiSlider-thumb {
+    padding-left: 0px;
+  }
+  .css-1aznpnh-MuiSlider-root {
+    width: 60% !important;
+    margin-right: 55px !important;
+  }
+  .contribution-div {
+    margin-right: 60px;
+  }
+  .Your-contribution {
+    font-size: 30px;
+  }
+  .Two-btn {
+    width: 80vw;
+  }
+  .btn-one {
+    width: 40vw;
+  }
+  .btn-two {
+    width: 38vw;
+  }
+  .impact-box-2 {
+    margin-right: 0px;
+  }
+  .Tree-img-box {
+    margin-left: 160px;
+  }
+  .Make-your-Impact2 {
+    width: 80vw;
+    font-size: 6vw;
+    margin-left: 15%;
+  }
+  .Last-box {
+    height: 150vh;
+  }
+  .Four-img {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0px;
+    width: 120vw;
+  }
+  .Img1 {
+    width: 50vw;
+  }
+  .Img1 img {
+    width: 36vw;
+  }
+  .Img2 {
+    width: 50vw;
+  }
+  .Img2 img {
+    width: 36vw;
+  }
+  .Img3 {
+    width: 50vw;
+  }
+  .Img3 img {
+    width: 36vw;
+  }
+  .Img4 {
+    width: 50vw;
+  }
+  .Img4 img {
+    width: 36vw;
+  }
+.Find-out-more{
+  padding-left: 35%;
+}
 }

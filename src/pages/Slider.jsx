@@ -34,7 +34,7 @@ export default function DiscreteSliderMarks() {
             ? { color: "rgb(51, 197, 255)" }
             : { color: "rgb(97, 66, 234)" }
         }
-        className="slider"
+        
         onChange={handelImpactlevel}
         aria-label="Custom marks"
         max={3}

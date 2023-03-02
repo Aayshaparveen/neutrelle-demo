@@ -9,8 +9,7 @@
 }
 .Impact-box {
   border: 1px solid #e2e2e2;
-  margin: 50px 100px 20px 100px;
-  padding-bottom: 80px;
+  margin: 50px 100px 50px 100px;
   border-radius: 0px 30px;
 }
 .Impact-heading-box {
@@ -42,7 +41,7 @@
   font-weight: 600;
 }
 hr {
-border: 2px solid whitesmoke;
+  border: 2px solid whitesmoke;
   margin: 25px 0px 0px 0px;
 }
 .Two-box {
@@ -92,6 +91,7 @@ border: 2px solid whitesmoke;
   flex-direction: column;
   gap: 20px;
   margin-left: 40px;
+  width: 20vw;
 }
 .Two-btn2 {
   background-color: lightgray;
@@ -107,6 +107,7 @@ border: 2px solid whitesmoke;
 }
 .Last-two-containt {
   margin-top: 20px;
+  margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
 }
@@ -152,36 +153,31 @@ border: 2px solid whitesmoke;
   margin-left: 30px;
 }
 .first-circle {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
-    margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  margin-left: 50px;
 }
 .first-circle img {
-    width: 10vw;
-   
-    border-radius: 50%;
-    border: 10px solid;
-    border-left-color: #58da71;
-    border-top-color: #33c5ff;
-    border-right-color: #6142ea;
-    border-bottom-color: #c3c3c3;
+  width: 10vw;
+  border-radius: 50%;
+  border: 10px solid;
 }
 .second-tree {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin-right: 85px;
-    margin-top: 42px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-right: 85px;
+  margin-top: 42px;
 }
-.second-tree img{
-    width: 5vw;
+.second-tree img {
+  width: 5vw;
 }
 .num {
-font-size: 15px;
+  font-size: 15px;
 }
 .-Trees-planted {
-    font-size: 20px;
-    margin-top: 20px;
+  font-size: 20px;
+  margin-top: 20px;
 }

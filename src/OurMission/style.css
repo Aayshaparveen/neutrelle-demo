@@ -316,13 +316,14 @@
     text-align: center;
     color: #000;
   }
-  span {
+  /* span {
     padding-left: 35%;
-  }
+  } */
   .box2 h2 {
     font-size: 30px;
   }
   .last-impact {
+    width: 112vw;
     padding: 35px 0px;
   }
   .impact-button {
@@ -352,7 +353,7 @@
     width: 388px;
   }
   .last-impact {
-    width: 107%;
+    width: 112vw;
   }
   .footer {
     width: 100%;

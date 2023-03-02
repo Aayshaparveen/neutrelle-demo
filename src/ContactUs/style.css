@@ -103,6 +103,7 @@ form .css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
   .Container{
     display: block;
     height: 705px;
+    margin-top: 160px;
   }
   .contact-img-box img{
     display: none;
@@ -131,5 +132,9 @@ form .css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
   .Message-box{
     width: 275px;
   }
+  .css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+    border-color: gray !important;
+    width: 90vw !important;
+}
 }
 
