@@ -12,7 +12,7 @@ import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { differenceInDays } from "date-fns";
 import Dropzone from "../Dropzone";
 import OutlinedInput from "@mui/material/OutlinedInput";
-// import AddIcon from '@mui/icons-material/Add';
+
 const Service = () => {
   const CssTextField = styled(TextField)({
     "& label.Mui-focused": {
@@ -48,7 +48,6 @@ const Service = () => {
   const [complainanat, setComplainanat] = useState("");
   const [manager, setManager] = useState("");
   const [informal, setInformal] = useState("");
-
   const [startdate, setStartdate] = useState(null);
   const [enddate, setEnddate] = useState(null);
   const [duration, setDuration] = useState("");
@@ -143,14 +142,15 @@ const Service = () => {
                   displayEmpty
                   inputProps={{ "aria-label": "Without label" }}
                 >
-                  <MenuItem value="">
-                    <em></em>
+                  <MenuItem value="Sick Leave">Enquiry: Sick Leave</MenuItem>
+                  <MenuItem value="Annual Leave">
+                    Enquiry: Annual Leave
                   </MenuItem>
-                  <MenuItem value="Enquiry">Enquiry: Sick Leave</MenuItem>
-                  <MenuItem value="Enquiry">Enquiry: Annual Leave</MenuItem>
-                  <MenuItem value="Enquiry">Enquiry: Maternity Leave</MenuItem>
-                  <MenuItem value="Case">ER Case: Grievance</MenuItem>
-                  <MenuItem value="Case">ER Case: Capability</MenuItem>
+                  <MenuItem value="Maternity Leave">
+                    Enquiry: Maternity Leave
+                  </MenuItem>
+                  <MenuItem value="Grievance">ER Case: Grievance</MenuItem>
+                  <MenuItem value="Capability">ER Case: Capability</MenuItem>
                 </Select>
               </FormControl>
             </div>
@@ -164,9 +164,6 @@ const Service = () => {
                   displayEmpty
                   inputProps={{ "aria-label": "Without label" }}
                 >
-                  <MenuItem value="">
-                    <em></em>
-                  </MenuItem>
                   <MenuItem value={1}>Category1</MenuItem>
                   <MenuItem value={2}>Category2</MenuItem>
                   <MenuItem value={3}>Category3</MenuItem>
@@ -190,9 +187,6 @@ const Service = () => {
                   displayEmpty
                   inputProps={{ "aria-label": "Without label" }}
                 >
-                  <MenuItem value="">
-                    <em></em>
-                  </MenuItem>
                   <MenuItem value={1}>Queue1</MenuItem>
                   <MenuItem value={2}>Queue2</MenuItem>
                   <MenuItem value={3}>Queue3</MenuItem>
@@ -209,9 +203,6 @@ const Service = () => {
                   displayEmpty
                   inputProps={{ "aria-label": "Without label" }}
                 >
-                  <MenuItem value="">
-                    <em></em>
-                  </MenuItem>
                   <MenuItem value={1}>Queue1</MenuItem>
                   <MenuItem value={2}>Queue2</MenuItem>
                   <MenuItem value={3}>Queue3</MenuItem>
@@ -228,9 +219,6 @@ const Service = () => {
                   displayEmpty
                   inputProps={{ "aria-label": "Without label" }}
                 >
-                  <MenuItem value="">
-                    <em></em>
-                  </MenuItem>
                   <MenuItem value={1}>Queue1</MenuItem>
                   <MenuItem value={2}>Queue2</MenuItem>
                   <MenuItem value={3}>Queue3</MenuItem>
@@ -238,34 +226,23 @@ const Service = () => {
                 </Select>
               </FormControl>
             </div>
-              <div className="attachment-text">Attachment</div>
+            <div className="attachment-text">Attachment</div>
             <div className="attachment">
-              {/* <AddIcon/> */}
-              <div className="Category2">
-              <FormControl sx={{ m: 1, minWidth: 120 }}>
-                <Select
-                  value={category}
-                 placeholder="Category"
-                  onChange={handleCategory}
-                  displayEmpty
-                  inputProps={{ "aria-label": "Without label" }}
-                >
-                  <MenuItem value="">
-                    <em></em>
-                  </MenuItem>
-                  <MenuItem value="Enquiry">Enquiry: Sick Leave</MenuItem>
-                  <MenuItem value="Enquiry">Enquiry: Annual Leave</MenuItem>
-                  <MenuItem value="Enquiry">Enquiry: Maternity Leave</MenuItem>
-                  <MenuItem value="Case">ER Case: Grievance</MenuItem>
-                  <MenuItem value="Case">ER Case: Capability</MenuItem>
-                </Select>
-              </FormControl>
-            </div>
               <Dropzone />
             </div>
             <div className="service-type">
               Service Request Type
-              <div>{category}</div>
+              <div>
+                {category == "Sick Leave" ||
+                category == "Annual Leave" ||
+                category == "Maternity Leave" ? (
+                  <div>Enquiry</div>
+                ) : category == "Grievance" || category == "Capability" ? (
+                  <div>Case</div>
+                ) : (
+                  <div></div>
+                )}
+              </div>
             </div>
           </div>
         </div>

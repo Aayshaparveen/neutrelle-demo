@@ -15,6 +15,7 @@ import KnowImpact from "./pages/KnowImpact";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
+
   return (
     <>
       <BrowserRouter>
@@ -29,7 +30,7 @@ function App() {
           <Route path="/Cardeatils" element={<Cardeatils />} />
           <Route path="/pages/SignIn" element={<SignIn />} />
           <Route path="/pages/SignUp" element={<SignUp />} />
-          <Route path="/pages/KnowImpact" element={<KnowImpact/>} />
+          <Route path="/pages/KnowImpact"element={<KnowImpact/>} />
           <Route path="/ServicePage" element={<ServicePage />} />
         </Routes>
        

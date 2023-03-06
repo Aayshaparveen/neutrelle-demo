@@ -181,3 +181,74 @@ hr {
   font-size: 20px;
   margin-top: 20px;
 }
+/* Rsponsive */
+@media (max-width: 600px) {
+  .Impact-text {
+    text-align: center;
+    font-size: 35px;
+    margin-left: 45px;
+  }
+  .Impact-box {
+    border: 1px solid #e2e2e2;
+    margin: 0px;
+    border: 0px;
+  }
+  .Sb-box-right{
+    margin-right: 0px;
+    margin-left: 80px;
+  }
+  .left-text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    margin-top: 20px;
+  }
+  .Box-1{
+    width: 100vw;
+  }
+  .Box-2{
+    display: none;
+  }
+  .milage-box .css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+    border-color: gray !important;
+    width: 45vw !important;
+  }
+  .Two-btn1 {
+    background-color: lightgray;
+    border-radius: 0px 20px;
+    width: 65vw;
+    height: 8vh;
+}
+.btn-one-km{
+  width: 15vw;
+}
+.btn-two-mi{
+  width: 18vw;
+}
+.impact-div-2 {
+  text-align: center;
+  margin-top: 20px;
+  flex-direction: column;
+  gap: 20px;
+  margin-left: 75px;
+  width: 65vw;
+  display: flex;
+}
+.Impact-level {
+  margin-right: 40px;
+}
+.Two-btn2{
+  width: 80vw;
+}
+.Add-btn {
+  text-align: center;
+  width: 70vw;
+  margin-left: 62px;
+}
+.button{
+  width: 0px;
+}
+.text{
+  display: none;
+}
+}

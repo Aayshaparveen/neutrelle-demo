@@ -10,11 +10,12 @@ import { RiFileListLine } from "react-icons/ri";
 import { RiAccountBoxLine } from "react-icons/ri";
 import { BiArrowFromRight } from "react-icons/bi";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
-  return  (
+  return (
     <div
       role="tabpanel"
       hidden={value !== index}
@@ -45,8 +46,10 @@ function a11yProps(index) {
 }
 
 export default function VerticalTabs() {
-  const [value, setValue] = React.useState(0);
+  const location = useLocation();
+  console.log("uselocation", location.state);
 
+  const [value, setValue] = React.useState(0);
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -114,32 +117,32 @@ export default function VerticalTabs() {
                 <span className="Trees-Planted">12 Trees Planted</span>
               </div>
             </div>
-            <hr/>
+            <hr />
             <div className="second-box">
               <div className="sb-col-1">
-                <span className="num">40,000</span>
                 <span className="Total-Mileage">Total Mileage</span>
+                <span className="num"> {location.state.value} </span>
               </div>
-              <hr className="Hr-1" />
-              <div className="sb-col-2">
-                <span className="num">4,500</span>
+              {/* <hr className="Hr-1" /> */}
+              {/* <div className="sb-col-2">
+                <span className="num"></span>
                 <span className="No-Impact">No Impact</span>
-              </div>
+              </div> */}
               <hr className="Hr-2" />
 
               <div className="sb-col-3">
-                <span className="num">35,500</span>
+                <span className="num"></span>
                 <span className="Single-Impact">Single Impact</span>
               </div>
               <hr className="Hr-3" />
 
               <div className="sb-col-4">
-                <span className="num">35,500</span>
+                <span className="num"></span>
                 <span className="Double-Impact">Double Impact</span>
               </div>
               <hr className="Hr-4" />
               <div className="sb-col-5">
-                <span className="num">35,500</span>
+                <span className="num"></span>
                 <span className="Tripple-Impact">Tripple Impact</span>
               </div>
             </div>

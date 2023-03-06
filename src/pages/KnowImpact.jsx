@@ -3,6 +3,7 @@ import "./KnowImpact.css";
 import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
+import { useNavigate } from "react-router-dom";
 const marks = [
   {
     value: 1,
@@ -20,10 +21,26 @@ const marks = [
 
 const KnowImpact = () => {
   const [impactlevel, setImpactlevel] = useState(1);
+  const [mileageValue, setMileageValue] = useState();
+
   const handelImpactlevel = (event) => {
     setImpactlevel(event.target.value);
     console.log(event.target.value);
   };
+
+  const navigate = useNavigate();
+  const openmilage = (name) => {
+    navigate("/MyGarage",{
+      state: {
+      value: mileageValue
+      }
+    });
+  };
+
+  const handelMileage =(e) =>{
+    setMileageValue(e.target.value);
+  }
+  
   return (
     <>
       <div className="Impact-heading">
@@ -44,10 +61,15 @@ const KnowImpact = () => {
           <div className="Box-1">
             <div className="milage-box">
               <TextField
-                helperText=" "
-                id="demo-helper-text-aligned-no-helper"
+              value={mileageValue}
+              onChange={handelMileage}
+              variant="outlined"
+              id="outlined-basic"
                 label="Mileage"
                 placeholder="Milage value"
+                state={{
+                  value: mileageValue 
+                }}
               />
               <div className="Two-btn1">
                 <button className="btn-one-km">Km</button>
@@ -80,7 +102,7 @@ const KnowImpact = () => {
             <hr className="imp-hr" />
             <div className="Last-two-containt">
               <div className="Add-btn">
-                <button>Add To Cart</button>
+                <button onClick={openmilage}>Add To Cart</button>
               </div>
               <div className="text">
                 <span className="Month">£0.84 /Month</span>

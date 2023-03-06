@@ -86,11 +86,11 @@ button {
   cursor: pointer;
   opacity: 0.5;
 }
-.arrow img:hover{
+.arrow img:hover {
   transform: rotate(45deg);
   transition: all 0.3s ease 0s;
 }
-.error-message{
+.error-message {
   color: red;
   padding: 0px 25px;
   margin: 0px;
@@ -113,6 +113,7 @@ button {
     border-radius: 0px;
     padding: 3%;
     text-align: center;
+    width: 107vw;
   }
   .Registration-box {
     padding: 25px 20px;
@@ -143,18 +144,16 @@ button {
 
     padding: 0.2rem 0.2rem;
   }
-  .details{
+  .details {
     padding: 34px 0px;
     font-size: 17px;
-    
   }
-  .arrow{
+  .arrow {
     padding: 0px 10px;
-    
   }
 }
-@media (max-width:998px) {
-  .main-container{
+@media (max-width: 998px) {
+  .main-container {
     padding-bottom: 308px;
   }
 }
