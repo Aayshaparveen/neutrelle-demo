@@ -27,6 +27,7 @@ const CssTextField = styled(TextField)({
   },
 });
 const ImpactCalculator = () => {
+  
   const [RegistrationNumber, setRegistrationNumber] = useState("");
   const [showRnumberError, setShowRnumberError] = useState(false);
  
@@ -43,6 +44,7 @@ const ImpactCalculator = () => {
         setShowRnumberError(true)
     }
   };
+  
   return (
     <div className="main-container">
       <p className="heading">Impact Calculator</p>

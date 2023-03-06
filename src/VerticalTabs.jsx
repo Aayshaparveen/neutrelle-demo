@@ -11,7 +11,9 @@ import { RiAccountBoxLine } from "react-icons/ri";
 import { BiArrowFromRight } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-
+function scrollWin() {
+  window.scrollTo(200, 0);
+}
 function TabPanel(props) {
   const { children, value, index, name, ...other } = props;
 
@@ -90,7 +92,7 @@ export default function VerticalTabs() {
         <div className="Logout">
           <BiArrowFromRight className="right-arrow" />
 
-          <Link to="../pages/SignIn" className="Logout-txt">
+          <Link to="../pages/SignIn" className="Logout-txt"onclick="scrollWin()">
             Logout
           </Link>
         </div>

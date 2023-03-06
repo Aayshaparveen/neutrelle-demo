@@ -64,6 +64,7 @@ export default function ControlledOpenSelect() {
 
   const navigate = useNavigate();
   const openKnowimpact = () => {
+    window.scrollTo(200, 0);
     navigate("/MyGarage", {
       state: {
         value: openname,
@@ -89,11 +90,9 @@ export default function ControlledOpenSelect() {
       },
     },
   }));
-  const [value, setValue] = React.useState("2022-04-07");
+  const [value, setValue] = React.useState("");
 
-  // function scrollWin() {
-  //   window.scrollTo(200, 0);
-  // }
+ 
   return (
     <div className="main-container2">
       <div className="heading2">Impact Calculator</div>

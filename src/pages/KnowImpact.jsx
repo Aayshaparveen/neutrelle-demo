@@ -40,7 +40,9 @@ const KnowImpact = () => {
   const handelMileage =(e) =>{
     setMileageValue(e.target.value);
   }
-  
+  function scrollWin() {
+    window.scrollTo(200, 0);
+  }
   return (
     <>
       <div className="Impact-heading">
