@@ -11,7 +11,7 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import { Stack } from "@mui/system";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const CssTextField = styled(TextField)({
   "& label.Mui-focused": {
     color: "gray",
@@ -37,11 +37,41 @@ const CssTextField = styled(TextField)({
 });
 
 export default function ControlledOpenSelect() {
-  const [age, setAge] = React.useState("");
-  const [open, setOpen] = React.useState(false);
+  const [variant, setVariant] = React.useState("");
+  const [openname, setOpenname] = React.useState("");
+  const [fule, setFule] = useState("");
+  const [miles, setMiles] = useState("");
+  const [mileageValue, setMileageValue] = useState();
+  const [Rnumber, setRnumber] = useState();
+  const handelRnumber = (event) => {
+    setRnumber(event.target.value);
+  };
+  const handleVariant = (event) => {
+    setVariant(event.target.value);
+  };
+  const handelOpenname = (event) => {
+    setOpenname(event.target.value);
+  };
+  const handleFuel = (event) => {
+    setFule(event.target.value);
+  };
+  const handleMiles = (event) => {
+    setMiles(event.target.value);
+  };
+  const handelMileage = (e) => {
+    setMileageValue(e.target.value);
+  };
 
-  const handleChange = (event) => {
-    setAge(event.target.value);
+  const navigate = useNavigate();
+  const openKnowimpact = () => {
+    navigate("/MyGarage", {
+      state: {
+        value: openname,
+        id: mileageValue,
+        name: variant,
+        num: Rnumber,
+      },
+    });
   };
 
   const BootstrapInput = styled(InputBase)(() => ({
@@ -61,9 +91,9 @@ export default function ControlledOpenSelect() {
   }));
   const [value, setValue] = React.useState("2022-04-07");
 
-  function scrollWin() {
-    window.scrollTo(200, 0);
-  }
+  // function scrollWin() {
+  //   window.scrollTo(200, 0);
+  // }
   return (
     <div className="main-container2">
       <div className="heading2">Impact Calculator</div>
@@ -73,6 +103,10 @@ export default function ControlledOpenSelect() {
         <div className="Registration-box2">
           <div className="Registration-title">Registration</div>
           <CssTextField
+          value={Rnumber}
+          onChange={handelRnumber}
+          state={{ num: Rnumber }}
+
             label="Enter Registration Number*"
             id="custom-css-outlined-input"
           />
@@ -82,21 +116,21 @@ export default function ControlledOpenSelect() {
           <div className="Two-col">
             <div className="col-1">
               <FormControl sx={{ m: 1, minWidth: 120 }}>
-                {/* <InputLabel id="demo-simple-select-helper-label">Make</InputLabel> */}
                 <Select
-                  value={age}
-                  onChange={handleChange}
+                  value={openname}
+                  onChange={handelOpenname}
+                  state={{ value: openname }}
                   displayEmpty
                   inputProps={{ "aria-label": "Without label" }}
                 >
                   <MenuItem value="">
                     <em>Make</em>
                   </MenuItem>
-                  <MenuItem value={1}>Abarth</MenuItem>
-                  <MenuItem value={2}>Bentley</MenuItem>
-                  <MenuItem value={3}>Dodge</MenuItem>
-                  <MenuItem value={3}>Infiniti</MenuItem>
-                  <MenuItem value={3}>Volv</MenuItem>
+                  <MenuItem value="Abarth">Abarth</MenuItem>
+                  <MenuItem value="Bentley">Bentley</MenuItem>
+                  <MenuItem value="Dodge">Dodge</MenuItem>
+                  <MenuItem value="Infiniti">Infiniti</MenuItem>
+                  <MenuItem value="Volv">Volv</MenuItem>
                 </Select>
               </FormControl>
             </div>
@@ -121,19 +155,20 @@ export default function ControlledOpenSelect() {
             <div className="V-box">
               <FormControl sx={{ m: 1, minWidth: 120 }}>
                 <Select
-                  value={age}
-                  onChange={handleChange}
+                  value={variant}
+                  onChange={handleVariant}
                   displayEmpty
                   inputProps={{ "aria-label": "Without label" }}
+                  state={{ name: variant }}
                 >
                   <MenuItem value="">
                     <em>Other</em>
                   </MenuItem>
-                  <MenuItem value={1}>Petrol</MenuItem>
-                  <MenuItem value={2}>Diesel</MenuItem>
-                  <MenuItem value={3}>Electric</MenuItem>
-                  <MenuItem value={3}>Petrol(MHEV)</MenuItem>
-                  <MenuItem value={3}>Diesel(MHEV)</MenuItem>
+                  <MenuItem value="Petrol">Petrol</MenuItem>
+                  <MenuItem value="Diesel">Diesel</MenuItem>
+                  <MenuItem value="Electric">Electric</MenuItem>
+                  <MenuItem value="Petrol(MHEV)">Petrol(MHEV)</MenuItem>
+                  <MenuItem value="Diesel(MHEV)">Diesel(MHEV)</MenuItem>
                 </Select>
               </FormControl>
             </div>
@@ -152,8 +187,8 @@ export default function ControlledOpenSelect() {
                 <FormControl sx={{ m: 1 }} variant="standard">
                   <NativeSelect
                     id="demo-customized-select-native"
-                    value={age}
-                    onChange={handleChange}
+                    value={fule}
+                    onChange={handleFuel}
                     input={<BootstrapInput />}
                   >
                     <option value={1}>Mpg</option>
@@ -168,20 +203,21 @@ export default function ControlledOpenSelect() {
                   id="outlined-basic"
                   label="Mileage*"
                   variant="outlined"
+                  value={mileageValue}
+                  onChange={handelMileage}
+                  state={{
+                    id: mileageValue,
+                  }}
                 />
               </div>
               <div className="F-col2">
                 <FormControl sx={{ m: 1 }} variant="standard">
-                  {/* <InputLabel htmlFor="demo-customized-select-native">
-                  Age
-                </InputLabel> */}
                   <NativeSelect
                     id="demo-customized-select-native"
-                    value={age}
-                    onChange={handleChange}
+                    value={miles}
+                    onChange={handleMiles}
                     input={<BootstrapInput />}
                   >
-                    {/* <option aria-label="None" value="" /> */}
                     <option value={1}>Miles</option>
                     <option value={2}>Km</option>
                   </NativeSelect>
@@ -190,10 +226,11 @@ export default function ControlledOpenSelect() {
             </div>
           </div>
           <div className="btn">
-            <Link to="../pages/KnowImpact">
-
-            <button onClick={scrollWin} className="impact-btn">Know your Impact</button>
-            </Link>
+            {/* <Link to="../pages/KnowImpact"> */}
+            <button onClick={openKnowimpact} className="impact-btn">
+              Know your Impact
+            </button>
+            {/* </Link> */}
           </div>
           <div className="bottom-container">
             <div className="line-box">
@@ -213,8 +250,6 @@ export default function ControlledOpenSelect() {
         </div>
       </div>
     </div>
-    
   );
- 
 }
 // export default Registration;
