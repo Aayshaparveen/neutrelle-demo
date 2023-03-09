@@ -1,0 +1,10 @@
+body{
+    margin-top: 20vh;
+}
+.main{
+  display: flex;
+  gap: 20px;
+}
+.css-ptiqhd-MuiSvgIcon-root {
+  display: none !important;
+}

@@ -12,6 +12,8 @@ import ContactUs from "./ContactUs";
 import Footer from "./Footer";
 import Cardeatils from "./Cardeatils";
 import KnowImpact from "./pages/KnowImpact";
+import Tem from "./pages/Tem";
+import Userdata from "./pages/Userdata";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -32,6 +34,9 @@ function App() {
           <Route path="/pages/SignUp" element={<SignUp />} />
           <Route path="/pages/KnowImpact"element={<KnowImpact/>} />
           <Route path="/ServicePage" element={<ServicePage />} />
+          <Route path="/pages/Tem" element={<Tem/>}/>
+          <Route path="/pages/Userdata" element={<Userdata/>}/>
+
         </Routes>
        
         <Footer />

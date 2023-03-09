@@ -1,13 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import "./style.css";
 import Slider from "../pages/Slider";
 import { Link } from "react-router-dom";
+
 const Home = () => {
+ 
   return (
     <>
       <div className="Home-container">
         <div className="Home-Title">
           <span className="Help-nature-to-rever">
+          <Link to="../pages/Tem">
+            <button>Tem</button>
+          </Link>
             Help nature to reverse the damage caused by your car
           </span>
           <span className="Make-a-difference-by">
@@ -91,7 +96,7 @@ const Home = () => {
             <div className="impact-box-1">
               <div className="impact-div">
                 <span className="Impact-level">Impact level</span>
-                      <Slider/>
+                <Slider />
               </div>
               <div className="contribution-div">
                 <span className="Your-contribution">Your contribution</span>

@@ -3,7 +3,7 @@ import "./KnowImpact.css";
 import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 const marks = [
@@ -68,9 +68,6 @@ const KnowImpact = () => {
                 id="demo-helper-text-misaligned-no-helper"
                 label="Mileage"
                 placeholder="Milage value"
-                // state={{
-                //   value: mileageValue 
-                // }}
                 
               />
               <div className="Two-btn1">

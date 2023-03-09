@@ -37,12 +37,14 @@ const CssTextField = styled(TextField)({
 });
 
 export default function ControlledOpenSelect() {
+  const [value, setValue] = React.useState("");
   const [variant, setVariant] = React.useState("");
   const [openname, setOpenname] = React.useState("");
+  const [mileageValue, setMileageValue] = useState();
   const [fule, setFule] = useState("");
   const [miles, setMiles] = useState("");
-  const [mileageValue, setMileageValue] = useState();
   const [Rnumber, setRnumber] = useState();
+
   const handelRnumber = (event) => {
     setRnumber(event.target.value);
   };
@@ -90,9 +92,8 @@ export default function ControlledOpenSelect() {
       },
     },
   }));
-  const [value, setValue] = React.useState("");
-
  
+
   return (
     <div className="main-container2">
       <div className="heading2">Impact Calculator</div>
@@ -102,10 +103,9 @@ export default function ControlledOpenSelect() {
         <div className="Registration-box2">
           <div className="Registration-title">Registration</div>
           <CssTextField
-          value={Rnumber}
-          onChange={handelRnumber}
-          state={{ num: Rnumber }}
-
+            value={Rnumber}
+            onChange={handelRnumber}
+            state={{ num: Rnumber }}
             label="Enter Registration Number*"
             id="custom-css-outlined-input"
           />
