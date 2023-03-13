@@ -11,9 +11,6 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import CustomButton from "./CustomButton";
-import userdata from "./Userdata";
-// import CustomMulitiline from "../../../Components/CustMultiline/CustomMultiline";
-// import InputField from "../../../Components/CustText/CustText";
 import "./Temstyle.css";
 const Tem = () => {
   const [userId, setUserId] = useState("");
@@ -22,8 +19,9 @@ const Tem = () => {
   const [body, setBody] = useState("");
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
+  const [id, setId] = useState(null);
 
-  const navigate = useNavigate();
+  const navigate1 = useNavigate();
   const handleChangePage = (_event, newPage) => {
     setPage(newPage);
   };
@@ -36,8 +34,7 @@ const Tem = () => {
     axios
       .get("https://jsonplaceholder.typicode.com/posts/1")
       .then((response) => {
-        console.log("Response:PostsById = ", response.data);
-
+        setId(response.data.id);
         setUserId(response.data.userId);
         setTitle(response.data.title);
         setBody(response.data.body);
@@ -54,15 +51,20 @@ const Tem = () => {
     getAllPostById();
   }, []);
   const handleSubmit = () => {
-    navigate("/user-data");
-    console.log("user",navigate)
+    navigate1("/user-data");
   };
+
+  const navigate2 = useNavigate();
+  const handleView = (row) => {
+    navigate2("/Userview", { state: row });
+  };
+
   return (
-    <div className="data-container">
+    <div className="Data-container">
       <h1>All Posts</h1>
       <CustomButton title="Next" onSubmit={handleSubmit} />
       <div className="user-details">
-        <TableContainer sx={{ maxHeight: 500 }}>
+        <TableContainer sx={{ maxHeight: 500, fontFamily: "Poppins" }}>
           <Table stickyHeader aria-label="simple table">
             <TableHead>
               <TableRow>
@@ -111,11 +113,16 @@ const Tem = () => {
                   <TableRow key={row.id}>
                     <TableCell
                       sx={{
-                        fontFamily: "Manrope",
                         color: "#1078B4",
                         fontWeight: "600",
                         cursor: "pointer",
                       }}
+                      // onClick={handleView}
+                      // onClick={ (data)=>{
+                      //   console.log("data",data);
+                      // }}
+                      // onClick={handleView.bind(this, 78)}
+                      onClick={() => handleView(row)}
                     >
                       {row.id}
                     </TableCell>

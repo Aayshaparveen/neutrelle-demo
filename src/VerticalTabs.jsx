@@ -27,7 +27,7 @@ function TabPanel(props) {
     >
       {value === index && (
         <Box>
-          <Typography>{children}</Typography>
+          <Typography component={'span'} variant={'body2'}>{children}</Typography>
         </Box>
       )}
     </div>
@@ -92,7 +92,7 @@ export default function VerticalTabs() {
         <div className="Logout">
           <BiArrowFromRight className="right-arrow" />
 
-          <Link to="../pages/SignIn" className="Logout-txt"onclick="scrollWin()">
+          <Link to="../pages/SignIn" className="Logout-txt"onClick="scrollWin()">
             Logout
           </Link>
         </div>

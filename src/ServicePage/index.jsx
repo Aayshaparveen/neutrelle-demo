@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./style.css";
 import { styled } from "@mui/material/styles";
 import TextField from "@mui/material/TextField";
@@ -12,7 +12,17 @@ import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { differenceInDays } from "date-fns";
 import Dropzone from "../Dropzone";
 import OutlinedInput from "@mui/material/OutlinedInput";
+//  to grt the data from local storage
+// const getLocalItmes = () => {
+//   let text = localStorage.getItem("list");
+//   console.log("simple-text", text);
 
+//   if (text) {
+//     // return JSON.parse(localStorage.getItem("list"));
+//   } else {
+//     return [];
+//   }
+// };
 const Service = () => {
   const CssTextField = styled(TextField)({
     "& label.Mui-focused": {
@@ -36,6 +46,8 @@ const Service = () => {
       },
     },
   });
+
+  const [title, setTitle] = useState();
   const [category, setCategory] = useState("");
   const [primary, setPrimary] = useState("");
   const [queue, setQueue] = useState("");
@@ -52,7 +64,11 @@ const Service = () => {
   const [enddate, setEnddate] = useState(null);
   const [duration, setDuration] = useState("");
   const [diff, setdifferenceInDays] = useState("");
-
+  const [value1, setValue1] = useState(null);
+  const [value2, setValue2] = useState(null);
+  const handleTitle = (event) => {
+    setTitle(event.target.value);
+  };
   const handleCategory = (event) => {
     setCategory(event.target.value);
   };
@@ -109,16 +125,34 @@ const Service = () => {
       setDuration(diff);
     }
   };
-  const [value1, setValue1] = useState(null);
-  const [value2, setValue2] = useState(null);
+  const handleClick = () => {
+    const service = {
+      title: title,
+      category: category,
+      primaryPoint:primary
+    };
+    localStorage.setItem("Service Request", JSON.stringify(service));
+    // localStorage.setItem("CATEGORY", JSON.stringify(category));
+  };
 
+  // const Title = JSON.parse(localStorage.getItem("TITLE"));
+  // const Category = JSON.parse(localStorage.getItem("CATEGORY"));
+
+  //  localStorage.setItem("Text",text)
+  //  localStorage.setItem("category",category)
+  // useEffect(() => {
+  //   localStorage.setItem("list", JSON.stringify(text));
+  // }, [text]);
+  // add data to localStorage
   return (
     <>
       <div className="Service-container">
         <div className="Service-heading">
           <h1>Create Service Request</h1>
           <div className="Service-btns">
-            <button className="btn1">Save and Continue</button>
+            <button className="btn1" onClick={handleClick}>
+              Save and Continue
+            </button>
             <button className="btn2">Save and Close</button>
             <button className="btn3">Cancel</button>
           </div>
@@ -129,7 +163,7 @@ const Service = () => {
               <label>
                 Title
                 <FormControl sx={{ width: "29ch" }}>
-                  <OutlinedInput />
+                  <OutlinedInput value={title} onChange={handleTitle} />
                 </FormControl>
               </label>
             </div>
@@ -164,10 +198,10 @@ const Service = () => {
                   displayEmpty
                   inputProps={{ "aria-label": "Without label" }}
                 >
-                  <MenuItem value={1}>Category1</MenuItem>
-                  <MenuItem value={2}>Category2</MenuItem>
-                  <MenuItem value={3}>Category3</MenuItem>
-                  <MenuItem value={4}>Category4</MenuItem>
+                  <MenuItem value="Category1">Category1</MenuItem>
+                  <MenuItem value="Category2">Category2</MenuItem>
+                  <MenuItem value="Category3">Category3</MenuItem>
+                  <MenuItem value="Category4">Category4</MenuItem>
                 </Select>
               </FormControl>
             </div>

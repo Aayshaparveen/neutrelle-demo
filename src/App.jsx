@@ -13,6 +13,7 @@ import Footer from "./Footer";
 import Cardeatils from "./Cardeatils";
 import KnowImpact from "./pages/KnowImpact";
 import Tem from "./pages/Tem";
+import Userview from "./Userview";
 import Userdata from "./pages/Userdata";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
@@ -36,6 +37,7 @@ function App() {
           <Route path="/ServicePage" element={<ServicePage />} />
           <Route path="/pages/Tem" element={<Tem/>}/>
           <Route path="/pages/Userdata" element={<Userdata/>}/>
+          <Route path="/Userview" element={<Userview/>}/>
 
         </Routes>
        

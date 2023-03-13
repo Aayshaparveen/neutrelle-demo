@@ -181,6 +181,9 @@ hr {
   font-size: 20px;
   margin-top: 20px;
 }
+.css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+  border-radius: 0px 20px !important;
+}
 /* Rsponsive */
 @media (max-width: 600px) {
   .Impact-text {

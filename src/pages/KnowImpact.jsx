@@ -4,7 +4,7 @@ import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
 // import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const marks = [
   {
@@ -22,27 +22,23 @@ const marks = [
 ];
 
 const KnowImpact = () => {
+  const location = useLocation();
+  console.log("uselocation", location.state);
+
   const [impactlevel, setImpactlevel] = useState(1);
-  const [mileageValue, setMileageValue] = useState();
   const handelImpactlevel = (event) => {
     setImpactlevel(event.target.value);
     console.log(event.target.value);
   };
-  // const navigate = useNavigate();
-  // const openmilage = (name) => {
-    
-  //   navigate("/MyGarage",{
-  //     state: {
-  //     value: mileageValue
-  //     }
-  //   });
-  // };
-  const handelMileage =(e) =>{
-    setMileageValue(e.target.value);
-  }
+
   function scrollWin() {
     window.scrollTo(200, 0);
   }
+  const navigate = useNavigate();
+  const openTab = () => {
+    navigate("/MyGarage", { state: location.state });
+  };
+
   return (
     <>
       <div className="Impact-heading">
@@ -63,12 +59,11 @@ const KnowImpact = () => {
           <div className="Box-1">
             <div className="milage-box">
               <TextField
-              value={mileageValue}
-              onChange={handelMileage}
+                value={location.state.id}
+                // onChange={handelMileage2}
                 id="demo-helper-text-misaligned-no-helper"
                 label="Mileage"
                 placeholder="Milage value"
-                
               />
               <div className="Two-btn1">
                 <button className="btn-one-km">Km</button>
@@ -101,10 +96,9 @@ const KnowImpact = () => {
             <hr className="imp-hr" />
             <div className="Last-two-containt">
               <div className="Add-btn">
-                <Link to="/MyGarage">
-
-                <button >Add To Cart</button>
-                </Link>
+                {/* <Link to="/MyGarage"> */}
+                <button onClick={openTab}>Add To Cart</button>
+                {/* </Link> */}
               </div>
               <div className="text">
                 <span className="Month">£0.84 /Month</span>
@@ -149,3 +143,12 @@ const KnowImpact = () => {
 };
 
 export default KnowImpact;
+// const navigate = useNavigate();
+// const openmilage = (name) => {
+
+//   navigate("/MyGarage",{
+//     state: {
+//     value: mileageValue
+//     }
+//   });
+// };
