@@ -25,26 +25,31 @@ const KnowImpact = () => {
   console.log("uselocation", location.state);
 
   const [impactlevel, setImpactlevel] = useState(1);
-  const [button, setButton] = useState();
+  const [mileagevalue, setMileagevalue] = useState(location.state.mileageValue);
 
-  const handleButton = (e) => {
-    setButton(e.target.button);
+  const handleMileagevalue = (e) => {
+    setMileagevalue(e.target.button);
     console.log("valuebtn", e.target.button);
   };
   const handleImpactlevel = (event) => {
     setImpactlevel(event.target.value);
   };
 
-  function scrollWin() {
-    window.scrollTo(200, 0);
-  }
+  function scrollWin() {}
   const navigate = useNavigate();
   const openTab = () => {
+    window.scrollTo(100, 0);
     const data = {
       ...location.state,
-      singleImpact: impactlevel == 1 ? location.state.id : 0,
-      doubleImpact: impactlevel == 2 ? location.state.id : 0,
-      trippleImpact: impactlevel == 3 ? location.state.id : 0,
+      singleImpact: impactlevel == 1 ? location.state.mileageValue : 0,
+      doubleImpact: impactlevel == 2 ? location.state.mileageValue : 0,
+      trippleImpact: impactlevel == 3 ? location.state.mileageValue : 0,
+      bgColor:
+        impactlevel == 1
+          ? { color: "rgb(88, 218, 113)" }
+          : impactlevel == 2
+          ? { color: "rgb(51, 197, 255)" }
+          : { color: "rgb(97, 66, 234)" },
     };
     navigate("/MyGarage", { state: data });
   };
@@ -70,12 +75,17 @@ const KnowImpact = () => {
         <div className="Two-box">
           <div className="Box-1">
             <div className="milage-box">
-              <TextField
-                value={location.state.mileageValue}
-                id="demo-helper-text-misaligned-no-helper"
-                label="Mileage"
-                placeholder="Milage value"
-              />
+           
+                <TextField
+                  value={mileagevalue}
+                  onChange={handleMileagevalue}
+                  id="demo-helper-text-misaligned-no-helper"
+                  label="Mileage"
+                  placeholder="Milage value"
+                  defaultValue = 'Initial value' 
+                
+                />
+            
               <div className="Two-btn1">
                 <button className="btn-one-km">Km</button>
                 <button className="btn-two-mi">Miles</button>
@@ -101,19 +111,13 @@ const KnowImpact = () => {
               </Box>
             </div>
             <div className="Two-btn2">
-              <button className="btn-one" onClick={handleButton} value={1}>
-                One Time
-              </button>
-              <button className="btn-two" onClick={handleButton} value={2}>
-                Monthly
-              </button>
+              <button className="btn-one">One Time</button>
+              <button className="btn-two">Monthly</button>
             </div>
             <hr className="imp-hr" />
             <div className="Last-two-containt">
               <div className="Add-btn">
-                {/* <Link to="/MyGarage"> */}
                 <button onClick={openTab}>Add To Cart</button>
-                {/* </Link> */}
               </div>
               <div className="text">
                 <span className="Month"> £10.05</span>

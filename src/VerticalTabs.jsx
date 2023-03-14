@@ -105,7 +105,10 @@ export default function VerticalTabs() {
           <div className="vehicles-box1">
             <div className="first-box">
               <div className="vehicles-logo">
-                <img src="./image/mercedes_logos.png" />
+                <img src="./image/mercedes_logos.png"
+                style=
+                  {location.state.bgColor}
+                  />
               </div>
               <div className="deatils-box">
                 <span className="Mercedes-Benz"> {location.state.name}</span>

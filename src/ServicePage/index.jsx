@@ -121,18 +121,13 @@ const Service = () => {
       primaryPoint: primary,
     };
     localStorage.setItem("Service Request", JSON.stringify(service));
-    // localStorage.setItem("CATEGORY", JSON.stringify(category));
   };
-
-  // const Title = JSON.parse(localStorage.getItem("TITLE"));
-  // const Category = JSON.parse(localStorage.getItem("CATEGORY"));
-
-  //  localStorage.setItem("Text",text)
-  //  localStorage.setItem("category",category)
-  // useEffect(() => {
-  //   localStorage.setItem("list", JSON.stringify(text));
-  // }, [text]);
-  // add data to localStorage
+  const service = JSON.stringify(localStorage.getItem('data'))
+  
+  const handleRemove = () =>{
+    localStorage.removeItem("Service Request");
+   
+    }
   return (
     <>
       <div className="Service-container">
@@ -142,8 +137,8 @@ const Service = () => {
             <button className="btn1" onClick={handleClick}>
               Save and Continue
             </button>
-            <button className="btn2">Save and Close</button>
-            <button className="btn3">Cancel</button>
+            <button className="btn2" >Save and Close</button>
+            <button className="btn3"onClick={handleRemove}>Cancel</button>
           </div>
         </div>
         <div className="Form-col">
