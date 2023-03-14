@@ -12,17 +12,6 @@ import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { differenceInDays } from "date-fns";
 import Dropzone from "../Dropzone";
 import OutlinedInput from "@mui/material/OutlinedInput";
-//  to grt the data from local storage
-// const getLocalItmes = () => {
-//   let text = localStorage.getItem("list");
-//   console.log("simple-text", text);
-
-//   if (text) {
-//     // return JSON.parse(localStorage.getItem("list"));
-//   } else {
-//     return [];
-//   }
-// };
 const Service = () => {
   const CssTextField = styled(TextField)({
     "& label.Mui-focused": {
@@ -129,7 +118,7 @@ const Service = () => {
     const service = {
       title: title,
       category: category,
-      primaryPoint:primary
+      primaryPoint: primary,
     };
     localStorage.setItem("Service Request", JSON.stringify(service));
     // localStorage.setItem("CATEGORY", JSON.stringify(category));
@@ -269,13 +258,11 @@ const Service = () => {
               <div>
                 {category == "Sick Leave" ||
                 category == "Annual Leave" ||
-                category == "Maternity Leave" ? (
-                  <div>Enquiry</div>
-                ) : category == "Grievance" || category == "Capability" ? (
-                  <div>Case</div>
-                ) : (
-                  <div></div>
-                )}
+                category == "Maternity Leave" 
+                ? (<div>Enquiry</div>) 
+                : category == "Grievance" || category == "Capability" 
+                ? (<div>Case</div>) 
+                : (<div></div>)}
               </div>
             </div>
           </div>

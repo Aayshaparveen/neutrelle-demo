@@ -108,11 +108,11 @@ export default function VerticalTabs() {
                 <img src="./image/mercedes_logos.png" />
               </div>
               <div className="deatils-box">
-                <span className="Mercedes-Benz"> {location.state.value}</span>
-                <span className="-Petrol-A-Cl">{location.state.name}</span>
+                <span className="Mercedes-Benz"> {location.state.name}</span>
+                <span className="-Petrol-A-Cl">{location.state.variant}</span>
               </div>
               <div className="SB-box">
-                <span className="SB71-HJN">{location.state.num}</span>
+                <span className="SB71-HJN">{location.state.Rnum}</span>
               </div>
               <div className="num-box">
                 <span className="tCO2e">1.607 tCO2e</span>
@@ -123,24 +123,24 @@ export default function VerticalTabs() {
             <div className="second-box">
               <div className="sb-col-1">
                 <span className="Total-Mileage">Total Mileage</span>
-                <span className="num"> {location.state.id} </span>
+                <span className="num"> {location.state.mileageValue} </span>
               </div>
               <hr className="Hr-1" />
 
               <div className="sb-col-2">
-                <span className="num"></span>
                 <span className="Single-Impact">Single Impact</span>
+                <span className="num">{location.state.singleImpact}</span>
               </div>
               <hr className="Hr-2" />
 
               <div className="sb-col-3">
-                <span className="num"></span>
                 <span className="Double-Impact">Double Impact</span>
+                <span className="num">{location.state.doubleImpact}</span>
               </div>
               <hr className="Hr-3" />
               <div className="sb-col-4">
-                <span className="num"></span>
                 <span className="Tripple-Impact">Tripple Impact</span>
+                <span className="num">{location.state.trippleImpact}</span>
               </div>
             </div>
           </div>

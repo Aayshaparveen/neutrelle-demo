@@ -113,22 +113,36 @@ const Tem = () => {
                   <TableRow key={row.id}>
                     <TableCell
                       sx={{
+                        fontFamily: "Poppins",
                         color: "#1078B4",
                         fontWeight: "600",
                         cursor: "pointer",
                       }}
-                      // onClick={handleView}
-                      // onClick={ (data)=>{
-                      //   console.log("data",data);
-                      // }}
-                      // onClick={handleView.bind(this, 78)}
                       onClick={() => handleView(row)}
                     >
                       {row.id}
                     </TableCell>
-                    <TableCell>{row.userId}</TableCell>
-                    <TableCell>{row.title}</TableCell>
-                    <TableCell>{row.body}</TableCell>
+                    <TableCell
+                      sx={{
+                        fontFamily: "Poppins",
+                      }}
+                    >
+                      {row.userId}
+                    </TableCell>
+                    <TableCell
+                      sx={{
+                        fontFamily: "Poppins",
+                      }}
+                    >
+                      {row.title}
+                    </TableCell>
+                    <TableCell
+                      sx={{
+                        fontFamily: "Poppins",
+                      }}
+                    >
+                      {row.body}
+                    </TableCell>
                   </TableRow>
                 ))}
             </TableBody>

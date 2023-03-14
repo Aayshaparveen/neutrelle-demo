@@ -3,8 +3,7 @@ import "./KnowImpact.css";
 import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
-// import { useNavigate } from "react-router-dom";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const marks = [
   {
@@ -26,9 +25,14 @@ const KnowImpact = () => {
   console.log("uselocation", location.state);
 
   const [impactlevel, setImpactlevel] = useState(1);
-  const handelImpactlevel = (event) => {
+  const [button, setButton] = useState();
+
+  const handleButton = (e) => {
+    setButton(e.target.button);
+    console.log("valuebtn", e.target.button);
+  };
+  const handleImpactlevel = (event) => {
     setImpactlevel(event.target.value);
-    console.log(event.target.value);
   };
 
   function scrollWin() {
@@ -36,7 +40,13 @@ const KnowImpact = () => {
   }
   const navigate = useNavigate();
   const openTab = () => {
-    navigate("/MyGarage", { state: location.state });
+    const data = {
+      ...location.state,
+      singleImpact: impactlevel == 1 ? location.state.id : 0,
+      doubleImpact: impactlevel == 2 ? location.state.id : 0,
+      trippleImpact: impactlevel == 3 ? location.state.id : 0,
+    };
+    navigate("/MyGarage", { state: data });
   };
 
   return (
@@ -47,11 +57,13 @@ const KnowImpact = () => {
       <div className="Impact-box">
         <div className="Impact-heading-box">
           <div className="left-text">
-            <span className="Mercedese-Benz-2">Mercedese-Benz</span>
-            <span className="Petrol">2022 • Petrol</span>
+            <span className="Mercedese-Benz-2">{location.state.name}</span>
+            <span className="Petrol">
+              {location.state.year.$y} {location.state.variant}
+            </span>
           </div>
           <div className="Sb-box-right">
-            <span className="SB71-HJN-2">SB71 HJN</span>
+            <span className="SB71-HJN-2">{location.state.Rnum}</span>
           </div>
         </div>
         <hr />
@@ -59,8 +71,7 @@ const KnowImpact = () => {
           <div className="Box-1">
             <div className="milage-box">
               <TextField
-                value={location.state.id}
-                // onChange={handelMileage2}
+                value={location.state.mileageValue}
                 id="demo-helper-text-misaligned-no-helper"
                 label="Mileage"
                 placeholder="Milage value"
@@ -81,7 +92,7 @@ const KnowImpact = () => {
                       ? { color: "rgb(51, 197, 255)" }
                       : { color: "rgb(97, 66, 234)" }
                   }
-                  onChange={handelImpactlevel}
+                  onChange={handleImpactlevel}
                   aria-label="Custom marks"
                   max={3}
                   min={1}
@@ -90,8 +101,12 @@ const KnowImpact = () => {
               </Box>
             </div>
             <div className="Two-btn2">
-              <button className="btn-one">One Time</button>
-              <button className="btn-two">Monthly</button>
+              <button className="btn-one" onClick={handleButton} value={1}>
+                One Time
+              </button>
+              <button className="btn-two" onClick={handleButton} value={2}>
+                Monthly
+              </button>
             </div>
             <hr className="imp-hr" />
             <div className="Last-two-containt">
@@ -101,8 +116,9 @@ const KnowImpact = () => {
                 {/* </Link> */}
               </div>
               <div className="text">
-                <span className="Month">£0.84 /Month</span>
-                <span className="Months">12 Months</span>
+                <span className="Month"> £10.05</span>
+                {/* <span className="Months">12 Months</span> */}
+                {/* {handleButton== 0 ? 10.05 :button== 2 ? 234 :0} */}
               </div>
             </div>
           </div>
@@ -114,7 +130,6 @@ const KnowImpact = () => {
               <div className="first-circle">
                 <img
                   src="../image/mercedes_logos.png"
-                  // onChange={handelImpactlevel}
                   style={
                     impactlevel == 1
                       ? { color: "rgb(88, 218, 113)" }
@@ -123,7 +138,16 @@ const KnowImpact = () => {
                       : { color: "rgb(97, 66, 234)" }
                   }
                 />
-                <span className="-tCO2e">0.06614 tCO2e</span>
+                <span className="-tCO2e">
+                  {impactlevel == 1
+                    ? 0.001
+                    : impactlevel == 2
+                    ? 0.002
+                    : impactlevel == 3
+                    ? 0.003
+                    : 0}
+                  tCO2e
+                </span>
               </div>
               <div className="second-tree">
                 <div className="tree-img">
@@ -131,8 +155,8 @@ const KnowImpact = () => {
                   <img src="../image/icon-plant-1.png" className="Tree-img-2" />
                   <img src="../image/icon-plant-1.png" className="Tree-img-3" />
                 </div>
-                <span className="num">+7</span>
-                <span className="-Trees-planted">10 Trees planted</span>
+                {/* <span className="num">+7</span> */}
+                <span className="-Trees-planted">1 Trees planted</span>
               </div>
             </div>
           </div>

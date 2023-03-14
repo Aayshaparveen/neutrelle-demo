@@ -40,7 +40,7 @@ export default function ControlledOpenSelect() {
   const [value, setValue] = React.useState("");
   const [variant, setVariant] = React.useState("");
   const [openname, setOpenname] = React.useState("");
-  const [mileageValue1, setMileageValue1] = useState("");
+  const [mileageValue, setMileageValue] = useState("");
   const [fule, setFule] = useState("");
   const [miles, setMiles] = useState("");
   const [Rnumber, setRnumber] = useState("");
@@ -60,20 +60,22 @@ export default function ControlledOpenSelect() {
   const handleMiles = (event) => {
     setMiles(event.target.value);
   };
-  const handelMileage1 = (e) => {
-    setMileageValue1(e.target.value);
+  const handelMileage = (e) => {
+    setMileageValue(e.target.value);
   };
-
   const navigate = useNavigate();
   const openKnowimpact = () => {
     window.scrollTo(200, 0);
+    console.log("Mvalue", mileageValue);
+
     navigate("/pages/KnowImpact", {
       state: {
-        id: mileageValue1,
-        value: openname,
-        name: variant,
-        num: Rnumber,
-      }, 
+        mileageValue : mileageValue,
+        name: openname,
+        variant: variant,
+        Rnum: Rnumber,
+        year:value,
+      },
     });
   };
 
@@ -92,7 +94,6 @@ export default function ControlledOpenSelect() {
       },
     },
   }));
- 
 
   return (
     <div className="main-container2">
@@ -202,9 +203,8 @@ export default function ControlledOpenSelect() {
                   id="outlined-basic"
                   label="Mileage*"
                   variant="outlined"
-                  value={mileageValue1}
-                  onChange={handelMileage1}
-                
+                  value={mileageValue}
+                  onChange={handelMileage}
                 />
               </div>
               <div className="F-col2">

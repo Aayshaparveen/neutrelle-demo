@@ -50,7 +50,7 @@ const Userview = () => {
               <TableRow>
                 <TableCell
                   sx={{
-                    // fontFamily: "Manrope",
+                    fontFamily: "Poppins",
                     // fontWeight: "600",
                     fontSize: "16px",
                   }}
@@ -59,7 +59,7 @@ const Userview = () => {
                 </TableCell>
                 <TableCell
                   sx={{
-                    // fontFamily: "Manrope",
+                    fontFamily: "Poppins",
                     // fontWeight: "600",
                     fontSize: "16px",
                   }}
@@ -68,7 +68,7 @@ const Userview = () => {
                 </TableCell>
                 <TableCell
                   sx={{
-                    // fontFamily: "Manrope",
+                    fontFamily: "Poppins",
                     // fontWeight: "600",
                     fontSize: "16px",
                   }}
@@ -77,7 +77,7 @@ const Userview = () => {
                 </TableCell>
                 <TableCell
                   sx={{
-                    // fontFamily: "Manrope",
+                    fontFamily: "Poppins",
                     // fontWeight: "600",
                     fontSize: "16px",
                   }}
