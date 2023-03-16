@@ -1,6 +1,5 @@
 import React from "react";
 import "./FooterStyle.css";
-import ServicePage from "./ServicePage";
 import { ImFacebook } from "react-icons/im";
 import { BsTwitter } from "react-icons/bs";
 import { AiOutlineInstagram } from "react-icons/ai";

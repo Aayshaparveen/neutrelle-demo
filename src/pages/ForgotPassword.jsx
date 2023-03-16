@@ -1,3 +1,4 @@
+import { TextField } from "@mui/material";
 import React from "react";
 import "./ForgotPasswordStyle.css";
 const ForgotPassword = () => {
@@ -14,6 +15,25 @@ const ForgotPassword = () => {
       setShowEmailError(true);
     }
   };
+  const CssTextField = styled(TextField)({
+    '& label.Mui-focused': {
+      color: 'green',
+    },
+    '& .MuiInput-underline:after': {
+      borderBottomColor: 'green',
+    },
+    '& .MuiOutlinedInput-root': {
+      '& fieldset': {
+        borderColor: 'red',
+      },
+      '&:hover fieldset': {
+        borderColor: 'yellow',
+      },
+      '&.Mui-focused fieldset': {
+        borderColor: 'green',
+      },
+    },
+  });
   return (
     <>
       <div className="Password-container">

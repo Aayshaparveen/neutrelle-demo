@@ -10,7 +10,6 @@ import {
 import React from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
-import Button from "@mui/material/Button";
 import { useState } from "react";
 const SignInpage = () => {
   const handleClickShowPassword = () => setShowPassword((show) => !show);
@@ -27,7 +26,7 @@ const SignInpage = () => {
   const [showEmailError, setShowEmailError] = useState(false);
   const [showPasswordError, setShowPasswordError] = useState(false);
 
-  const handelChange = (e) => {
+  const handleEmail = (e) => {
     console.log("output", e.target.value);
 
     if (e.target.name == "Email") {
@@ -39,42 +38,43 @@ const SignInpage = () => {
     //   setShowEmailError(true);
     //   setEmailErrorMsg("Email address is required");
     // }
-    if (
-      Email.length > 0 &&
-      !/\S+@\S+\.\S+/.test(Email)
-    ) {
+    if (Email.length > 0 && !/\S+@\S+\.\S+/.test(Email)) {
       setShowEmailError(true);
       setEmailErrorMsg("Email address format is invalid.");
+    }
+  };
+
+  const handlePassword = (e) => {
+    console.log("output", e.target.value);
+
+    if (Password == "") {
+      setShowPasswordError(true);
+      setPasswordErrorMsg("Password is required");
     }
     if (e.target.name == "Password") {
       setPassword(e.target.value);
       setPasswordErrorMsg("");
       setShowPasswordError(false);
     }
-    // if (Password == "") {
-    //   setShowPasswordError(true);
-    //   setPasswordErrorMsg("Password is required");
-    // }
-    if (Password.length < 7 && Password.length > 0) {
+    if (Password.length < 8 && Password.length > 0) {
       setShowPasswordError(true);
       setPasswordErrorMsg("Password must be alteast 8 characters");
     }
   };
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSignIn = (e) => {
+    console.log("enable", e.target.value);
   };
-
   return (
     <>
       <div className="signin_container">
-        <p className="signin_heading">SignIn with email</p>
+        <p className="signin_heading">Sign In with email</p>
         <form className="form_box">
           <TextField
             id="standard-basic"
             label="Email address"
             name="Email"
             variant="standard"
-            onChange={handelChange}
+            onChange={handleEmail}
           />
           {showEmailError == true ? (
             <p className="error-Etext">{EmailErrorMsg}</p>
@@ -85,9 +85,7 @@ const SignInpage = () => {
             </InputLabel>
             <Input
               name="Password"
-            onClick={handleSubmit}
-              
-              onChange={handelChange}
+              onChange={handlePassword}
               id="standard-adornment-password"
               type={showPassword ? "text" : "password"}
               endAdornment={
@@ -109,21 +107,30 @@ const SignInpage = () => {
         </form>
         <div className="F-box">
           <Link to="./ForgotPassword" className="F-password">
-            Forgot password
+            Forgot password?
           </Link>
         </div>
-        <div className="sign_btn">
-          <Button
-            variant="contained"
-            disabled={!Password}
-            style={
-              handelChange == 1
-              ?{backgroundColor:"red"}
-              :{backgroundColor:"gray"}
-            }
-          >
-            Sign In
-          </Button>
+        <div className="terma_condation_section">
+          By signing in, you have read and agree to our <a>Vista General Terms and
+          Conditions.</a> For more details on how we use the information we collect
+          about you, please read our <br/><a>Vista Privacy and Cookie Policy.</a>
+        </div>
+        <div className="Btn-section">
+          <div className="sign_btn">
+            <button
+              className={Password == "" ? "disable-btn" : "enable-btn"}
+              onClick={handleSignIn}
+              disabled={!Password}
+            >
+              Sign In
+            </button>
+          </div>
+          <p>or</p>
+          <div className="Create-btn-box">
+            <Link to="./Create_account">
+              <button className="Create-btn">Create an account</button>
+            </Link>
+          </div>
         </div>
       </div>
     </>

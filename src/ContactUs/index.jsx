@@ -1,11 +1,7 @@
 import React, { useState } from "react";
 import "./style.css";
-import Box from "@mui/material/Box";
-import TextField from "@mui/material/TextField";
-import FormGroup from "@mui/material/FormGroup";
-import styled from "@emotion/styled";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Checkbox from "@mui/material/Checkbox";
+import { Box, Checkbox, FormControlLabel, FormGroup, TextField } from "@mui/material";
+import styled from "styled-components";
 const CssTextField = styled(TextField)({
   "& label.Mui-focused": {
     color: "gray",

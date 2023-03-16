@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
-import Slider from "../pages/Slider";
 import { Link } from "react-router-dom";
+import { Slider } from "@mui/material";
 
 const Home = () => {
  

@@ -1,10 +1,9 @@
 import React from "react";
 import "./SignUpStyle.css";
-import TextField from "@mui/material/TextField";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import styled from "@emotion/styled";
-import InputAdornment from "@mui/material/InputAdornment";
+import styled from "styled-components";
+import { InputAdornment, TextField } from "@mui/material";
 const CssTextField = styled(TextField)({
   "& label.Mui-focused": {
     color: "gray",

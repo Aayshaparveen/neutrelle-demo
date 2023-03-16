@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import "./KnowImpact.css";
-import TextField from "@mui/material/TextField";
-import Box from "@mui/material/Box";
-import Slider from "@mui/material/Slider";
 import { useLocation, useNavigate } from "react-router-dom";
+import { Box, Slider, TextField } from "@mui/material";
 
 const marks = [
   {
@@ -170,12 +168,3 @@ const KnowImpact = () => {
 };
 
 export default KnowImpact;
-// const navigate = useNavigate();
-// const openmilage = (name) => {
-
-//   navigate("/MyGarage",{
-//     state: {
-//     value: mileageValue
-//     }
-//   });
-// };

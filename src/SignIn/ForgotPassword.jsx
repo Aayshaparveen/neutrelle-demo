@@ -1,10 +1,10 @@
-import { Button, TextField } from "@mui/material";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 const Forgotpassword = () => {
   const [Email, setEmail] = useState("");
   const [EmailErrorMsg, setEmailErrorMsg] = useState("");
   const [showEmailError, setShowEmailError] = useState(false);
-  const handelChange = (e) => {
+  const handelEmail = (e) => {
     console.log("output", e.target.value);
 
     if (e.target.name == "Email") {
@@ -12,23 +12,26 @@ const Forgotpassword = () => {
       setEmailErrorMsg("");
       setShowEmailError(false);
     }
+
+    // if (Email == "") {
+    //   setShowEmailError(true);
+    //   setEmailErrorMsg("Email address is required");
+    // }
+    if (Email.length > 0 && !/\S+@\S+\.\S+/.test(Email)) {
+      setShowEmailError(true);
+      setEmailErrorMsg("Email address format is invalid.");
+    }
   };
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (Email == "") {
-      setShowEmailError(true);
-      setEmailErrorMsg("Email address is required");
-    }
-    if (Email.length !== "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$") {
-      setShowEmailError(true);
-      setEmailErrorMsg("Enter a valid Email Address");
-    }
+  const handleForgotpassword = (e) => {
+    console.log("enable", e.target.value);
   };
   return (
     <>
       <div className="Forgot_container">
-        <div className="Back-btn">
-          <Button variant="outlined">Back to sign in</Button>
+        <div className="Back-btn-box">
+          <Link to="/SignIn">
+            <button className="Back-btn">Back to Sign In</button>
+          </Link>
         </div>
         <h2 className="R-heading">Reset your password.</h2>
         <p className="Enter-deatils">
@@ -40,16 +43,20 @@ const Forgotpassword = () => {
             label="Email address"
             name="Email"
             variant="standard"
-            onChange={handelChange}
+            onChange={handelEmail}
           />
           {showEmailError == true ? (
             <p className="error-Etext">{EmailErrorMsg}</p>
           ) : null}
         </div>
         <div className="Reset_btn">
-          <Button variant="contained" onClick={handleSubmit}>
+          <button
+            className={Email == "" ? "disable-btn" : "enable-btn"}
+            onClick={handleForgotpassword}
+            disabled={!Email}
+          >
             Reset Password
-          </Button>
+          </button>
         </div>
       </div>
     </>

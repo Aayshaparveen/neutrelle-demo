@@ -9,8 +9,12 @@
 .form_box {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 0px;
   padding: 0px;
+}
+.css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+  margin-bottom: 20px !important;
+  width: 40vw !important;
 }
 .MuiInputLabel-root:hover {
   color: blue !important;
@@ -36,21 +40,47 @@
 .F-password:hover {
   color: gray;
 }
+.terma_condation_section {
+  margin-top: 20px;
+  font-size: 10px;
+  text-align: left;
+  width: 40vw;
+  margin-left: 30%;
+}
+a{
+  text-decoration: underline;
+}
+.Btn-section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+}
 .sign_btn {
   margin-top: 25px;
 }
-.MuiButtonBase-root {
-  color: gray !important;
-  font-size: 13px !important;
-  font-weight: 600 !important;
-  box-shadow: none !important;
-  background-color: rgb(181 176 176 / 12%);
+.enable-btn {
+  color: white;
+  font-size: 15px;
+  box-shadow: none;
+  width: 37vw;
+  height: 8vh;
+  border: 1px solid;
+  border-radius: 20px;
+  border-width: 1px;
+  background-color: black;
 }
-.css-sghohy-MuiButtonBase-root-MuiButton-root {
-  width: 37vw !important;
-  height: 8vh !important;
-  border-radius: 20px !important;
-  background-color: rgb(231, 229, 229) !important;
+.disable-btn {
+  color: gray;
+  font-size: 15px;
+  box-shadow: none;
+  width: 40vw;
+  height: 8vh;
+  border: 1px solid;
+  border-width: 1px;
+  border-radius: 20px;
+  background-color: rgb(248, 248, 248);
+  border-color: rgb(233, 223, 223);
 }
 .error-Etext {
   color: red;
@@ -60,25 +90,59 @@
 .error-Ptext {
   color: red;
   font-size: 12px;
-  margin-right: 25vw;
+  margin-right: 21vw;
+}
+.Create-btn:hover {
+  border-color: black;
+}
+.Create-btn {
+  font-size: 15px;
+  color: black;
+  background-color: white;
+  border-color: rgb(233, 223, 223);
+  border-style: solid;
+  border-width: 1px;
+  overflow: hidden;
+  transition: all 0.2s;
+  cursor: pointer;
+  border-radius: 20px;
+  width: 40vw;
+  height: 8vh;
 }
 
 /* Forgot Password Style */
 .Forgot_container {
   height: 100vh;
-  margin-left: 35%;
+  margin-left: 30%;
 }
 .R-heading {
-    margin-bottom: 20px;
-    font-weight: 200;
+  margin-bottom: 20px;
+  font-weight: 200;
 }
 .Enter-deatils {
-    margin-bottom: 20px;
-    font-weight: 100;
+  margin-bottom: 20px;
+  font-weight: 100;
 }
-.Reset_btn{
-    margin-top: 30px;
+.Reset_btn {
+  margin-top: 30px;
 }
-.Back-btn{
-    margin-bottom: 30px;
+.Back-btn-box {
+  margin-bottom: 30px;
+}
+.Back-btn {
+  font-size: 15px;
+  color: black;
+  background-color: white;
+  border-color: rgb(233, 223, 223);
+  border-style: solid;
+  border-width: 1px;
+  overflow: hidden;
+  transition: all 0.2s;
+  cursor: pointer;
+  border-radius: 20px;
+  width: 40vw;
+  height: 8vh;
+}
+.Back-btn-box :hover {
+  border-color: black;
 }

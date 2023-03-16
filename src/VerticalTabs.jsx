@@ -1,9 +1,7 @@
 import * as React from "react";
-import PropTypes from "prop-types";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
-import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
+
+
+import PropTypes from 'prop-types';
 import { FaCarSide } from "react-icons/fa";
 import { CgBox } from "react-icons/cg";
 import { RiFileListLine } from "react-icons/ri";
@@ -11,6 +9,7 @@ import { RiAccountBoxLine } from "react-icons/ri";
 import { BiArrowFromRight } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import { Box, Tab, Tabs, Typography } from "@mui/material";
 function scrollWin() {
   window.scrollTo(200, 0);
 }

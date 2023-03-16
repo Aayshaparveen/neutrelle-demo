@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import "./style.css";
-import TextField from "@mui/material/TextField";
-import styled from "@emotion/styled";
-import NativeSelect from "@mui/material/NativeSelect";
-import InputBase from "@mui/material/InputBase";
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
-import { Stack } from "@mui/system";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import {
+  FormControl,
+  InputBase,
+  MenuItem,
+  NativeSelect,
+  Select,
+  Stack,
+  TextField,
+} from "@mui/material";
+import styled from "styled-components";
+import { LocalizationProvider } from "@mui/x-date-pickers";
 const CssTextField = styled(TextField)({
   "& label.Mui-focused": {
     color: "gray",
@@ -70,11 +70,11 @@ export default function ControlledOpenSelect() {
 
     navigate("/pages/KnowImpact", {
       state: {
-        mileageValue : mileageValue,
+        mileageValue: mileageValue,
         name: openname,
         variant: variant,
         Rnum: Rnumber,
-        year:value,
+        year: value,
       },
     });
   };

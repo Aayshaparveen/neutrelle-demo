@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from "react";
 import "./style.css";
 import { styled } from "@mui/material/styles";
-import TextField from "@mui/material/TextField";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
-import InputLabel from "@mui/material/InputLabel";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { differenceInDays } from "date-fns";
 import Dropzone from "../Dropzone";
-import OutlinedInput from "@mui/material/OutlinedInput";
+import {
+  FormControl,
+  InputLabel,
+  MenuItem,
+  OutlinedInput,
+  Select,
+  TextField,
+} from "@mui/material";
 const Service = () => {
   const CssTextField = styled(TextField)({
     "& label.Mui-focused": {
@@ -122,12 +124,11 @@ const Service = () => {
     };
     localStorage.setItem("Service Request", JSON.stringify(service));
   };
-  const service = JSON.stringify(localStorage.getItem('data'))
-  
-  const handleRemove = () =>{
+  const service = JSON.stringify(localStorage.getItem("data"));
+
+  const handleRemove = () => {
     localStorage.removeItem("Service Request");
-   
-    }
+  };
   return (
     <>
       <div className="Service-container">
@@ -137,8 +138,10 @@ const Service = () => {
             <button className="btn1" onClick={handleClick}>
               Save and Continue
             </button>
-            <button className="btn2" >Save and Close</button>
-            <button className="btn3"onClick={handleRemove}>Cancel</button>
+            <button className="btn2">Save and Close</button>
+            <button className="btn3" onClick={handleRemove}>
+              Cancel
+            </button>
           </div>
         </div>
         <div className="Form-col">
@@ -253,11 +256,13 @@ const Service = () => {
               <div>
                 {category == "Sick Leave" ||
                 category == "Annual Leave" ||
-                category == "Maternity Leave" 
-                ? (<div>Enquiry</div>) 
-                : category == "Grievance" || category == "Capability" 
-                ? (<div>Case</div>) 
-                : (<div></div>)}
+                category == "Maternity Leave" ? (
+                  <div>Enquiry</div>
+                ) : category == "Grievance" || category == "Capability" ? (
+                  <div>Case</div>
+                ) : (
+                  <div></div>
+                )}
               </div>
             </div>
           </div>
