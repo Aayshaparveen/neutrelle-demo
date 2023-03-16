@@ -1,6 +1,4 @@
 import * as React from "react";
-
-
 import PropTypes from 'prop-types';
 import { FaCarSide } from "react-icons/fa";
 import { CgBox } from "react-icons/cg";
@@ -59,7 +57,7 @@ export default function VerticalTabs() {
     <Box
       sx={{
         flexGrow: 1,
-        bgcolor: "background.paper",
+        backgroundColor: "background.paper",
         display: "flex",
         height: 727,
         borderRadius: "0px 35px",
@@ -106,7 +104,7 @@ export default function VerticalTabs() {
               <div className="vehicles-logo">
                 <img src="./image/mercedes_logos.png"
                 style=
-                  {location.state.bgColor}
+                  {location.state.img}
                   />
               </div>
               <div className="deatils-box">

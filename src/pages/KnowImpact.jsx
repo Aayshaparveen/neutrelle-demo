@@ -43,7 +43,7 @@ const KnowImpact = () => {
       singleImpact: impactlevel == 1 ? mileagevalue : 0,
       doubleImpact: impactlevel == 2 ? mileagevalue : 0,
       trippleImpact: impactlevel == 3 ? mileagevalue : 0,
-      bgColor:
+      img:
         impactlevel == 1
           ? { color: "rgb(88, 218, 113)" }
           : impactlevel == 2
