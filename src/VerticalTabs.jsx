@@ -126,7 +126,7 @@ export default function VerticalTabs() {
             <div className="second-box">
               <div className="sb-col-1">
                 <span className="Total-Mileage">Total Mileage</span>
-                <span className="num"> {location.state.mileageValue} </span>
+                <span className="num"> {location.state.miValue} </span>
               </div>
               <hr className="Hr-1" />
 

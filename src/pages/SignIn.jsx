@@ -32,11 +32,10 @@ const CssTextField = styled(TextField)({
 });
 function SignIn() {
   const [Email, setEmail] = useState("");
-  const [showEmailError, setShowEmailError] = useState(false);
-  const [EmailErrorMsg, setEmailErrorMsg] = useState("");
-
   const [Password, setPassword] = useState("");
+  const [EmailErrorMsg, setEmailErrorMsg] = useState("");
   const [PasswordErrorMsg, setPasswordErrorMsg] = useState("");
+  const [showEmailError, setShowEmailError] = useState(false);
   const [showPasswordError, setShowPasswordError] = useState(false);
 
   const handelChange = (e) => {

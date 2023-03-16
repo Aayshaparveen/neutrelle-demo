@@ -1,0 +1,84 @@
+.signin_container {
+  height: 100vh;
+  text-align: center;
+}
+.signin_heading {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.form_box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0px;
+}
+.MuiInputLabel-root:hover {
+  color: blue !important;
+}
+.css-v4u5dn-MuiInputBase-root-MuiInput-root:hover:not(
+    .Mui-disabled,
+    .Mui-error
+  ):before {
+  border-bottom: 1px solid gray !important;
+}
+.css-v4u5dn-MuiInputBase-root-MuiInput-root:after {
+  border-bottom: 2px solid black !important;
+}
+.F-box {
+  width: 20vw;
+  margin-left: 310px;
+  margin-top: 20px;
+  font-size: 13px;
+}
+.F-password {
+  color: black;
+}
+.F-password:hover {
+  color: gray;
+}
+.sign_btn {
+  margin-top: 25px;
+}
+.MuiButtonBase-root {
+  color: gray !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  box-shadow: none !important;
+  background-color: rgb(181 176 176 / 12%);
+}
+.css-sghohy-MuiButtonBase-root-MuiButton-root {
+  width: 37vw !important;
+  height: 8vh !important;
+  border-radius: 20px !important;
+  background-color: rgb(231, 229, 229) !important;
+}
+.error-Etext {
+  color: red;
+  font-size: 12px;
+  margin-right: 27vw;
+}
+.error-Ptext {
+  color: red;
+  font-size: 12px;
+  margin-right: 25vw;
+}
+
+/* Forgot Password Style */
+.Forgot_container {
+  height: 100vh;
+  margin-left: 35%;
+}
+.R-heading {
+    margin-bottom: 20px;
+    font-weight: 200;
+}
+.Enter-deatils {
+    margin-bottom: 20px;
+    font-weight: 100;
+}
+.Reset_btn{
+    margin-top: 30px;
+}
+.Back-btn{
+    margin-bottom: 30px;
+}

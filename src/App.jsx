@@ -16,7 +16,8 @@ import Tem from "./pages/Tem";
 import Userview from "./Userview";
 import Userdata from "./pages/Userdata";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-
+import SignInpage from "./SignIn";
+import Forgotpassword from "./SignIn/ForgotPassword";
 function App() {
 
   return (
@@ -38,6 +39,8 @@ function App() {
           <Route path="/pages/Tem" element={<Tem/>}/>
           <Route path="/pages/Userdata" element={<Userdata/>}/>
           <Route path="/Userview" element={<Userview/>}/>
+          <Route path="/SignIn" element={<SignInpage/>} />
+          <Route path="/SignIn/ForgotPassword" element={<Forgotpassword/>} />
 
         </Routes>
        

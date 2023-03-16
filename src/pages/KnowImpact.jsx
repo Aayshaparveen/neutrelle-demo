@@ -28,8 +28,8 @@ const KnowImpact = () => {
   const [mileagevalue, setMileagevalue] = useState(location.state.mileageValue);
 
   const handleMileagevalue = (e) => {
-    setMileagevalue(e.target.button);
-    console.log("valuebtn", e.target.button);
+    setMileagevalue(e.target.value);
+    console.log("valuebtn", e.target.value);
   };
   const handleImpactlevel = (event) => {
     setImpactlevel(event.target.value);
@@ -41,9 +41,10 @@ const KnowImpact = () => {
     window.scrollTo(100, 0);
     const data = {
       ...location.state,
-      singleImpact: impactlevel == 1 ? location.state.mileageValue : 0,
-      doubleImpact: impactlevel == 2 ? location.state.mileageValue : 0,
-      trippleImpact: impactlevel == 3 ? location.state.mileageValue : 0,
+      miValue: mileagevalue,
+      singleImpact: impactlevel == 1 ? mileagevalue : 0,
+      doubleImpact: impactlevel == 2 ? mileagevalue : 0,
+      trippleImpact: impactlevel == 3 ? mileagevalue : 0,
       bgColor:
         impactlevel == 1
           ? { color: "rgb(88, 218, 113)" }
@@ -75,17 +76,15 @@ const KnowImpact = () => {
         <div className="Two-box">
           <div className="Box-1">
             <div className="milage-box">
-           
-                <TextField
-                  value={mileagevalue}
-                  onChange={handleMileagevalue}
-                  id="demo-helper-text-misaligned-no-helper"
-                  label="Mileage"
-                  placeholder="Milage value"
-                  defaultValue = 'Initial value' 
-                
-                />
-            
+              <TextField
+                value={mileagevalue}
+                onChange={handleMileagevalue}
+                id="demo-helper-text-misaligned-no-helper"
+                label="Mileage"
+                placeholder="Milage value"
+                defaultValue="Initial value"
+              />
+
               <div className="Two-btn1">
                 <button className="btn-one-km">Km</button>
                 <button className="btn-two-mi">Miles</button>

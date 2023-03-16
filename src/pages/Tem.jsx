@@ -12,6 +12,17 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import CustomButton from "./CustomButton";
 import "./Temstyle.css";
+import Carousel from "react-simply-carousel";
+const images = [
+  "../image/Blog(1).png",
+  "../image/Blog(2).png",
+  "../image/Blog(3).png",
+  "../image/Blog(4).png",
+  "../image/Blog(1).png",
+  "../image/Blog(2).png",
+  "../image/Blog(3).png",
+  "../image/Blog(4).png",
+];
 const Tem = () => {
   const [userId, setUserId] = useState("");
   const [title, setTitle] = useState("");
@@ -58,6 +69,8 @@ const Tem = () => {
   const handleView = (row) => {
     navigate2("/Userview", { state: row });
   };
+
+  const [activeSlide, setActiveSlide] = useState(0);
 
   return (
     <div className="Data-container">
@@ -158,6 +171,53 @@ const Tem = () => {
           onRowsPerPageChange={handleChangeRowsPerPage}
         />
       </div>
+      {/* <div>
+      <Carousel
+        autoplay={true}
+        updateOnItemClick
+        containerProps={{}}
+        activeSlideIndex={activeSlide}
+        activeSlideProps={{}}
+        onRequestChange={setActiveSlide}
+        forwardBtnProps={{
+          style: {
+            width: 0,
+            height: 0,
+            minWidth: 0,
+            display: "none",
+            alignSelf: "center"
+          }
+        }}
+        backwardBtnProps={{
+          style: {
+            width: 0,
+            height: 0,
+            minWidth: 0,
+            display: "none",
+            alignSelf: "center"
+          }
+        }}
+        itemsToShow={2}
+        speed={2800}
+      >
+        {images.map((item, index) => (
+          <div
+            style={{
+              // backgroundImage: `url(${item})`,
+              width: 300,
+              border: "30px solid white",
+              height: 300,
+              textAlign: "center",
+              lineHeight: "240px",
+              boxSizing: "border-box"
+            }}
+            key={index}
+          >
+            <img src={item} className="carouselCustomDesign" />
+          </div>
+        ))}
+      </Carousel>
+    </div> */}
     </div>
   );
 };
