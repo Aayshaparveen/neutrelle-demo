@@ -34,10 +34,10 @@ const SignInpage = () => {
       setEmailErrorMsg("");
       setShowEmailError(false);
     }
-    // if (Email == "") {
-    //   setShowEmailError(true);
-    //   setEmailErrorMsg("Email address is required");
-    // }
+    if (e.target.value == "") {
+      setShowEmailError(true);
+      setEmailErrorMsg("Email address is required");
+    }
     if (Email.length > 0 && !/\S+@\S+\.\S+/.test(Email)) {
       setShowEmailError(true);
       setEmailErrorMsg("Email address format is invalid.");
@@ -46,20 +46,19 @@ const SignInpage = () => {
 
   const handlePassword = (e) => {
     console.log("output", e.target.value);
-
-    if (Password == "") {
-      setShowPasswordError(true);
-      setPasswordErrorMsg("Password is required");
-    }
     if (e.target.name == "Password") {
       setPassword(e.target.value);
       setPasswordErrorMsg("");
       setShowPasswordError(false);
     }
-    if (Password.length < 8 && Password.length > 0) {
+    if ( e.target.value == "") {
       setShowPasswordError(true);
-      setPasswordErrorMsg("Password must be alteast 8 characters");
+      setPasswordErrorMsg("Password is required");
     }
+    // if (e.target.value.length < 8 && e.target.value.length > 0) {
+    //   setShowPasswordError(true);
+    //   setPasswordErrorMsg("Password must be alteast 8 characters");
+    // }
   };
   const handleSignIn = (e) => {
     console.log("enable", e.target.value);
@@ -118,9 +117,9 @@ const SignInpage = () => {
         <div className="Btn-section">
           <div className="sign_btn">
             <button
-              className={Password == "" ? "disable-btn" : "enable-btn"}
+              className={Password  == "" ? "disable-btn" : "enable-btn"}
               onClick={handleSignIn}
-              disabled={!Password}
+              disabled={!Password }
             >
               Sign In
             </button>

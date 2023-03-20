@@ -1,5 +1,6 @@
 import { TextField } from "@mui/material";
 import React, { useState } from "react";
+import { BiArrowBack } from "react-icons/bi";
 import { Link } from "react-router-dom";
 const Forgotpassword = () => {
   const [Email, setEmail] = useState("");
@@ -14,10 +15,10 @@ const Forgotpassword = () => {
       setShowEmailError(false);
     }
 
-    // if (Email == "") {
-    //   setShowEmailError(true);
-    //   setEmailErrorMsg("Email address is required");
-    // }
+    if (e.target.value == "") {
+      setShowEmailError(true);
+      setEmailErrorMsg("Email address is required");
+    }
     if (Email.length > 0 && !/\S+@\S+\.\S+/.test(Email)) {
       setShowEmailError(true);
       setEmailErrorMsg("Email address format is invalid.");
@@ -30,9 +31,11 @@ const Forgotpassword = () => {
     <>
       <div className="Forgot_container">
         <div className="Back-btn-box">
-          <Link to="/SignIn">
-            <button className="Back-btn">Back to Sign In</button>
-          </Link>
+        <button className="Back-btn">
+          <Link to="/SignIn" className="Link_text">
+            <BiArrowBack className="left_arrow"/>Back to Sign In
+            </Link></button>
+          
         </div>
         <h2 className="R-heading">Reset your password.</h2>
         <p className="Enter-deatils">
