@@ -7,7 +7,6 @@ import {
   InputLabel,
   TextField,
 } from "@mui/material";
-import { width } from "@mui/system";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 const Create_account = () => {
